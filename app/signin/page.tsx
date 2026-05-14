@@ -17,8 +17,8 @@ export default async function SignInPage() {
         <p className="eyebrow">Player login</p>
         <h1>Get a secure sign-in link</h1>
         <p>
-          Enter the email used for this player. The first sign-in starts a short soccer IQ
-          baseline before the learning modules open.
+          Enter the email used for this player. The first sign-in starts a short
+          tactical baseline before Coach David&apos;s learning modules open.
         </p>
         <SignInForm />
       </section>

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Soccer IQ",
-  description: "A simple soccer IQ check-in for youth players.",
+  title: "Coach David's Soccer Tactical App",
+  description: "A tactical learning app for Coach David's soccer players.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

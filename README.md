@@ -1,6 +1,6 @@
-# Soccer IQ
+# Coach David's Soccer Tactical App
 
-A simple Next.js app for parent email-link sign-in and youth soccer IQ responses.
+A simple Next.js app for parent email-link sign-in and youth soccer tactical learning.
 
 ## Stack
 
@@ -35,7 +35,7 @@ EMAIL_SERVER_HOST=
 EMAIL_SERVER_PORT=587
 EMAIL_SERVER_USER=
 EMAIL_SERVER_PASSWORD=
-EMAIL_FROM="Soccer IQ <no-reply@example.com>"
+EMAIL_FROM="Coach David's Soccer Tactical App <no-reply@example.com>"
 ```
 
 If SMTP is not configured, the sign-in link is printed in the `npm run dev` terminal.

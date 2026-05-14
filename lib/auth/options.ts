@@ -39,11 +39,11 @@ export const authOptions: NextAuthOptions = {
   providers: [
     EmailProvider({
       server: emailServer(),
-      from: process.env.EMAIL_FROM ?? "Soccer IQ <no-reply@example.com>",
+      from: process.env.EMAIL_FROM ?? "Coach David's Soccer Tactical App <no-reply@example.com>",
       async sendVerificationRequest({ identifier, url, provider }) {
         if (!provider.server) {
           console.log("");
-          console.log("Soccer IQ sign-in link");
+          console.log("Coach David's Soccer Tactical App sign-in link");
           console.log(`Email: ${identifier}`);
           console.log(url);
           console.log("");
@@ -54,13 +54,13 @@ export const authOptions: NextAuthOptions = {
         await transport.sendMail({
           to: identifier,
           from: provider.from,
-          subject: "Your Soccer IQ sign-in link",
-          text: `Open this link to sign in to Soccer IQ:\n\n${url}\n\nIf you did not ask for this, you can ignore it.`,
+          subject: "Your Coach David's Soccer Tactical App sign-in link",
+          text: `Open this link to sign in to Coach David's Soccer Tactical App:\n\n${url}\n\nIf you did not ask for this, you can ignore it.`,
           html: `
             <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-              <h2>Soccer IQ sign-in</h2>
+              <h2>Coach David's Soccer Tactical App sign-in</h2>
               <p>Open this secure link to sign in:</p>
-              <p><a href="${url}">Sign in to Soccer IQ</a></p>
+              <p><a href="${url}">Sign in to Coach David's Soccer Tactical App</a></p>
               <p>If you did not ask for this, you can ignore it.</p>
             </div>
           `,

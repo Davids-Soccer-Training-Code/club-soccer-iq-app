@@ -17,12 +17,12 @@ export default async function HomePage() {
     <main className="page-shell home-shell">
       <section className="hero-panel">
         <div className="hero-copy">
-          <p className="eyebrow">Soccer IQ learning center</p>
-          <h1>Learn the game like a smart player.</h1>
+          <p className="eyebrow">Coach David&apos;s tactical app</p>
+          <h1>Coach David&apos;s Soccer Tactical App</h1>
           <p className="lede">
-            A simple player learning center for soccer IQ, formations, field areas,
-            rules, and team tactics. Players start with a baseline quiz, then keep
-            learning through short modules.
+            A focused learning center for formations, field areas, rules, and team
+            tactics. Players start with a baseline quiz, then build sharper decisions
+            through short coaching modules.
           </p>
           <div className="hero-actions">
             <Link className="primary-link" href="/signin">
@@ -61,7 +61,7 @@ export default async function HomePage() {
         </article>
         <article>
           <Goal aria-hidden="true" />
-          <h2>Soccer IQ habits</h2>
+          <h2>Tactical habits</h2>
           <p>The goal is a better understanding of where to be and what to notice.</p>
         </article>
       </section>
