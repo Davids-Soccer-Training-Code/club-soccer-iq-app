@@ -79,7 +79,7 @@ export default async function LearningModulePage({
             <div className="relative aspect-video overflow-hidden rounded-lg border border-slate-200">
               <Image
                 alt=""
-                className="object-cover"
+                className="object-contain"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 420px"

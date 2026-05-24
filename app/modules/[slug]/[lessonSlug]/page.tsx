@@ -1,9 +1,11 @@
 import { getServerSession } from "next-auth";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 import { markLessonComplete } from "@/app/actions";
+import { FieldNumberPlacementGame } from "@/components/field-number-placement-game";
 import { authOptions } from "@/lib/auth/options";
 import { getLessonCompletions, getPlayer, getResponses } from "@/lib/data";
 import {
@@ -84,6 +86,22 @@ export default async function LessonPage({
   const isComplete = completions.some(
     (completion) => completion.moduleSlug === slug && completion.lessonSlug === lessonSlug,
   );
+  const lessonParagraphs = lesson.body.split("\n\n");
+  const imageAfterParagraph = lesson.imageAfterParagraph ?? 0;
+  const lessonImage = lesson.imageSrc ? (
+    <div
+      className="relative mx-auto mt-5 w-full max-w-3xl overflow-hidden rounded-lg border border-green-100 bg-white"
+      style={{ aspectRatio: lesson.imageAspectRatio ?? "16 / 9" }}
+    >
+      <Image
+        alt=""
+        className="object-contain"
+        fill
+        sizes="(max-width: 820px) 100vw, 768px"
+        src={lesson.imageSrc}
+      />
+    </div>
+  ) : null;
 
   return (
     <main className="page-shell grid gap-5">
@@ -92,22 +110,81 @@ export default async function LessonPage({
         {learningModule.title}
       </Link>
 
-      <article className="rounded-lg border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-900/10 md:p-8">
+      <article className="mx-auto w-full max-w-5xl rounded-lg border border-slate-200 bg-white/90 p-6 shadow-xl shadow-slate-900/10 md:p-8">
         <p className="eyebrow">Topic details</p>
         <h1 className="max-w-4xl text-4xl font-black leading-none tracking-normal text-slate-900 md:text-6xl">
           {lesson.title}
         </h1>
         <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">{lesson.summary}</p>
 
-        <div className="mt-8 rounded-lg border border-green-100 bg-green-50/70 p-5">
-          <h2 className="text-2xl font-black tracking-normal text-slate-900">Details</h2>
-          <div className="mt-3 grid max-w-3xl gap-4">
-            {lesson.body.split("\n\n").map((paragraph) => (
-              <p className="m-0 leading-7 text-slate-700" key={paragraph}>
-                {paragraph}
-              </p>
+        <div className="mx-auto mt-8 max-w-4xl rounded-lg border border-green-100 bg-green-50/70 p-5 md:p-7">
+          <h2 className="text-3xl font-black tracking-normal text-slate-900">Details</h2>
+          {lesson.callouts ? (
+            <div className="mt-5 grid gap-3 md:grid-cols-2">
+              {lesson.callouts.map((callout) => (
+                <div className="rounded-lg border border-green-200 bg-white p-5" key={callout.title}>
+                  <p className="m-0 text-sm font-black uppercase text-green-800">{callout.title}</p>
+                  <p className="m-0 mt-2 text-xl font-black leading-8 text-slate-900">{callout.body}</p>
+                </div>
+              ))}
+            </div>
+          ) : null}
+          <div className="mt-5 grid gap-5">
+            {lessonParagraphs.map((paragraph, index) => {
+              const isHeading = paragraph.length <= 56 && !/[.!?]$/.test(paragraph);
+
+              return (
+                <div key={`${paragraph}-${index}`}>
+                  {isHeading ? (
+                    <h3 className="text-2xl font-black tracking-normal text-slate-900">{paragraph}</h3>
+                  ) : (
+                    <p className="m-0 text-lg leading-8 text-slate-700">{paragraph}</p>
+                  )}
+                  {lessonImage && index + 1 === imageAfterParagraph ? lessonImage : null}
+                </div>
+              );
+            })}
+            {lessonImage && imageAfterParagraph <= 0 ? lessonImage : null}
+            {lesson.bullets?.map((bulletGroup) => (
+              <div className="rounded-lg border border-green-100 bg-white p-5" key={bulletGroup.title}>
+                <h3 className="text-xl font-black tracking-normal text-slate-900">{bulletGroup.title}</h3>
+                <ul className="mt-3 grid gap-2 pl-5 text-lg text-slate-700">
+                  {bulletGroup.items.map((item) => (
+                    <li className="leading-8" key={item}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
+          {lesson.table ? (
+            <div className="mt-6 overflow-hidden rounded-lg border border-green-100 bg-white">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead className="bg-green-700 text-white">
+                  <tr>
+                    {lesson.table.columns.map((column) => (
+                      <th className="px-4 py-3 font-black" key={column} scope="col">
+                        {column}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {lesson.table.rows.map((row) => (
+                    <tr className="border-t border-green-100" key={row.join("-")}>
+                      {row.map((cell, index) => (
+                        <td className="px-4 py-3 text-slate-700" key={`${row[0]}-${index}`}>
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : null}
+          {lesson.practice === "field-number-placement" ? <FieldNumberPlacementGame /> : null}
         </div>
 
         <form action={markLessonComplete} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
