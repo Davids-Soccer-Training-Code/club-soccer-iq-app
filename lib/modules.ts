@@ -32,7 +32,27 @@ export type LearningModule = {
       columns: string[];
       rows: string[][];
     };
-    practice?: "field-number-placement";
+    coachSays?: string;
+    funFact?: { title: string; body: string };
+    positionContent?: {
+      prompt: string;
+      positions: {
+        id: string;
+        label: string;
+        number: number;
+        body: string;
+        bullets?: string[];
+      }[];
+    };
+    comparison?: {
+      left: { label: string; items: string[] };
+      right: { label: string; items: string[] };
+    };
+    practice?:
+      | "field-number-placement"
+      | { type: "tap-the-zone"; prompt: string; zones: "thirds" | "channels"; answer: string }
+      | { type: "what-would-you-do"; scenario: string; choices: { label: string; response: string }[] }
+      | { type: "true-false"; statement: string; answer: boolean; explanation: string };
   }[];
 };
 
@@ -1133,22 +1153,620 @@ export const learningModules: LearningModule[] = [
       "Top-down soccer field divided into thirds and vertical channels with subtle colored overlays, youth training board style, clear field markings, no text, no logos, 16:9",
     lessons: [
       {
-        slug: "thirds",
-        title: "Thirds",
-        summary: "Defensive, middle, and attacking thirds from a player point of view.",
-        body: "Thirds split the field from your goal to the opponent goal. Players should understand what part of the field they are in before choosing what to do next.",
+        slug: "the-three-thirds",
+        title: "The Three Thirds",
+        summary: "The field is split into three zones from goal to goal.",
+        body: "What Is a Third\n\nA third is one of three equal zones that run across the field from your goal to the other team's goal.\n\nHow They Are Named\n\nThe names come from your team's point of view. The defending third is near your goal. The middle third is the center of the field. The attacking third is near the other team's goal.\n\nWhy Thirds Matter\n\nThirds help you know your job. When you are in the defending third, your job is to protect. When you are in the middle third, your job is to connect and transition. When you are in the attacking third, your job is to create chances and score.\n\nEvery Player Uses Thirds\n\nIt does not matter what position you play. Thirds apply to everyone. A striker can drop into the middle third to help. A defender can push into the attacking third on a corner. Knowing your third helps you make the right decision fast.",
+        practice: { type: "tap-the-zone", prompt: "Tap the attacking third", zones: "thirds", answer: "attacking" },
+        imageSrc: "/module-images/field-thirds-channels.png",
+        imageAfterParagraph: 3,
+        callouts: [
+          {
+            title: "Split in three",
+            body: "The field is cut into thirds from your goal to the other team's goal.",
+          },
+          {
+            title: "Your job changes",
+            body: "What you do depends on which third the ball is in.",
+          },
+        ],
+        table: {
+          columns: ["Third", "Where it is", "Main idea"],
+          rows: [
+            ["Defending third", "Near your goal", "Protect the goal and clear danger."],
+            ["Middle third", "Center of the field", "Connect passes and transition."],
+            ["Attacking third", "Near the opponent's goal", "Create chances and score."],
+          ],
+        },
       },
       {
-        slug: "channels",
-        title: "Channels",
-        summary: "Left, center, and right channels and how they affect spacing.",
-        body: "Channels split the field from left to right. They help players talk about width, central space, and where support should come from.",
+        slug: "attacking-third",
+        title: "The Attacking Third",
+        funFact: { title: "Zone 14", body: "Scouts at professional clubs track every touch on the field using a grid system. Zone 14 is the square right in front of the penalty box. It consistently shows up in data as the zone where the most goals are set up from. Some clubs count Zone 14 touches as a key performance stat for attacking midfielders and strikers. Messi, Iniesta, and Zidane all dominated Zone 14." },
+        summary: "This is where goals happen — here is how to play like you belong here.",
+        body: "Where It Is\n\nThe attacking third starts the moment you cross into the opponent's half and goes all the way to their goal line. You are in their territory now.\n\nWhat to Do With the Ball\n\nEvery touch you take in the attacking third should make the goalkeeper nervous. Shoot when you have a real chance. Pass into space for a teammate making a run. Drive to the back of the box when room opens up. Do not waste time — defenders close fast in this zone.\n\nWhat to Do Without the Ball\n\nIf you do not have the ball, be a problem anyway. Stay wide to pull defenders out of position. Time your run behind the last defender when your teammate has space to play. The best attackers are already moving before the ball arrives.\n\nRisk vs. Reward\n\nHere is the best part: you can take more risks in the attacking third than anywhere else on the field. A bad pass up here is not a disaster. A bad pass in your own defending third can cost your team a goal. So be brave. Be direct. Go for it.\n\nZone 14 — The Magic Spot\n\nCoaches and scouts have a name for the most dangerous area in the attacking third: Zone 14. It is the space right in front of the penalty box, between the penalty arc and the top of the box. Why is it special? Because a player with the ball there can shoot, play a through ball, or slide a pass to either side of the box. Defenders hate Zone 14 because there is no easy answer. Messi, Iniesta, and Zidane all loved operating in Zone 14. Next time you are near the top of the box, remember — you are standing in one of the most dangerous spots on a soccer field.",
+        callouts: [
+          {
+            title: "Be dangerous",
+            body: "In the attacking third, every touch should make the goalkeeper nervous.",
+          },
+          {
+            title: "Zone 14",
+            body: "The space just outside the penalty box is called Zone 14 — pros call it the most dangerous spot on the field.",
+          },
+        ],
+        bullets: [
+          {
+            title: "What to do in the attacking third",
+            items: [
+              "Shoot when you have a real chance — do not wait for a perfect moment.",
+              "Drive to the back of the box when space opens up.",
+              "Stay wide until a gap appears, then cut inside.",
+              "Time your run so you arrive as the ball arrives — not too early.",
+              "If you find Zone 14, look to shoot or play someone in behind.",
+            ],
+          },
+        ],
       },
       {
-        slug: "where-to-be",
-        title: "Your Position",
-        summary: "How to decide where you should be as the ball moves.",
-        body: "Where you stand depends on the ball, your teammates, the opponent, and your role. Good players keep checking these things as the game changes.",
+        slug: "middle-third",
+        title: "The Middle Third",
+        summary: "The middle third is where the game connects — use it to move the ball forward.",
+        body: "Where It Is\n\nThe middle third covers the center of the field between both teams' halves. It is the busiest zone on the pitch.\n\nWhy It Matters\n\nThe middle third links your defense to your attack. If your team cannot move the ball through the middle third, it is very hard to create scoring chances.\n\nHow to Move to Help\n\nAlways offer a passing option. Show for the ball by moving into space. Look forward first before passing sideways or back. Keep your head up so you know what is around you before the ball arrives.\n\nWhat Mistakes to Avoid\n\nDo not stand still in the middle third. Defenders can mark a player who is not moving. Do not clump together with two or three teammates in the same spot. Spread out and give the player on the ball different angles to pass to.",
+        callouts: [
+          {
+            title: "Connect play",
+            body: "The middle third links your defense to your attack.",
+          },
+          {
+            title: "Keep moving",
+            body: "If you stand still in the middle third, defenders can mark you easily.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Middle third habits",
+            items: [
+              "Always show for the pass — give your teammate an option.",
+              "Keep your head up before the ball arrives.",
+              "Look forward first before passing sideways or back.",
+              "Keep your spacing from teammates so the field stays open.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "defending-third",
+        title: "The Defending Third",
+        coachSays: "If you are not sure what to do in the defending third, keep it simple. A safe pass or a cleared ball is better than losing the ball near your own goal.",
+        summary: "The defending third is where mistakes cost goals — stay organized and clear the danger.",
+        body: "Where It Is\n\nThe defending third is the zone nearest your own goal. It includes your penalty box and the area just in front of it.\n\nHow to Defend Without Panicking\n\nStay calm. Do not lunge at the ball unless you are sure you will win it. Mark the nearest opponent. Keep your body between the ball and your goal. Talk to your goalkeeper and teammates.\n\nForwards in the Defending Third\n\nIf you are a forward and the ball is in your team's defending third, your job is to press high on the opponent's defense. You are not defending in your own box. You are making it harder for them to play it back and build again.\n\nCommunication Is Everything\n\nCall out what you see. Tell your teammates who has the runner. Tell the goalkeeper if a shot is coming. The defending third is where talking wins games.",
+        callouts: [
+          {
+            title: "No risks",
+            body: "In the defending third, do not try to dribble past players.",
+          },
+          {
+            title: "Goal first",
+            body: "Clearing the ball safely matters more than keeping it.",
+          },
+        ],
+        table: {
+          columns: ["Role", "Job in the defending third"],
+          rows: [
+            ["Goalkeeper", "Organizes the box and commands the defense."],
+            ["Defenders", "Mark runners, win headers, and clear the ball."],
+            ["Midfielders", "Track back, block passing lanes, and help the defense."],
+            ["Forwards", "Press high on the opponent to slow their buildup."],
+          ],
+        },
+      },
+      {
+        slug: "spacing-in-thirds",
+        title: "Spacing in Thirds",
+        coachSays: "I would rather see you hold your position in the right zone than sprint to the ball and leave a gap behind you.",
+        comparison: {
+          left: {
+            label: "Bad Spacing",
+            items: [
+              "All three midfielders chase the ball into the attacking third.",
+              "The middle third is completely empty.",
+              "If the team loses the ball, nobody is there to win it back.",
+              "The opponent has a free path to goal.",
+            ],
+          },
+          right: {
+            label: "Good Spacing",
+            items: [
+              "One midfielder supports the attack in the attacking third.",
+              "One midfielder holds the middle third.",
+              "One midfielder stays closer to the defending third.",
+              "If the team loses the ball, the shape is already set.",
+            ],
+          },
+        },
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your team has the ball in the attacking third. You are a midfielder who just ran up to support. You look around and see three teammates already in the attacking third and nobody in the middle third. What do you do?",
+          choices: [
+            {
+              label: "Keep pushing forward to help the attack",
+              response: "Your attacking instinct is great — but four players in the attacking third means the middle is completely empty. If your team loses the ball now, the other team has a clear run forward. The right call is to hold your position back.",
+            },
+            {
+              label: "Drop back to the middle third",
+              response: "Yes! The middle third needs coverage. If your team loses the ball up top, you are already in position to slow the counter or win it back. This is what it means to keep the team's shape.",
+            },
+            {
+              label: "Go wide into the left channel to stretch the defense",
+              response: "Going wide could create width — but the bigger problem is that the middle third has no cover. Dropping back to balance the team is more important here. Width helps when the team already has good shape.",
+            },
+          ],
+        },
+        summary: "Good spacing means your team is never too bunched up in one zone.",
+        body: "What Bad Spacing Looks Like\n\nWhen all your players chase the ball into the same third, your team loses its shape. The other team can win the ball and play into the empty zones you left behind.\n\nWhat Good Spacing Looks Like\n\nGood teams always have players ready in every third. Someone holds the defending third, someone supports in the middle third, and someone threatens in the attacking third. Even when the ball moves fast, the shape stays connected.\n\nHow to Check Your Own Spacing\n\nAsk yourself: is the area behind me empty? If you leave your zone to follow the ball, make sure a teammate has covered where you left. Look around before you move forward. If two teammates are already there, stay back and hold the balance.",
+        callouts: [
+          {
+            title: "Spread out",
+            body: "If all your players are in the same third, your team has no shape.",
+          },
+          {
+            title: "Cover all three",
+            body: "Your team should always have players ready in every third.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Spacing rules",
+            items: [
+              "Do not follow the ball into a zone that is already crowded.",
+              "Stay in your third unless the whole team shifts together.",
+              "When in doubt, one player pushes forward and one stays back.",
+              "Look for the empty space on your team's side before moving.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "the-three-channels",
+        title: "The Three Channels",
+        practice: { type: "tap-the-zone", prompt: "Tap the center channel", zones: "channels", answer: "center" },
+        summary: "The field is also split left to right into three vertical channels.",
+        body: "What Is a Channel\n\nA channel is a vertical lane that runs from your goal to the other team's goal. While thirds cut the field side to side, channels cut the field top to bottom.\n\nHow They Are Named\n\nThe three channels are the left channel, the center channel, and the right channel. They are named from the perspective of the team attacking.\n\nWhy Channels Are Different From Thirds\n\nThirds tell you how far up the field you are. Channels tell you how wide you are. A player in the left channel near their own goal is in the left channel of the defending third. Both things are true at the same time.\n\nWidth Changes Everything\n\nUsing all three channels forces the defense to spread out. When the defense spreads, gaps open up in the center. When the defense collapses into the center, the wide channels open up.",
+        imageSrc: "/module-images/field-thirds-channels.png",
+        imageAfterParagraph: 2,
+        callouts: [
+          {
+            title: "Up and down",
+            body: "Channels run from goal to goal, splitting the field into left, center, and right.",
+          },
+          {
+            title: "Width matters",
+            body: "Using all three channels makes your team hard to defend.",
+          },
+        ],
+        table: {
+          columns: ["Channel", "Where it is", "Who usually plays there"],
+          rows: [
+            ["Left", "Left side of the field", "Left back and left winger"],
+            ["Center", "Middle of the field", "Central midfielders and striker"],
+            ["Right", "Right side of the field", "Right back and right winger"],
+          ],
+        },
+      },
+      {
+        slug: "left-channel",
+        title: "The Left Channel",
+        summary: "The left channel is used by the left back and left winger to stretch the defense.",
+        body: "Who Plays Here\n\nThe left back and left winger are the main players in the left channel. They share the space, but they should not be in the same spot at the same time.\n\nWhen to Use Width\n\nStay wide when your team has the ball in the center. A wide player pulls a defender out of the middle and creates space for the striker or central midfielder.\n\nWhen to Cut Inside\n\nCut into the center only when a gap opens up. If you cut in too early, you take the space away from your central players and you are not in the left channel anymore.\n\nThe Left Back's Role\n\nWhen the left winger cuts inside, the left back can overlap into the left channel and deliver a cross. This movement confuses defenders because they do not know who to follow.",
+        callouts: [
+          {
+            title: "Own your lane",
+            body: "The left winger and left back share the left channel but should not crowd it.",
+          },
+          {
+            title: "Go wide",
+            body: "A wide player in the left channel pulls a defender away from the center.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Left channel rules",
+            items: [
+              "Stay wide when your team has the ball in the center.",
+              "Support the left back when they push forward into your channel.",
+              "Cut inside only when a clear gap opens up.",
+              "Do not drift so far that you lose your connection to the left channel.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "right-channel",
+        title: "The Right Channel",
+        summary: "The right channel mirrors the left — your right back and right winger use it together.",
+        body: "Who Plays Here\n\nThe right back and right winger work the right channel together. Like the left side, one should push forward while the other provides support or cover.\n\nThe Overlap Run\n\nWhen the right winger cuts inside toward the center, the right back can make an overlapping run into the right channel behind them. The defender has to choose between following the winger or tracking the right back. Either choice leaves someone open.\n\nWhen to Hold and When to Go\n\nIf the team is under pressure, the right back should hold their position and not push forward. If the team has the ball and is attacking, look for the right moment to overlap or join the attack.\n\nSupporting a Teammate\n\nIf the right winger has the ball wide and is 1v1, hold your run and give them a pass-back option. Do not run past them before they are ready to release the ball.",
+        callouts: [
+          {
+            title: "Mirror the left",
+            body: "The right side works the same way as the left — stretch the defense and overlap.",
+          },
+          {
+            title: "Overlap chance",
+            body: "When the right winger cuts inside, the right back can run into the space behind.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Right channel rules",
+            items: [
+              "Stay wide when the team attacks through the center.",
+              "Overlap when the winger cuts inside and space opens up.",
+              "Hold your run if the winger needs a pass-back option first.",
+              "Track back quickly if your team loses the ball.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "center-channel",
+        title: "The Center Channel",
+        funFact: { title: "Pro fact", body: "In professional soccer, the team that wins more duels in Zone 14 — the space just outside the penalty box in the center channel — wins the match around 70% of the time. That number is why coaches and scouts obsess over controlling the center channel. Every game at every level, teams are fighting for this exact space." },
+        summary: "The center channel is the most dangerous lane on the field — here is why pros fight for it every game.",
+        body: "Why It Is the Most Dangerous\n\nThe center channel runs straight from one goal to the other. A player with the ball in the center has the best shooting angle, the most passing options, and the fastest path to goal. That is why every team in the world tries to control it.\n\nZone 14 Lives Here\n\nThe most dangerous spot in the entire center channel has a name: Zone 14. It is the area right in front of the penalty box — the space between the penalty arc and the top of the box. From Zone 14, a player can shoot, play a through ball, or slip a pass to either side of the penalty area. Scouts track how often players get into Zone 14 and what they do there. If you find Zone 14 in a game, something good is about to happen.\n\nHow to Attack Through the Center\n\nThe center is the most guarded lane on the field, so you cannot just dribble straight through it. Use combinations. A wall pass, a third-man run, or a quick one-two can open the center in a second. The striker holds their position as a target. Midfielders time their runs late so defenders do not pick them up early. Patience wins the center channel.\n\nHow to Protect the Center\n\nWhen the other team has the ball, your first job is to close the center. Force them wide where the shooting angle gets harder. Two defenders covering the center channel is almost always more important than one defender chasing the ball wide. The team that wins the center channel usually wins the game.",
+        callouts: [
+          {
+            title: "Most dangerous",
+            body: "The center channel leads straight to goal — the team that controls it usually wins the game.",
+          },
+          {
+            title: "Zone 14",
+            body: "The space just outside the penalty box in the center channel is called Zone 14 — pros fight to get there every game.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Playing through the center",
+            items: [
+              "Use a wall pass or one-two before trying to go central alone.",
+              "The striker holds position in Zone 14 as a target for midfielders.",
+              "Time your run late so defenders do not see you coming.",
+              "When defending, close the center channel first before chasing wide.",
+              "Two defenders in the center beats one defender everywhere.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "spacing-in-channels",
+        title: "Spacing in Channels",
+        comparison: {
+          left: {
+            label: "Bad Channel Spacing",
+            items: [
+              "Three players drift into the center channel.",
+              "Left and right channels are empty.",
+              "Defense packs the middle and blocks every passing lane.",
+              "No width, no threat from the sides, no way through.",
+            ],
+          },
+          right: {
+            label: "Good Channel Spacing",
+            items: [
+              "One player holds each channel.",
+              "Defense has to stretch across the full width.",
+              "Gaps open in the center as defenders move wide.",
+              "Ball can switch quickly from channel to channel.",
+            ],
+          },
+        },
+        practice: {
+          type: "true-false",
+          statement: "If three players are in the center channel, the defense has a harder job covering them.",
+          answer: false,
+          explanation: "Three players in the same channel actually makes the defense easier — they can mark everyone with fewer defenders. Width is what stretches the defense and creates gaps. Spread across all three channels and the defense has to cover the whole field.",
+        },
+        summary: "Use all three channels so the defense cannot block every option.",
+        body: "What It Looks Like When a Team Uses All Three Channels\n\nWhen your team spreads into all three channels, the defense has to stretch to cover the width. That creates gaps. The wider your team plays, the harder it is for three or four defenders to cover everything at once.\n\nWhat Happens When Everyone Goes Central\n\nIf all your attacking players drift into the center channel, the defense can pack in and block every passing lane. The wide channels become completely empty. There is no width, no threat from the sides, and no way in.\n\nHow to Fix Bad Channel Spacing\n\nIf you notice your team is bunched in the middle, the simplest fix is for one player to push wide and hold the channel. That single movement stretches the defense and creates space for everyone else.",
+        callouts: [
+          {
+            title: "Use the width",
+            body: "When your team spreads into all three channels, the defense has to stretch too.",
+          },
+          {
+            title: "Do not crowd",
+            body: "Three players in the center channel makes it easier for the defense, not harder.",
+          },
+        ],
+        table: {
+          columns: ["Situation", "Good spacing", "Bad spacing"],
+          rows: [
+            ["Ball in center", "Wide players stay wide in their channels.", "Everyone cuts inside to help."],
+            ["Ball on the left", "Right player holds the right channel.", "Right player drifts left to watch."],
+            ["Team attacking", "Players spread across all three channels.", "Everyone crowds around the ball."],
+          ],
+        },
+      },
+      {
+        slug: "what-third-are-you-in",
+        title: "What Third Are You In?",
+        positionContent: {
+          prompt: "Select your position — find out which thirds you play in.",
+          positions: [
+            {
+              id: "GK", label: "GK", number: 1,
+              body: "You almost always operate in the defending third. Your whole game is built around protecting that zone. Stay near your line, command the box, and organize your defense. The only time you enter the middle third is on a goal kick buildup — and you get back as soon as possible.",
+              bullets: ["Command the box in the defending third at all times.", "Push up to the edge of your penalty area when your team attacks.", "Get back to your line the moment the ball returns to your defending third."],
+            },
+            {
+              id: "RB", label: "RB", number: 2,
+              body: "You split your time between the defending third and the middle third. When your team defends, hold the right side of the defending third and track the left winger. When your team attacks, push into the middle third. On a good overlap run you might enter the attacking third to deliver a cross — then sprint back.",
+              bullets: ["Defending third when the opponent attacks — track the winger.", "Middle third when your team has the ball — stay connected.", "Attacking third only on overlap runs — recover immediately after."],
+            },
+            {
+              id: "CB", label: "CB", number: 4,
+              body: "You live in the defending third. Your job is to protect the space in front of the goal, win headers, and mark the striker. You can step briefly into the middle third to play out from the back — but never get caught high up the field. Stay organized and keep your defensive line.",
+              bullets: ["Stay in the defending third and hold your position.", "Step into the middle third only to receive the ball from the goalkeeper.", "Never push into the attacking third during open play."],
+            },
+            {
+              id: "LB", label: "LB", number: 3,
+              body: "You split your time between the defending third and the middle third, just like the right back on the opposite side. When defending, stay in the defending third and track the right winger. When your team attacks, push into the middle third and join the play. Attack the space the wide winger leaves.",
+              bullets: ["Defending third when marking the winger.", "Middle third when your team builds up — offer a wide passing option.", "Attacking third on overlap runs — deliver and recover."],
+            },
+            {
+              id: "CDM", label: "CDM", number: 6,
+              body: "You are the defensive wall of the middle third. Your job is to sit between the midfielders and defenders, win the ball, and protect the center. You rarely enter the attacking third — your value comes from owning the middle third and cleaning up anything that breaks through.",
+              bullets: ["Own the middle third — this is your zone.", "Cover the space in front of the center backs.", "Only enter the attacking third on set pieces or rare chances — recover immediately."],
+            },
+            {
+              id: "CM", label: "CM", number: 8,
+              body: "You work the middle third from end to end. You support the attack and track back to defend. When your team has the ball, push toward the attacking third and arrive late into the box. When your team loses the ball, get back into the middle third and rebuild the shape.",
+              bullets: ["Middle third is your base — you leave it to attack or defend.", "Push into the attacking third on late runs without the ball.", "When the team loses the ball, your first job is to win it back in the middle third."],
+            },
+            {
+              id: "CAM", label: "CAM", number: 10,
+              body: "You operate on the edge between the middle third and attacking third — right in Zone 14 territory. Your job is to receive the ball in dangerous areas, turn quickly, and create chances. When your team defends, track back to the middle third and press to help win the ball.",
+              bullets: ["Live on the line between the middle and attacking third.", "Zone 14 — the space just outside the penalty box — is your main area.", "Track back to the middle third when the team defends."],
+            },
+            {
+              id: "LW", label: "LW", number: 11,
+              body: "You spend most of your time in the attacking third, staying wide on the left side. When the team has the ball, hold high and be a threat. When the team loses the ball, press from the front and then track back to the middle third if the opponent builds quickly.",
+              bullets: ["Attacking third is your home — stay wide and high.", "Press from the front when the team loses the ball.", "Drop to the middle third only if the opponent builds quickly past your press."],
+            },
+            {
+              id: "RW", label: "RW", number: 7,
+              body: "You stay high in the attacking third, holding the right side wide. Your job is to stretch the defense, make runs behind the right back, and deliver or cut inside. When your team loses the ball, press immediately — then track back to the middle third if needed.",
+              bullets: ["Attacking third is your zone — stay high and wide.", "Make runs behind the right back when the ball is played forward.", "Press the nearest defender when the team loses the ball."],
+            },
+            {
+              id: "ST", label: "ST", number: 9,
+              body: "You are the furthest forward player and you live in the attacking third. Make runs behind defenders, hold the ball up under pressure, and finish chances. You can drop into the middle third to receive and turn — but always push back into the attacking third to be a goal threat.",
+              bullets: ["Attacking third is your zone — stay central and be a constant threat.", "Drop into the middle third to receive the ball and turn.", "Always push back into the attacking third — you are the team's finisher."],
+            },
+          ],
+        },
+        practice: {
+          type: "true-false",
+          statement: "A striker should always stay in the attacking third no matter where the ball is.",
+          answer: false,
+          explanation: "Strikers can drop into the middle third to receive a pass, hold the ball, or help the team keep possession. Where you should be depends on the ball, your team's shape, and what the game needs — not just your position name.",
+        },
+        summary: "Learn to quickly identify which third you are in during a game.",
+        body: "Ask Yourself Before Every Touch\n\nBefore you receive the ball, ask yourself: what third am I in right now? This takes one second and changes your whole decision.\n\nWhat That Changes\n\nIf you are in the defending third, your first job is safety. Clear the danger, play a simple pass, do not risk losing the ball near your goal. If you are in the middle third, your job is to connect play and move the ball forward. If you are in the attacking third, look to shoot, cross, or play a final pass.\n\nExamples by Position\n\nA center back receiving the ball in the defending third should play it simple to a midfielder. That same center back arriving in the attacking third on a corner kick can attack the ball and head it on target. A striker dropping into the middle third to receive a pass should turn quickly and drive forward into the attacking third.",
+        callouts: [
+          {
+            title: "Ask yourself",
+            body: "Before you touch the ball, ask: what third am I in right now?",
+          },
+          {
+            title: "Third = job",
+            body: "Your third tells you whether your job is to protect, connect, or attack.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Quick check by position",
+            items: [
+              "Defender in the defending third — stay, protect, and clear.",
+              "Midfielder in the middle third — connect, support, and look forward.",
+              "Forward in the attacking third — run, threaten, and finish.",
+              "Any player in the wrong third — get back to your zone quickly.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "what-channel-are-you-in",
+        title: "What Channel Are You In?",
+        positionContent: {
+          prompt: "Select your position — find out which channel is yours.",
+          positions: [
+            {
+              id: "GK", label: "GK", number: 1,
+              body: "You operate in the center channel. Stay central to protect the goal. You rarely need to go wide — only to sweep a ball that has gone outside your box. The center channel is your zone to command at all times.",
+              bullets: ["Center channel — stay central and protect the goal.", "Only go wide to sweep a ball outside the penalty box.", "Organize your defense to protect the center channel."],
+            },
+            {
+              id: "RB", label: "RB", number: 2,
+              body: "You own the right channel. When defending, track the left winger into your channel and stop crosses. When attacking, push up the right channel and look to deliver. If the right winger cuts inside, the right channel belongs to you — overlap and get to the byline.",
+              bullets: ["Right channel is yours — own it going both ways.", "When the winger cuts inside, the channel opens up for your overlap.", "Defend the right channel first — stop crosses before they start."],
+            },
+            {
+              id: "CB", label: "CB", number: 4,
+              body: "You cover the center channel. Your job is to block passes played through the middle and stop forwards getting in behind. Never follow an opponent into a wide channel — hold the center and let your fullbacks deal with wide players.",
+              bullets: ["Center channel — hold it and block through balls.", "Do not follow opponents into the wide channels.", "Stay central and let the fullbacks cover wide."],
+            },
+            {
+              id: "LB", label: "LB", number: 3,
+              body: "You own the left channel. When defending, track the right winger who attacks your channel. When attacking, push up and deliver crosses from the left. If the left winger cuts inside into the center channel, the left channel opens up — that space is yours to attack.",
+              bullets: ["Left channel is yours — defend it and attack it.", "When the left winger cuts inside, the left channel is open for you.", "Defend the channel first — track the winger before you think about attacking."],
+            },
+            {
+              id: "CDM", label: "CDM", number: 6,
+              body: "You protect the center channel in front of the defense. Block passing lanes through the middle, step to the ball to press, and get back into the center channel quickly if you are drawn wide. The center channel is the most dangerous zone — you are its guardian.",
+              bullets: ["Center channel — you are its protector.", "Block central passing lanes and win the ball.", "If you are drawn wide, get back to the center channel immediately."],
+            },
+            {
+              id: "CM", label: "CM", number: 8,
+              body: "You move through all three channels — that is what makes a good center midfielder so hard to mark. Your base is the center channel, but when the ball goes wide you should often follow it into that channel to give a passing option or create a combination. When the opposite winger has the ball, you can drift to the far side to be ready for a switch. Read what the team needs and fill the space.",
+              bullets: ["Center channel is your starting point — but do not stay there rigidly.", "Move into wide channels when the ball is there and a combination is possible.", "When the ball is on one side, you might drift to the other side to receive the switch."],
+            },
+            {
+              id: "CAM", label: "CAM", number: 10,
+              body: "You operate in the center channel just outside the penalty box — this is Zone 14. From there you can shoot, play a through ball, or slide a pass to either winger. Receive the ball in the center channel and use your vision to find the right option.",
+              bullets: ["Center channel — Zone 14 is your main area.", "Use your position in the center to play left, right, or straight at goal.", "Receive, turn, and make something happen — that is your job in this channel."],
+            },
+            {
+              id: "LW", label: "LW", number: 11,
+              body: "The left channel is your home — you own it. Your default is wide, stretching the defense and making runs down the left side. There are moments you move inside — when the ball switches to the far right and you drift centrally to be a switch option, or when you see a gap to cut into. These moments happen and they can be devastating. But they are exceptions. Get to the left channel first and be a threat there. Move inside when the timing is right.",
+              bullets: ["Ball on the left — be wide in the left channel and make yourself a threat.", "You can cut inside when a real gap opens up — but do not drift in just to follow the ball.", "The left channel is yours. Hold it so the defense has to deal with you."],
+            },
+            {
+              id: "RW", label: "RW", number: 7,
+              body: "The right channel is your home — you own it. Your default is wide on the right side, stretching the defense and attacking down the line. There are moments you move inside — when the ball is on the far left and you drift centrally to be a switch option, or when you see a lane to cut into and shoot. These moments happen and they are dangerous. But they are exceptions. Start wide, be a threat in the right channel, and move inside when the moment is right.",
+              bullets: ["Ball on the right — be wide in the right channel and make yourself a threat.", "You can cut inside when a real gap opens up — but do not drift in just to follow the ball.", "The right channel is yours. Hold it so the defense has to deal with you."],
+            },
+            {
+              id: "ST", label: "ST", number: 9,
+              body: "The center channel is your home — that is where you are most dangerous and where you live. Your job is to be a target in the middle, hold up the ball, and score. Sometimes you pull wide to drag a center back out of position and open space in the middle. A run into a wide channel can create a gap for a teammate to run into. These moments are real and useful — but they are not your default. Your default is central. Be in the center channel and make the defense deal with you there first.",
+              bullets: ["Center channel is your home — be there and be a threat.", "Pulling wide can drag a defender and open space, but do it with a purpose.", "When you go wide, get back central quickly — the center is where you score from."],
+            },
+          ],
+        },
+        summary: "Your channel tells you how wide you are and who your nearest support is.",
+        body: "How to Identify Your Channel\n\nGlance at the nearest sideline. If you are right next to it, you are in a wide channel. If you are in the center of the field, you are in the center channel. This is a quick check you can do in less than a second.\n\nWhy It Matters for Support\n\nKnowing your channel tells you who should be nearby. In the left channel, your support usually comes from the left back behind you or the center midfielder to your right. In the center channel, you have options on both sides.\n\nWhen It Is Okay to Switch Channels\n\nYou can move into a different channel when space opens up there and your original channel is covered by a teammate. Do not switch channels just to follow the ball. Switch because there is a better position to be in.",
+        callouts: [
+          {
+            title: "Left, center, right",
+            body: "At any moment you should know if you are in the left, center, or right channel.",
+          },
+          {
+            title: "Stay in your lane",
+            body: "Staying in your channel gives your team predictable width and spacing.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Channel awareness habits",
+            items: [
+              "Glance at the sideline to quickly know how wide you are.",
+              "If a teammate is already in your channel, one of you should adjust.",
+              "Call your channel so teammates know where you are.",
+              "Only switch channels when space opens up and your zone is covered.",
+            ],
+          },
+        ],
+      },
+      {
+        slug: "moving-with-the-ball",
+        title: "Moving as the Ball Moves",
+        positionContent: {
+          prompt: "Select your position — find out how you shift when the ball moves.",
+          positions: [
+            {
+              id: "GK", label: "GK", number: 1,
+              body: "When the ball moves to the left, shift slightly left to cover the near post. When it moves right, shift right. When your team attacks and the ball is in the opponent's third, push to the edge of your penalty area so you can sweep long balls. When the ball returns to your defending third, get back to your line quickly.",
+              bullets: ["Shift left or right to stay on the line between ball and goal.", "Push to the edge of your box when the team attacks.", "Get back to your line immediately when the ball returns."],
+            },
+            {
+              id: "RB", label: "RB", number: 2,
+              body: "When the ball goes to the right side, push forward in the right channel and become an attacking option. When the ball goes to the left side, tuck in toward the center and cover behind the center backs. When the team attacks, push your line forward. When the team loses the ball, sprint back to the right channel immediately.",
+              bullets: ["Ball on the right — push forward and join the attack.", "Ball on the left — tuck into center and cover the right center back.", "Ball lost — sprint back into the right channel first."],
+            },
+            {
+              id: "CB", label: "CB", number: 4,
+              body: "When the ball moves to one side, the nearest center back pushes out to cover, and the other shifts to hold the center. When your team attacks, push your line forward to compress space. Never push so high that a long ball over the top catches you — stay connected to your goalkeeper.",
+              bullets: ["Nearest CB covers wide, other CB holds the center.", "Push the line forward when the team attacks.", "Never get caught too high — the long ball is your biggest danger."],
+            },
+            {
+              id: "LB", label: "LB", number: 3,
+              body: "When the ball goes to the left side, push forward in the left channel and support the attack. When the ball goes to the right side, tuck in toward the center and cover behind the center backs. When the team attacks, join the play. When the ball is lost, recover into the left channel immediately.",
+              bullets: ["Ball on the left — push forward and become an option.", "Ball on the right — tuck into center and cover.", "Ball lost — recover into the left channel right away."],
+            },
+            {
+              id: "CDM", label: "CDM", number: 6,
+              body: "When the ball moves to either side, shift with it — but stay slightly behind the play. You are the defensive screen. When the team attacks, hold your position in the middle third and do not push into the attacking third. Your job is to be the first to win the ball back when it is lost.",
+              bullets: ["Shift with the ball but stay behind the action.", "Hold the middle third when the team attacks — do not push up.", "When the ball is lost, you are the first to press and win it back."],
+            },
+            {
+              id: "CM", label: "CM", number: 8,
+              body: "When the ball goes left, move left to support. When it goes right, move right. When the team attacks, join the attack and time your runs to arrive late into the box. When the team loses the ball, track back into the middle third quickly. You run all game long — that is the job.",
+              bullets: ["Shift with the ball — left and right, all game.", "Join the attack with late runs into the box.", "Track back first when the ball is lost — your job never stops."],
+            },
+            {
+              id: "CAM", label: "CAM", number: 10,
+              body: "When the ball is wide, move to the inside of that channel so you are available for a layoff into the center. When the ball is in the center, drive toward the attacking third. When the team loses the ball, press the nearest opponent immediately — your press from the front sets the tone for the whole team.",
+              bullets: ["Ball wide — move inside and be available for the layoff.", "Ball central — drive into the attacking third.", "Ball lost — press immediately and set the team's defensive tone."],
+            },
+            {
+              id: "LW", label: "LW", number: 11,
+              body: "The left channel is your home and that does not change when the ball moves. When the ball is in the left channel with you, drive forward — attack the space, look to cross or cut inside, and be a threat. When the ball switches to the right side, hold your width in the left channel. Do not follow the ball centrally. Your job is to stretch the defense across the whole field so the right side has room. Stay wide, stay patient, and be ready when the switch comes back to you. When the team loses the ball, press the nearest defender immediately — your pressing from the front sets the team's defensive shape.",
+              bullets: ["Ball on the left — attack, drive forward, and be dangerous in your channel.", "Ball on the right — hold the left channel wide to stretch the defense.", "Do not drift centrally just to follow the ball — hold your width.", "Ball lost — press immediately and trigger the team's defensive press."],
+            },
+            {
+              id: "RW", label: "RW", number: 7,
+              body: "The right channel is your home — that is where you do your damage. When the ball is on the right with you, attack forward. Look to deliver a cross, cut inside, or beat your defender one-on-one. When the ball goes to the left side, hold your width in the right channel. Stay wide and stay ready. You are there as the switch option — when the ball comes back to the right, you need to be in position to receive it and attack. If you drift inside to follow the ball, you lose your width and the whole right side collapses in. When the team loses the ball, press the nearest defender — you and the left winger are the first two defenders on the team.",
+              bullets: ["Ball on the right — attack forward in your channel.", "Ball on the left — hold the right channel wide and be ready for the switch.", "Do not drift inside just because the ball is far away — your width matters.", "Ball lost — press immediately with the left winger."],
+            },
+            {
+              id: "ST", label: "ST", number: 9,
+              body: "When the ball is in the defending third, do not track all the way back. Hold your position in the middle or attacking third and pin the center backs. You are the long ball option — if you drop back there is no one for the goalkeeper or defenders to play to. When the ball moves into the middle third, drop your line slightly and show for the pass. When it enters the attacking third, time your run — arrive as the ball arrives, not before. If you sprint too early, the defender catches you. Good timing beats pace every time. You can occasionally pull wide to drag a center back out of position and open the center, but your default is central. Get back there fast if you do move wide.",
+              bullets: ["Ball in defending third — stay in the middle or attacking third and pin the defenders.", "Do not drop into your own half — stay as the long ball target.", "Ball in middle third — show for the pass and link the play.", "Ball in attacking third — time your run late so you arrive with the ball."],
+            },
+          ],
+        },
+        coachSays: "When the ball moves, everyone moves. That is what separates a team from eleven players just standing around.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "The ball is on the left side in your team's attacking third. You are the right back. What do you do?",
+          choices: [
+            {
+              label: "Sprint across to the left side to help the attack",
+              response: "Moving all the way left might feel helpful, but it leaves the entire right channel open. If the ball switches quickly, the opponent can attack behind you with no one there to stop them.",
+            },
+            {
+              label: "Hold the right channel and push slightly forward",
+              response: "Exactly right. When your team attacks down the left, you stay wide in the right channel but move forward a little. You give the team width on the far side and a target if the ball switches. That is how a team keeps its shape while attacking.",
+            },
+            {
+              label: "Stay back in the defending third just in case",
+              response: "Staying back is safe, but it leaves the right channel empty and gives your team no option on that side. If you hold your position in the right channel and push up slightly, you are still available if needed without abandoning your zone.",
+            },
+          ],
+        },
+        summary: "When the ball shifts to a new third or channel, your whole team shifts with it.",
+        body: "The Ball Is Your Reference\n\nThe ball tells you whether to push forward, hold your position, or drop back. Every player on the team reads the same ball, so the whole team moves together.\n\nShifting When the Ball Goes Wide\n\nWhen the ball moves to the left channel, your whole team shifts left. The center players cover the space between the left and center channels. The players on the right tuck in to cover the center. The team compresses toward the ball without leaving the far side completely open.\n\nShifting When the Ball Goes Forward\n\nWhen the ball enters the attacking third, push your line forward to stay close and support. Do not stay back if the rest of your team is attacking. When the ball drops into the defending third, drop and compress quickly. Get organized before the opponent can play forward.\n\nStay Connected\n\nAlways keep yourself connected to the nearest two teammates. If there is a big gap between you and your teammates, the opponent can pass through that gap. Close the spaces and shift as a unit.",
+        callouts: [
+          {
+            title: "Team moves together",
+            body: "When the ball moves, every player adjusts — not just the one closest to the ball.",
+          },
+          {
+            title: "Ball is the reference",
+            body: "The ball tells you whether to push forward, hold, or drop back.",
+          },
+        ],
+        bullets: [
+          {
+            title: "Shifting rules",
+            items: [
+              "When the ball goes left, the whole team shifts left together.",
+              "When the ball enters the attacking third, push your line forward.",
+              "When the ball enters the defending third, drop back and get organized.",
+              "Always stay connected to the two nearest teammates with no big gaps.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Ball location", "Your team should…"],
+          rows: [
+            ["Defending third", "Drop back, compress together, and stay organized."],
+            ["Middle third", "Stay connected, look to transition, and move the ball forward."],
+            ["Attacking third", "Push forward, stay wide, and create chances."],
+            ["Left channel", "Shift left — right side covers the center."],
+            ["Right channel", "Shift right — left side covers the center."],
+          ],
+        },
       },
     ],
     sections: [
@@ -1156,19 +1774,35 @@ export const learningModules: LearningModule[] = [
         slug: "field-thirds",
         title: "Module 1: Field Thirds",
         summary: "Defensive, middle, and attacking thirds from a player point of view.",
-        lessonSlugs: ["thirds"],
+        lessonSlugs: [
+          "the-three-thirds",
+          "attacking-third",
+          "middle-third",
+          "defending-third",
+          "spacing-in-thirds",
+        ],
       },
       {
         slug: "field-channels",
         title: "Module 2: Field Channels",
         summary: "Left, center, and right channels and how they affect spacing.",
-        lessonSlugs: ["channels"],
+        lessonSlugs: [
+          "the-three-channels",
+          "left-channel",
+          "right-channel",
+          "center-channel",
+          "spacing-in-channels",
+        ],
       },
       {
         slug: "where-you-should-be",
         title: "Module 3: Where You Should Be",
         summary: "How to decide your position as the ball, teammates, and opponents move.",
-        lessonSlugs: ["where-to-be"],
+        lessonSlugs: [
+          "what-third-are-you-in",
+          "what-channel-are-you-in",
+          "moving-with-the-ball",
+        ],
       },
     ],
   },

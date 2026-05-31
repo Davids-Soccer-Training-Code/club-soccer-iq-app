@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#1a4a2e"/>
+    </marker>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect width="1024" height="1024" rx="210" fill="#e8f4ed"/>
+
+  <!-- Field outline (horizontal) -->
+  <rect x="128" y="208" width="768" height="608" rx="20" fill="none" stroke="#1a4a2e" stroke-width="30"/>
+
+  <!-- Halfway line -->
+  <line x1="512" y1="208" x2="512" y2="816" stroke="#1a4a2e" stroke-width="22"/>
+
+  <!-- Center circle -->
+  <circle cx="512" cy="512" r="110" fill="none" stroke="#1a4a2e" stroke-width="22"/>
+  <circle cx="512" cy="512" r="20" fill="#1a4a2e"/>
+
+  <!-- Left penalty box -->
+  <rect x="128" y="326" width="178" height="372" fill="none" stroke="#1a4a2e" stroke-width="22"/>
+  <!-- Left goal box -->
+  <rect x="128" y="412" width="76" height="200" fill="none" stroke="#1a4a2e" stroke-width="22"/>
+
+  <!-- Right penalty box -->
+  <rect x="718" y="326" width="178" height="372" fill="none" stroke="#1a4a2e" stroke-width="22"/>
+  <!-- Right goal box -->
+  <rect x="820" y="412" width="76" height="200" fill="none" stroke="#1a4a2e" stroke-width="22"/>
+
+  <!-- Players (dark green circles with subtle shadow) -->
+  <!-- Top-center player -->
+  <circle cx="400" cy="340" r="40" fill="#1a4a2e"/>
+  <!-- Left-mid player -->
+  <circle cx="248" cy="512" r="40" fill="#1a4a2e"/>
+  <!-- Bottom-left player -->
+  <circle cx="370" cy="690" r="40" fill="#1a4a2e"/>
+  <!-- Top-right player -->
+  <circle cx="660" cy="360" r="40" fill="#1a4a2e"/>
+  <!-- Right-mid player -->
+  <circle cx="768" cy="512" r="40" fill="#1a4a2e"/>
+  <!-- Bottom-right player -->
+  <circle cx="650" cy="690" r="40" fill="#1a4a2e"/>
+  <!-- Bottom-center player -->
+  <circle cx="512" cy="754" r="40" fill="#1a4a2e"/>
+
+  <!-- Arrow: top-center → top-right (dashed) -->
+  <path d="M 440 330 Q 540 280 622 352" fill="none" stroke="#1a4a2e" stroke-width="20" stroke-dasharray="34 22" marker-end="url(#arr)"/>
+
+  <!-- Arrow: right-mid → bottom-right (dashed) -->
+  <path d="M 768 554 Q 750 630 662 684" fill="none" stroke="#1a4a2e" stroke-width="20" stroke-dasharray="34 22" marker-end="url(#arr)"/>
+
+  <!-- Arrow: center → left (curved bottom) -->
+  <path d="M 472 754 Q 420 780 370 730" fill="none" stroke="#1a4a2e" stroke-width="20" stroke-dasharray="34 22" marker-end="url(#arr)"/>
+</svg>

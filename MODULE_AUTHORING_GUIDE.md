@@ -188,10 +188,14 @@ Table rules:
 Use this tone:
 
 - Clear
-- Calm
-- Coach-like
-- Encouraging without being cheesy
+- Energetic — lessons should feel exciting, not like homework
+- Coach-like and direct
+- Fun facts and pro references make players feel like they are learning real insider knowledge
 - Simple enough for a young player to read alone
+
+Good:
+
+> Scouts have a name for the most dangerous spot on the field: Zone 14. If you find it in a game, something good is about to happen.
 
 Good:
 
@@ -200,6 +204,31 @@ Good:
 Avoid:
 
 > Players must internalize the complete tactical numbering framework before progressing.
+
+## Fun Facts and Pro References
+
+Drop in real soccer facts and pro player references when they fit naturally. Young players love knowing that what they are learning is what pros actually do.
+
+Rules:
+- Keep facts short — one or two sentences max.
+- Name a real player or team when possible ("Messi, Iniesta, and Zidane all loved Zone 14").
+- Connect the fact back to what the player just learned.
+- Do not force it — only use a fun fact if it genuinely makes the lesson better.
+
+Examples:
+- Zone 14 (the area just outside the penalty box in the center) — scouts track every touch a player has there.
+- The "false 9" role — a striker who drops into midfield to confuse defenders.
+- Pressing traps — teams like Liverpool use channel pressing to force mistakes.
+
+## Energy in Lessons
+
+Every lesson should feel like a coach pulling a player aside to share something cool, not like reading a textbook.
+
+Ways to add energy:
+- Lead with the coolest fact or the biggest idea, not the definition.
+- Use short punchy sentences when making a key point.
+- Say "here is the best part" or "here is why this matters" to signal something important.
+- End sections with a clear takeaway the player can use in their next game.
 
 ## Checklist Before Adding A Lesson
 

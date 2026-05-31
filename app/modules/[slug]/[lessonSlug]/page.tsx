@@ -6,6 +6,10 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 import { markLessonComplete } from "@/app/actions";
 import { FieldNumberPlacementGame } from "@/components/field-number-placement-game";
+import { PositionSelector } from "@/components/position-selector";
+import { TapTheZone } from "@/components/tap-the-zone";
+import { TrueFalseCard } from "@/components/true-false-card";
+import { WhatWouldYouDo } from "@/components/what-would-you-do";
 import { authOptions } from "@/lib/auth/options";
 import { getLessonCompletions, getPlayer, getResponses } from "@/lib/data";
 import {
@@ -157,6 +161,34 @@ export default async function LessonPage({
                 </ul>
               </div>
             ))}
+            {lesson.comparison ? (
+              <div className="grid gap-3 md:grid-cols-2">
+                <div className="rounded-lg border border-red-200 bg-red-50 p-4">
+                  <p className="text-sm font-black uppercase tracking-wide text-red-700">
+                    {lesson.comparison.left.label}
+                  </p>
+                  <ul className="mt-3 grid gap-1 pl-5 text-base text-slate-700">
+                    {lesson.comparison.left.items.map((item) => (
+                      <li className="leading-7" key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                  <p className="text-sm font-black uppercase tracking-wide text-green-700">
+                    {lesson.comparison.right.label}
+                  </p>
+                  <ul className="mt-3 grid gap-1 pl-5 text-base text-slate-700">
+                    {lesson.comparison.right.items.map((item) => (
+                      <li className="leading-7" key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : null}
           </div>
           {lesson.table ? (
             <div className="mt-6 overflow-hidden rounded-lg border border-green-100 bg-white">
@@ -184,7 +216,44 @@ export default async function LessonPage({
               </table>
             </div>
           ) : null}
+          {lesson.funFact ? (
+            <div className="mt-5 rounded-lg border border-amber-200 bg-amber-50 p-5">
+              <p className="text-xs font-black uppercase tracking-wide !text-amber-700">
+                ⚡ {lesson.funFact.title}
+              </p>
+              <p className="mt-2 text-base leading-7 !text-slate-800">{lesson.funFact.body}</p>
+            </div>
+          ) : null}
+          {lesson.positionContent ? (
+            <PositionSelector
+              positions={lesson.positionContent.positions}
+              prompt={lesson.positionContent.prompt}
+            />
+          ) : null}
+          {lesson.coachSays ? (
+            <div className="mt-5 rounded-lg bg-green-800 px-5 py-4">
+              <p className="text-xs font-black uppercase tracking-wide !text-white opacity-70">Coach says</p>
+              <p className="mt-2 text-lg leading-8 !text-white">&ldquo;{lesson.coachSays}&rdquo;</p>
+            </div>
+          ) : null}
           {lesson.practice === "field-number-placement" ? <FieldNumberPlacementGame /> : null}
+          {typeof lesson.practice === "object" && lesson.practice.type === "tap-the-zone" ? (
+            <TapTheZone
+              answer={lesson.practice.answer}
+              prompt={lesson.practice.prompt}
+              zones={lesson.practice.zones}
+            />
+          ) : null}
+          {typeof lesson.practice === "object" && lesson.practice.type === "what-would-you-do" ? (
+            <WhatWouldYouDo choices={lesson.practice.choices} scenario={lesson.practice.scenario} />
+          ) : null}
+          {typeof lesson.practice === "object" && lesson.practice.type === "true-false" ? (
+            <TrueFalseCard
+              answer={lesson.practice.answer}
+              explanation={lesson.practice.explanation}
+              statement={lesson.practice.statement}
+            />
+          ) : null}
         </div>
 
         <form action={markLessonComplete} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
