@@ -127,6 +127,17 @@ export const learningModules: LearningModule[] = [
             ["11", "Left Winger", "Attack wide on the left and create chances."],
           ],
         },
+        coachSays: "Your jersey number and your field number are two different things. The field number is your job — learn it and own it.",
+        funFact: {
+          title: "The 4-3-3 Goes Back a Long Way",
+          body: "Brazil used a version of the 4-3-3 to win the 1970 World Cup — widely called the greatest team ever assembled. Pelé, Jairzinho, and Tostão all played in that shape. Ajax in the Netherlands then made it famous worldwide with Total Football, where every player could play every number.",
+        },
+        practice: {
+          type: "true-false",
+          statement: "Your jersey number is always the same as your field position number.",
+          answer: false,
+          explanation: "Your jersey number is just the number on your shirt — it could be anything. Your field number is the position you play. A player wearing jersey 23 can still play the number 9 striker role.",
+        },
       },
       {
         slug: "defensive-numbers",
@@ -174,6 +185,13 @@ export const learningModules: LearningModule[] = [
             ["5", "Left Center Back", "Protect the middle and win dangerous balls."],
           ],
         },
+        coachSays: "Defenders — protect the goal first, build the attack second. In that order, every single time.",
+        practice: {
+          type: "true-false",
+          statement: "In a standard back four, the number 5 plays on the right side.",
+          answer: false,
+          explanation: "The bigger number is usually on the left. The 5 is the left center back and the 4 is the right center back. Same rule for fullbacks — the 3 is the left back, and the 2 is the right back.",
+        },
       },
       {
         slug: "midfield-numbers",
@@ -219,6 +237,13 @@ export const learningModules: LearningModule[] = [
             ["10", "Attacking Midfielder", "Create chances and connect to the striker."],
           ],
         },
+        coachSays: "The 6 protects. The 8 connects. The 10 creates. Three jobs, one midfield, one team.",
+        practice: {
+          type: "true-false",
+          statement: "The number 10 is the deepest midfielder in a 4-3-3.",
+          answer: false,
+          explanation: "The 6 is the deepest midfielder — they sit closest to the defenders and protect the middle. The 10 plays highest, closest to the attackers, and looks to create chances.",
+        },
       },
       {
         slug: "attacking-numbers",
@@ -262,6 +287,20 @@ export const learningModules: LearningModule[] = [
             ["7", "Right Winger", "Attack wide, create chances, and cross or shoot."],
             ["9", "Striker", "Score goals and stay dangerous in the middle."],
             ["11", "Left Winger", "Attack wide, combine, cross, or cut inside."],
+          ],
+        },
+        coachSays: "7 wide right, 9 dangerous middle, 11 wide left. The front three only work when all three do their job.",
+        funFact: {
+          title: "The Famous Number 9",
+          body: "The number 9 shirt has been worn by some of the greatest strikers ever — Ronaldo Nazário (Brazil), Robert Lewandowski, and Erling Haaland. In some countries, if a legendary 9 retires, the club unofficially retires the shirt number too. It is the most pressure-filled number on the field.",
+        },
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You are playing striker (9). Your team wins the ball and you are near the opponent's goal. What do you do?",
+          choices: [
+            { label: "Sprint as far forward as possible right away", response: "Running too far too early can pull you offside or separate you from your teammates. A great striker times the run — stay connected, then burst into space the moment the pass is coming." },
+            { label: "Stay connected and time your run as the ball comes forward", response: "Exactly. The best strikers do not just run fast — they run at the right moment. Stay connected, read when the pass is coming, then attack the space. Timing beats speed every time." },
+            { label: "Drop back deep to help your team keep the ball", response: "Checking short can help sometimes, but your main job as the 9 is staying dangerous near goal. Let the midfielders handle possession — you hold the forward position and make defenders worry about you." },
           ],
         },
       },
@@ -313,6 +352,11 @@ export const learningModules: LearningModule[] = [
           ],
         },
         practice: "field-number-placement",
+        coachSays: "Defenders 1 to 5, midfielders 6-8-10, attackers 7-9-11. Say it out loud until you can say it in your sleep.",
+        funFact: {
+          title: "Why 10 Is The Magic Number",
+          body: "The number 10 shirt is one of the most iconic in all of sports. Pelé wore it at the 1958 World Cup at just 17 years old and was already the best player in the tournament. Diego Maradona wore it. Lionel Messi wore it for Argentina. The number 10 became synonymous with the most creative, skillful player on the team.",
+        },
       },
       {
         slug: "what-formation-numbers-mean",
@@ -358,6 +402,13 @@ export const learningModules: LearningModule[] = [
             ["3-5-2", "3 defenders, 5 midfielders, 2 attackers", "More players across midfield."],
           ],
         },
+        coachSays: "A formation tells you where to START — not where to freeze. Once the whistle goes, it is a game, not a photo.",
+        practice: {
+          type: "true-false",
+          statement: "A 4-3-3 formation includes the goalkeeper in the numbers — so it actually means 4 defenders, 3 midfielders, 3 attackers, and 1 goalkeeper.",
+          answer: false,
+          explanation: "The goalkeeper is never counted in formation numbers because every team already has one. A 4-3-3 describes only the 10 field players — 4 defenders, 3 midfielders, 3 attackers. Add the keeper and you get all 11.",
+        },
       },
       {
         slug: "how-11v11-shapes-work",
@@ -402,6 +453,11 @@ export const learningModules: LearningModule[] = [
             ["Midfield line", "Connect the team.", "Where pressure is coming from and where the next pass is."],
             ["Attacking line", "Create chances and score.", "Where space is behind or between defenders."],
           ],
+        },
+        coachSays: "Three lines, one team. When the back line is organized, the midfield trusts. When midfield connects, the attack has options.",
+        comparison: {
+          left: { label: "Bad Spacing", items: ["Everyone crowds the ball", "Three players squeezed into the same channel", "Big empty gaps between the lines", "No options for the player on the ball"] },
+          right: { label: "Good Spacing", items: ["Players spread across all three channels", "Each line covers its zone and stays connected", "Gaps between lines are small enough to pass through", "The player on the ball always has two or more options"] },
         },
       },
       {
@@ -476,6 +532,16 @@ export const learningModules: LearningModule[] = [
             ["11", "Left winger", "Left midfielder", "Left attacking mid", "One of two strikers", "Left midfielder"],
           ],
         },
+        coachSays: "The number tells you the job. The formation tells you the starting spot. The game tells you when and where to move.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your coach tells you that you are playing as the 6 today, but the team is using a 3-5-2 instead of the usual 4-3-3. What should you expect?",
+          choices: [
+            { label: "My starting spot and job stay exactly the same as in a 4-3-3", response: "Close, but not quite. In a 3-5-2, the 6 might drop deeper alongside three center backs or play with a midfield partner. The idea of protecting the middle stays the same, but your exact starting position may shift." },
+            { label: "My job might be slightly different — I should ask the coach before kickoff", response: "Smart. The 6 still protects the middle in most formations, but in a 3-5-2 the role can change. Asking the coach means you know your exact spot and responsibilities before the whistle, not after." },
+            { label: "The number 6 always starts in the exact same place in every formation", response: "Not quite. The formation changes where you start. In a 4-3-3 the 6 is a single holding midfielder. In a 3-5-2 the 6 might play as one of five midfielders or even drop into the back three. Same number, different map." },
+          ],
+        },
       },
       {
         slug: "how-to-read-11v11-formations",
@@ -522,6 +588,13 @@ export const learningModules: LearningModule[] = [
             ["3", "Attackers", "Do we have one striker or two?"],
             ["4", "Width", "Do outside backs or wingers make the field wide?"],
           ],
+        },
+        coachSays: "Before kickoff, answer three questions: who is closest to me, who gives us width, and who connects our lines. That is your formation check.",
+        practice: {
+          type: "true-false",
+          statement: "When reading a formation, you count the numbers starting from the attacking end — forwards first, then midfielders, then defenders.",
+          answer: false,
+          explanation: "Formation numbers are always read from your own goal forward. The first number is your defenders (closest to your goal), then midfielders, then attackers. So 4-3-3 means 4 defenders back, 3 midfielders in the middle, 3 attackers at the front.",
         },
       },
       {
@@ -572,6 +645,13 @@ export const learningModules: LearningModule[] = [
             ["3-2-1", "3 defenders, 2 midfielders, 1 forward", "Building from the back and protecting the middle."],
           ],
         },
+        coachSays: "7v7 is the perfect size to learn the game. You can see the whole team, every pass, and every space. Use it.",
+        practice: {
+          type: "true-false",
+          statement: "A 7v7 team playing a 2-3-1 formation has a total of 7 players including the goalkeeper.",
+          answer: true,
+          explanation: "Correct! The formation numbers count only field players: 2 defenders + 3 midfielders + 1 forward = 6 field players. Add the goalkeeper and you have 7 total. The goalkeeper is never included in the formation number.",
+        },
       },
       {
         slug: "common-7v7-shapes",
@@ -612,6 +692,11 @@ export const learningModules: LearningModule[] = [
             ["2-3-1", "More midfield width and passing support.", "Only two defenders if wide mids do not recover."],
             ["3-2-1", "More defensive cover and easier build-out shape.", "Can feel narrow if outside defenders never step forward."],
           ],
+        },
+        coachSays: "In 7v7 there is nowhere to hide — and that is a good thing. Every player touches the ball, every player makes decisions. Learn from it.",
+        comparison: {
+          left: { label: "Choose 2-3-1 When...", items: ["Your midfielders can defend hard and run back", "You want wide passing options in midfield", "Your team connects well through the center", "The opponent attacks mainly through the middle"] },
+          right: { label: "Choose 3-2-1 When...", items: ["Your team needs more cover near goal", "Outside defenders are ready to step forward at the right time", "The opponent has a dangerous forward that needs extra attention", "Your two midfielders stay well organized and connected"] },
         },
       },
       {
@@ -657,6 +742,13 @@ export const learningModules: LearningModule[] = [
             ["2-3-1", "One defender and one midfielder", "3-4-1", "The team adds more cover and still has four midfielders."],
             ["3-2-1", "One defender moves up, add two midfielders", "2-5-1", "The back line has two, and the midfield grows to five."],
           ],
+        },
+        coachSays: "When the field gets bigger, the new players need to solve real problems — more width, better cover, or a stronger connection. Add players in useful spots.",
+        practice: {
+          type: "true-false",
+          statement: "The easiest way to grow a 2-3-1 into a 9v9 formation is to add two more defenders.",
+          answer: false,
+          explanation: "Adding two defenders to a 2-3-1 gives you 4-3-1, which crowds the back line without solving the bigger problem. The easiest growth path is adding two midfielders to create a 2-5-1 — more passing choices, more width, and the striker still has support.",
         },
       },
       {
@@ -715,6 +807,16 @@ export const learningModules: LearningModule[] = [
             ["3-4-1", "More cover in the back line.", "Midfielders must support the lone striker."],
           ],
         },
+        coachSays: "More space means more decisions. The players who scan early and move before the ball arrives will always be one step ahead.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You just moved from 7v7 to 9v9. You are a midfielder. The ball is with your goalkeeper. What is different now?",
+          choices: [
+            { label: "Nothing changes — I do the same job as in 7v7", response: "The job idea is the same, but 9v9 is bigger. Passes travel farther, recovery runs take more effort, and you need to check your shoulder earlier because teammates are farther away. Same role, more ground to cover." },
+            { label: "I need to scan earlier and expect longer passes", response: "Exactly. The bigger field means help takes longer to arrive. Check your shoulder before the ball gets to you, and be ready for passes that travel farther than they did in 7v7. Your timing has to be earlier." },
+            { label: "I should sprint to the ball every time it moves", response: "Chasing every ball on a bigger field will tire you out fast. Read the game, scan early, and move to the right position — not just toward the ball. Good positioning beats running everywhere." },
+          ],
+        },
       },
       {
         slug: "what-9v9-formations-mean",
@@ -756,6 +858,13 @@ export const learningModules: LearningModule[] = [
             ["3-4-1", "3 defenders, 4 midfielders, 1 forward", "Stay protected while still connecting forward."],
           ],
         },
+        coachSays: "9v9 is where soccer starts to feel like the real game. Every habit you build here — spacing, scanning, covering — will make you better in 11v11.",
+        practice: {
+          type: "true-false",
+          statement: "A 9v9 team playing a 3-4-1 formation has 3 defenders, 4 midfielders, 1 forward, and 1 goalkeeper — 9 players total.",
+          answer: true,
+          explanation: "Correct! 1 goalkeeper + 3 defenders + 4 midfielders + 1 forward = 9 players total. In 9v9, the formation number counts all 8 field players, plus the goalkeeper makes 9.",
+        },
       },
       {
         slug: "common-9v9-shapes",
@@ -796,6 +905,11 @@ export const learningModules: LearningModule[] = [
             ["2-5-1", "More midfield numbers and width.", "Only two defenders if wide mids do not recover."],
             ["3-4-1", "More defensive cover and a clear back line.", "The striker can become isolated without support."],
           ],
+        },
+        coachSays: "Shape gives you a starting point. The game gives you the actual choices. Know both.",
+        comparison: {
+          left: { label: "Choose 2-5-1 When...", items: ["Your midfielders are strong and can run both ways all game", "You want more passing choices around the ball", "Wide midfielders can recover quickly when the team loses the ball", "You want to keep the ball and build attacks from deep"] },
+          right: { label: "Choose 3-4-1 When...", items: ["Your team needs more cover behind the ball", "The opponent has a dangerous forward who needs marking", "Outside midfielders can step forward at the right moments", "Your team works best with a secure back line behind them"] },
         },
       },
       {
@@ -850,6 +964,13 @@ export const learningModules: LearningModule[] = [
             ["3-4-1", "Add outside backs or wingbacks", "Midfield four stays connected", "5-4-1"],
           ],
         },
+        coachSays: "Every role you have in 9v9 already has a matching role in 11v11. You are already learning the full game — you just need to add two players.",
+        practice: {
+          type: "true-false",
+          statement: "A 2-5-1 in 9v9 can grow into a 4-3-3 in 11v11 by adding two fullbacks and pushing the wide midfielders forward into winger roles.",
+          answer: true,
+          explanation: "Exactly right. You keep the striker as the 9, keep three central midfielders as the 6, 8, and 10, and add a right back (2) and left back (3). The two wide midfielders step up into the 7 and 11 winger roles. The shape grows naturally.",
+        },
       },
       {
         slug: "what-changes-when-moving-to-11v11",
@@ -892,6 +1013,11 @@ export const learningModules: LearningModule[] = [
             ["9v9", "About 70-80 x 45-55 yards", "More room, longer passes, more running."],
             ["11v11", "Example: about 100 x 65 yards", "Expansive field, bigger decisions, longer recovery runs."],
           ],
+        },
+        coachSays: "The field gets big, but the game is still the same thing — get the ball, keep it, and put it in the goal. Stay calm and play your game.",
+        funFact: {
+          title: "How Far Do Players Run?",
+          body: "On a full 11v11 field, Premier League players run an average of 7 miles per game. Some midfielders run more than 9 miles in a single match. That is why spacing matters so much — if you run to the wrong spot, you are wasting energy that you need later.",
         },
       },
       {
@@ -937,6 +1063,16 @@ export const learningModules: LearningModule[] = [
             ["11v11", "4-3-3", "Fullbacks, three midfielders, two wingers, and one striker."],
           ],
         },
+        coachSays: "Our 2-5-1 is already teaching you the 4-3-3. The wide players, the striker, the connecting midfielders — it is all right there.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You are a wide midfielder in our 2-5-1. Your team wins the ball and the center midfielder has it with time. What is your job?",
+          choices: [
+            { label: "Move centrally to get close to the ball and help keep possession", response: "Moving central crowds the team and leaves the wide channel empty. In our 2-5-1, wide midfielders stretch the field by staying wide. Give the center midfielder a wide option — that is what opens up space and keeps the shape." },
+            { label: "Push wide and give the center midfielder a wide passing option", response: "Exactly. In our attacking shape, wide players stretch the defense. When the center midfielder has the ball, push wide so they can play forward or out wide to feet. Your width creates the space others need." },
+            { label: "Stay back and cover behind the center midfielder", response: "That is the job of the two defenders, not the wide midfielder. When the team wins the ball, your job is to push forward and wide to give options. One of the two defenders protects — not you." },
+          ],
+        },
       },
       {
         slug: "our-defending-shape-connected-to-11v11",
@@ -980,6 +1116,11 @@ export const learningModules: LearningModule[] = [
             ["When we defend", "3-4-1", "Add cover, protect the middle, and defend together."],
             ["Future 11v11", "4-3-3", "Use fullbacks, midfielders, wingers, and striker in connected lines."],
           ],
+        },
+        coachSays: "When we defend, everyone defends. The striker guides the press from the front, midfield slides together, and the back three locks the door.",
+        comparison: {
+          left: { label: "Disorganized Defense", items: ["Players scattered randomly across the field", "Nobody presses the ball — the other team has time", "Big gaps open between the defensive and midfield lines", "The center is wide open for easy passes through"] },
+          right: { label: "Organized 3-4-1 Defense", items: ["Back three covers the middle and wide spaces", "Midfield four slides together toward the ball", "Striker guides the press from the front to force mistakes", "Team stays compact so no dangerous gap opens between lines"] },
         },
       },
       {
@@ -1035,6 +1176,16 @@ export const learningModules: LearningModule[] = [
             ["We win the ball", "Change toward 2-5-1", "Where is the first safe pass?"],
           ],
         },
+        coachSays: "Attack in 2-5-1. Defend in 3-4-1. React in one second. Learn those three things and you understand how our team plays.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your team is attacking in 2-5-1 shape. The other team suddenly wins the ball. What happens first?",
+          choices: [
+            { label: "Keep pushing forward — the attack might still work", response: "If the ball just changed teams, your attack is over. Players who keep going forward leave the back line exposed and hand the other team a fast counterattack. React immediately — do not wait to see what happens." },
+            { label: "The player nearest the ball presses while others recover toward 3-4-1", response: "Exactly. The closest player puts immediate pressure to slow the other team down. Everyone else recovers and reorganizes toward 3-4-1 as fast as possible. Pressure first, recover together." },
+            { label: "Everyone runs back as fast as possible without pressing", response: "Getting back is important, but if nobody presses the ball first, the other team gets a free pass forward. One player must press right away to buy time while others recover behind them." },
+          ],
+        },
       },
       {
         slug: "how-our-players-learn-11v11-roles",
@@ -1080,6 +1231,13 @@ export const learningModules: LearningModule[] = [
             ["Defender", "4 or 5 center back", "Protect the middle and start attacks."],
             ["Added fullback", "2 or 3 fullback", "Defend wide space and support attacks from behind."],
           ],
+        },
+        coachSays: "You do not need to know every position on the field. Know yours, know the players next to you, and know what happens when the ball moves.",
+        practice: {
+          type: "true-false",
+          statement: "A wide midfielder in our 9v9 shape is most likely to become a central midfielder in 11v11.",
+          answer: false,
+          explanation: "A wide midfielder in our 2-5-1 is most likely to become a winger — the 7 or the 11 — in 11v11. They are already learning to stay wide, make runs, and be dangerous. That is exactly what the winger job in a 4-3-3 looks like.",
         },
       },
     ],
@@ -1859,6 +2017,13 @@ export const learningModules: LearningModule[] = [
             ["After a goal", "Team that gave up the goal.", "Do not argue; get ready."],
           ],
         },
+        coachSays: "After a goal, the score does not change your next job. Reset your shape, get back in position, and play the kickoff with a plan.",
+        practice: {
+          type: "true-false",
+          statement: "On a kickoff, the ball must go forward — passing backward is not allowed.",
+          answer: false,
+          explanation: "The ball can go in any direction on a kickoff — forward, sideways, or backward. It is in play as soon as it is kicked and clearly moves. Many teams pass backward first to build a better attack from a safer position.",
+        },
       },
       {
         slug: "throw-in-rules",
@@ -1904,6 +2069,13 @@ export const learningModules: LearningModule[] = [
             ["Spot", "Near where the ball went out.", "Stealing a lot of distance."],
           ],
         },
+        coachSays: "A legal throw is both hands, from behind the head, and both feet on the line. Referees watch carefully — practice it so it is automatic.",
+        practice: {
+          type: "true-false",
+          statement: "A player cannot be offside directly from a throw-in.",
+          answer: true,
+          explanation: "Correct! Offside does not apply on the direct throw-in. A player can receive a throw-in even from an advanced position without being called offside. However, once another teammate touches the ball after the throw, normal offside rules apply again.",
+        },
       },
       {
         slug: "corner-kick-rules",
@@ -1946,6 +2118,16 @@ export const learningModules: LearningModule[] = [
             ["Short corner", "Kick is passed to a nearby teammate.", "The ball must clearly move."],
             ["Long corner", "Kick goes toward goal or far post.", "Attack the ball with timing."],
             ["Low corner", "Kick is played on the ground.", "Be ready for a first-time shot or pass."],
+          ],
+        },
+        coachSays: "Corners are a team moment — every player has a job. Attackers move before the kick, defenders find their mark early. No standing around waiting.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You are defending a corner kick. A player on the other team is standing right next to you near goal. What do you do?",
+          choices: [
+            { label: "Watch only the ball coming in and react when it arrives", response: "Watching only the ball means losing the player next to you. A good marker checks both — they know where their player is AND they track the ball. The moment the kick is taken, go with your player." },
+            { label: "Mark the player closely and go with their movement when the kick is taken", response: "Yes. Know your player and stay tight. When the kick is taken, follow them and compete for the ball. Do not let them get a free run in dangerous space near goal." },
+            { label: "Leave them and protect the space near the penalty spot instead", response: "Space defending is a real tactic, but if a specific dangerous player is right next to you, marking them directly is usually better. Talk to teammates so nobody is left completely free." },
           ],
         },
       },
@@ -2000,6 +2182,13 @@ export const learningModules: LearningModule[] = [
             ["Ceremonial", "Depends if direct or indirect.", "Wait for whistle?"],
           ],
         },
+        coachSays: "Before every free kick, ask two questions: direct or indirect? Wait for whistle or can we go quick? Two questions. Every time.",
+        practice: {
+          type: "true-false" as const,
+          statement: "On a direct free kick, the ball must touch another player before it can go into the goal.",
+          answer: false,
+          explanation: "That is the rule for an indirect free kick. A direct free kick can go straight into the opponent's goal from the kick. That is what makes it direct.",
+        },
       },
       {
         slug: "penalty-kick-rules",
@@ -2044,6 +2233,17 @@ export const learningModules: LearningModule[] = [
             ["Other players", "Wait outside until the kick.", "Entering early."],
             ["Referee", "Signals when ready.", "Fair and legal restart."],
           ],
+        },
+        coachSays: "When you take a penalty, decide where you are shooting before your run starts. Then trust that decision and commit to it.",
+        funFact: {
+          title: "Penalty Kicks at the World Cup",
+          body: "Goalkeepers save only about 20-25% of all penalty kicks. Yet one single save at the right moment can change everything — like Emiliano Martínez for Argentina in the 2022 World Cup semi-final shootout against the Netherlands, a save that helped send Argentina to the final they eventually won.",
+        },
+        practice: {
+          type: "true-false",
+          statement: "After taking a penalty kick, the kicker can follow up and play the rebound immediately if the goalkeeper saves it.",
+          answer: false,
+          explanation: "The kicker cannot play the ball again until another player has touched it first. If the goalkeeper saves it and the ball comes back, a different player from either team must touch it before the original kicker can play it — otherwise it is an indirect free kick for the other team.",
         },
       },
       {
@@ -2090,6 +2290,13 @@ export const learningModules: LearningModule[] = [
             ["Injury stoppage", "Depends where and who had it.", "Safety comes first."],
           ],
         },
+        coachSays: "Dropped ball means the referee is in charge of the restart. Listen, give space, and restart calmly. This is a moment to show respect for the game.",
+        practice: {
+          type: "true-false",
+          statement: "If play stops inside the penalty area, the dropped ball goes to whichever field player last touched the ball.",
+          answer: false,
+          explanation: "When play stops inside the penalty area, the dropped ball goes to the goalkeeper — regardless of who last touched it. This is an important rule to know so you give the right player the space they need.",
+        },
       },
       {
         slug: "our-kickoff-strategy",
@@ -2131,6 +2338,16 @@ export const learningModules: LearningModule[] = [
             ["1", "Pass back to CM.", "Avoid forcing the ball into pressure."],
             ["2", "CM plays to corner-flag space.", "Move the ball far from our goal."],
             ["3", "Team presses and supports.", "Try to win the next ball high up the field."],
+          ],
+        },
+        coachSays: "Back to the CM, then into the corner. Two passes, zero panic. Same plan every kickoff — do it with speed and purpose.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your team is taking the kickoff. You are the center midfielder. The first pass comes back to you. What do you do next?",
+          choices: [
+            { label: "Shoot from the center circle — catch them off guard", response: "Shooting from center circle is extremely low percentage and usually just gives the ball straight back. Our kickoff plan is to play into the opponent's corner-flag space — not to shoot from distance." },
+            { label: "Play the ball into the opponent's corner-flag space", response: "That is the plan. This moves the game as far from our goal as possible. The wide player can press immediately, and we start the game with the ball near their corner instead of ours. Safe and aggressive at the same time." },
+            { label: "Pass it short again to a nearby midfielder", response: "Passing short again gives the other team time to organize around you. Once you receive the kickoff pass, the next job is clear — play it long into the corner-flag space. Be decisive." },
           ],
         },
       },
@@ -2183,6 +2400,16 @@ export const learningModules: LearningModule[] = [
             ["Winger is near the spot", "Winger throws quickly.", "Fast and organized."],
             ["Winger is far away", "Closest prepared player throws.", "Do not waste time."],
             ["Nobody is open", "Throw into space for a runner.", "Speed of play keeps pressure on the other team."],
+          ],
+        },
+        coachSays: "Throw it fast, throw it forward, lead the runner. A slow throw-in hands the momentum right back to the other team.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your winger takes a throw-in but all the nearby teammates are tightly marked. What should the winger do?",
+          choices: [
+            { label: "Hold the ball and wait for a teammate to get open", response: "You cannot wait long with a throw-in — the referee will award it to the other team if you hold too long. More importantly, waiting gives the defense even more time to organize. Act quickly." },
+            { label: "Throw the ball into space for a teammate to run onto", response: "Exactly. If no one is immediately open, lead a runner into space. A throw that puts a sprinting teammate in space is better than waiting for the perfect option. Speed of play is our rule." },
+            { label: "Throw it back to the goalkeeper to be safe", response: "That wastes the restart and gives the other team time to set up. Our plan is to keep the game moving forward. Throw into space, make the defense react to us — not the other way around." },
           ],
         },
       },
@@ -2239,6 +2466,16 @@ export const learningModules: LearningModule[] = [
             ["Indirect", "ST or CM with helper", "Plan the second touch."],
           ],
         },
+        coachSays: "Before you take any free kick, answer two questions: is it direct or indirect, and do we wait for the whistle? Get those right first.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "Your team wins a free kick just outside the penalty area. The referee raises one arm in the air. What does this tell you?",
+          choices: [
+            { label: "It means we can take it quickly before the wall is set", response: "One arm raised during a free kick signals indirect — not permission to go quickly. Indirect means another player must touch the ball before a goal can count. Make sure a teammate is ready to receive the first pass." },
+            { label: "It is an indirect free kick — a teammate must touch the ball before we can score", response: "Correct. One arm raised means indirect. If you shoot straight into goal from an indirect free kick, it does not count — it becomes a goal kick. Make sure you have the second-touch player in position first." },
+            { label: "It means a card is coming and we should wait for the referee to finish", response: "One arm raised before the free kick signals indirect — not a card. Cards are shown by the referee holding up the card itself. An arm raised at free kick time means you need a second touch before scoring." },
+          ],
+        },
       },
       {
         slug: "our-corner-kick-strategy",
@@ -2291,6 +2528,16 @@ export const learningModules: LearningModule[] = [
             ["Runner 2", "Tip of box stack", "Run to the side of the kick."],
             ["Runner 3", "Tip of box stack", "Run to the back of the box away from the kick."],
             ["Wingers", "Edges of box", "Win second balls and rebounds."],
+          ],
+        },
+        coachSays: "Three runners, three different spots. If all three go to the same place, defenders can mark you all with two players. Spread out and make them choose.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You are Runner 1 in our corner kick plan — the first player in the stack. The kicker gives the hand signal. Where do you run?",
+          choices: [
+            { label: "Run to the back of the box away from the kick — that is where the ball usually lands", response: "That is Runner 3's job. Runner 1 breaks forward toward the near-danger area. If runners swap targets, the whole plan falls apart and defenders can read you easily. Stick to your role." },
+            { label: "Run forward toward the near-danger area", response: "That is your run. Runner 1 attacks forward — the most dangerous space near goal. Time it right so you arrive as the ball arrives. Attack it with confidence and be ready to shoot, redirect, or flick on." },
+            { label: "Stay at the tip of the box and wait for a second ball", response: "Staying put leaves your run empty and makes the corner much easier to defend. The point of the three-runner plan is that all three go at the same time. Your run creates space for the others too." },
           ],
         },
       },
@@ -2346,6 +2593,13 @@ export const learningModules: LearningModule[] = [
             ["Ball is dropped", "Wait until it touches the ground.", "That makes the restart legal."],
             ["We receive it", "Play safe first.", "Avoid giving the ball away right after a stoppage."],
           ],
+        },
+        coachSays: "Dropped ball — calm down, listen to the referee, get ready. One job: restart safely and give your team a clean start.",
+        practice: {
+          type: "true-false",
+          statement: "A player can score directly from a dropped ball without anyone else touching it first.",
+          answer: false,
+          explanation: "A goal cannot be scored directly from a dropped ball. If the ball goes straight into goal without touching at least two players, the restart changes — the other team gets either a goal kick or a corner kick instead.",
         },
       },
       {
@@ -2403,6 +2657,13 @@ export const learningModules: LearningModule[] = [
             ["Header rule", "Avoid heading if your age group bans it.", "Trying to head the ball when it is not allowed."],
           ],
         },
+        coachSays: "Hard is not the same as unfair. You can be tough and physical — just stay in control of your body. Control wins the ball; losing control loses it for the team.",
+        practice: {
+          type: "true-false",
+          statement: "In most U11 youth games in the United States, players are not allowed to head the ball.",
+          answer: true,
+          explanation: "Correct. Most U.S. youth leagues ban heading at U11 and younger to protect player safety. If your game has a no-heading rule, let the ball drop and play it with your foot, thigh, or chest instead.",
+        },
       },
       {
         slug: "fair-contact",
@@ -2445,6 +2706,16 @@ export const learningModules: LearningModule[] = [
             ["Shoulder", "Side-by-side and controlled.", "From behind or too hard."],
             ["Shielding", "Body between opponent and ball.", "Holding with arms."],
             ["Tackle", "Ball first and controlled.", "Through the player."],
+          ],
+        },
+        coachSays: "Shield with your body, not your arms. Body position plus balance equals legal. Arms flying out equals foul.",
+        practice: {
+          type: "what-would-you-do",
+          scenario: "You have the ball near the sideline. A defender presses you hard from behind. You want to keep possession. What do you do?",
+          choices: [
+            { label: "Swing your arm back to push the defender away", response: "Using your arm to push is a foul — even if the defender is pressing unfairly. Shield with your body instead. Get your body between the ball and the defender with arms close to your sides." },
+            { label: "Shield the ball with your body, keeping it close to your feet", response: "Exactly. Body between the defender and ball, arms in, small controlled touches to keep possession. That is a legal and effective shield — the defender has to go around you without getting a foul called on you." },
+            { label: "Stop and wait for the referee to give you a free kick", response: "A defender pressing you hard from behind is not automatically a foul. They are allowed to challenge for the ball. Use your body to shield and stay moving — do not stop and wait for a call that might not come." },
           ],
         },
       },
@@ -2491,6 +2762,13 @@ export const learningModules: LearningModule[] = [
             ["Excessive force", "Dangerous force.", "Free kick and possible red card."],
           ],
         },
+        coachSays: "Careless gets a free kick. Reckless might get a yellow. Excessive force risks a red. Stay in control and none of those happen to you.",
+        practice: {
+          type: "true-false",
+          statement: "A yellow card is automatically given for any careless foul.",
+          answer: false,
+          explanation: "Careless play usually results in just a free kick — not automatically a yellow card. A yellow is more likely for reckless play, where the player takes too much risk with an opponent's safety. Excessive force — truly dangerous challenges — is what risks a red card.",
+        },
       },
       {
         slug: "handball-rules",
@@ -2535,6 +2813,13 @@ export const learningModules: LearningModule[] = [
             ["Blocking", "Natural body movement.", "Arm makes body bigger."],
           ],
         },
+        coachSays: "Defend with arms under control. The referee is not looking at the ball when you are in the box — they are watching your arms.",
+        practice: {
+          type: "true-false",
+          statement: "Every time the ball touches a player's hand or arm, it is an automatic handball offence.",
+          answer: false,
+          explanation: "Not every touch is handball. Referees look at how it happened — was the arm deliberately moved to the ball, did the arm make the body unnaturally bigger, and was the position natural for that movement? A ball hitting a hand that is close to the body in a normal position is usually not called.",
+        },
       },
       {
         slug: "no-heading-youth-rules",
@@ -2578,6 +2863,13 @@ export const learningModules: LearningModule[] = [
             ["Not sure", "Ask coach or referee.", "Know before the ball is in the air."],
             ["Accidental header", "Listen and reset.", "The referee handles the restart."],
           ],
+        },
+        coachSays: "If heading is off, do not panic when the ball is in the air. Step back, let it drop, and use your feet. You have more time than you think.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If heading is not allowed and you accidentally head the ball, you are automatically sent off.",
+          answer: false,
+          explanation: "An accidental header is not a red card offence. The referee will stop play and handle the restart according to league rules. Stay calm, listen to the referee, and reset.",
         },
       },
       {
@@ -2634,6 +2926,13 @@ export const learningModules: LearningModule[] = [
             ["What restart?", "Throw-in, goal kick, or corner kick direct to you.", "A teammate passes after the restart."],
           ],
         },
+        coachSays: "Offside is judged when your teammate plays the ball — not when you receive it. You can start onside and run behind after the pass. That is the whole game.",
+        practice: {
+          type: "true-false" as const,
+          statement: "You can be called offside just for standing in an advanced position, even if you do not touch the ball.",
+          answer: false,
+          explanation: "Standing in an offside position is not an offence by itself. It only becomes an offside offence when you get involved — playing the ball, challenging an opponent, blocking play, or gaining an advantage from a rebound.",
+        },
       },
       {
         slug: "offside-position",
@@ -2678,6 +2977,13 @@ export const learningModules: LearningModule[] = [
             ["Where is the defender?", "You are level.", "You are past the line."],
             ["What format?", "7v7 may use build-out line.", "9v9 uses second-last opponent."],
           ],
+        },
+        coachSays: "Level is onside. You do not have to be behind the defender — being even with them is fine. Use that. Start level and then run.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If you are level with the second-last defender when the ball is played, you are offside.",
+          answer: false,
+          explanation: "Level is onside. You only need to be behind the second-last defender to avoid offside — being exactly level with them is perfectly legal. Use that edge to time your runs.",
         },
       },
       {
@@ -2733,6 +3039,16 @@ export const learningModules: LearningModule[] = [
             ["If too early", "You may be offside.", "Curve back or reset onside."],
           ],
         },
+        coachSays: "The assistant referee freezes the picture at the moment your teammate plays the ball. Train yourself to be onside at that exact moment — then run as fast as you want.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are a striker making a run behind the defense. You can see a gap, but you know you are slightly ahead of the last defender. Your teammate is about to play the ball.",
+          choices: [
+            { label: "Keep running — you might get lucky", response: "If you are offside when the ball is played, the assistant referee's flag goes up. You will not get the ball. Curve your run or step back onside before the pass is made." },
+            { label: "Slow down and curve back onside, then go again", response: "Smart. Get level with the defender, then explode forward at the moment your teammate plays the ball. If you are onside at that moment, you can sprint as fast as you want. Timing beats speed." },
+            { label: "Stop your run and call for the ball to feet", response: "That works too — sometimes dropping short to receive to feet is the right move. But if the gap behind is real, learn to time your run so you can attack it onside rather than giving it up entirely." },
+          ],
+        },
       },
       {
         slug: "offside-restarts-and-exceptions",
@@ -2783,6 +3099,13 @@ export const learningModules: LearningModule[] = [
             ["Goal kick", "No.", "Yes, offside can apply again."],
             ["Corner kick", "No.", "Yes, offside can apply again."],
           ],
+        },
+        coachSays: "You cannot be offside from a throw-in — use that. But the moment a teammate touches the ball after the restart, the offside rule is fully back on. Stay sharp.",
+        practice: {
+          type: "true-false" as const,
+          statement: "After a short corner, if your teammate passes to you inside the box, you can be called offside.",
+          answer: true,
+          explanation: "You cannot be offside directly from a corner kick — but the moment a teammate touches the ball after the initial kick, offside rules apply again. A short corner pass is a second touch, so yes, you can be offside from it.",
         },
       },
       {
@@ -2838,6 +3161,16 @@ export const learningModules: LearningModule[] = [
             ["Confusing call", "Stay calm and get ready.", "Arguing does not help the team."],
           ],
         },
+        coachSays: "When the referee stops play, your brain should not stop with it. Know the restart before it happens. You should be ready before the whistle goes again.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "Play has stopped for a long injury. You are standing by yourself near midfield while players from both teams wait around.",
+          choices: [
+            { label: "Just wait and watch what is happening with the injured player", response: "It is respectful to give the injured player space — but do not just stand there with your brain off. Use this time to breathe, look around at the shape, and think about the next restart." },
+            { label: "Walk over to your team, talk about the game, and know the restart", response: "Exactly right. Long stoppages are team moments. Talk about what is working, what needs fixing, what the restart is, and who goes where. When play restarts you are already thinking." },
+            { label: "Sit down and rest — it is a long stoppage", response: "Resting your legs is not the problem, but switching your brain off is. Use the time to connect with your team. The game starts again and you should be the most organized team on the field." },
+          ],
+        },
       },
       {
         slug: "injury-stoppages",
@@ -2884,6 +3217,13 @@ export const learningModules: LearningModule[] = [
             ["Restart coming", "Know the restart and get shape.", "Be ready to play."],
           ],
         },
+        coachSays: "Give the hurt player space — that is respect. Then get with your team. That is how you honor them too. Do not just stand around waiting.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When a player is injured, the team with the ball should kick it out of play to stop the game.",
+          answer: false,
+          explanation: "Only the referee can officially stop the game. In youth soccer especially, the referee controls when play stops. While kicking the ball out is a sportsmanship tradition at some levels, players should not assume they must do it — listen to your coach and the referee.",
+        },
       },
       {
         slug: "long-stoppages-and-delays",
@@ -2919,6 +3259,16 @@ export const learningModules: LearningModule[] = [
             ["Referee discussion", "Talk with your team.", "Argue."],
             ["Substitution", "Reset shape.", "Turn your back on play."],
             ["Weather or field issue", "Listen to adults.", "Ignore instructions."],
+          ],
+        },
+        coachSays: "A delay is not wasted time — it is free coaching time. Use it. When the game restarts you should be the most organized team on the field.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "There is a long delay because the referee is having a discussion with both coaches about the score. You are not sure how long it will take.",
+          choices: [
+            { label: "Kick the ball around and stay loose", response: "Staying physically loose is fine, but staying mentally loose is the mistake. Talk to your teammates. What third of the field are you dominating? What channel are they attacking? What is the restart going to be?" },
+            { label: "Gather with your team and talk about what is working", response: "This is the right call. Use the time. Talk about shape, what is working, what the restart will be, and who needs to cover where. When the referee finishes, your team is already organized." },
+            { label: "Ask the coach what they are discussing", response: "That is not your job during the game. Trust that the adults are handling it. Your job is to use the time to connect with your teammates and be mentally ready when play restarts." },
           ],
         },
       },
@@ -2967,6 +3317,13 @@ export const learningModules: LearningModule[] = [
             ["Coach", "Technical area or sideline.", "Handles referee communication when needed."],
           ],
         },
+        coachSays: "If you disagree with a call, your job is to reset and play the next one. My job is to talk to the referee if needed. Do not make my job harder by arguing.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If the assistant referee raises their flag, play is automatically stopped and you should wait.",
+          answer: false,
+          explanation: "The assistant referee's flag is only a signal to the center referee. The center referee decides whether to stop play. Until you hear the whistle from the center referee, keep playing. Do not stop for a flag alone.",
+        },
       },
       {
         slug: "playing-to-the-whistle",
@@ -3014,6 +3371,16 @@ export const learningModules: LearningModule[] = [
             ["Ball might be out", "Play it until referee says out.", "Let it go and complain."],
             ["Contact happens", "Keep going unless referee calls it.", "Stop and ask for a foul."],
             ["Whistle blows", "Stop and reset.", "Kick ball away."],
+          ],
+        },
+        coachSays: "If you stop because someone yells and the referee does not call it, you just gave the other team a free advantage. Play every second until you hear that whistle.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are driving toward goal. You feel contact from a defender behind you. You hear a teammate yell 'foul!' but no whistle has blown.",
+          choices: [
+            { label: "Stop and look at the referee to see if they call it", response: "The moment you stop, the chance is gone. If the referee does not call it, you just gave the ball away. Play through contact until you hear the whistle — then look up." },
+            { label: "Keep playing through the contact and finish", response: "Yes. Play to the whistle. If the referee calls the foul, the game stops and you get the free kick. But if you keep going and score, the goal can stand. Never stop early." },
+            { label: "Go down to the ground so the referee can see the foul", response: "Going down deliberately without being knocked down is simulation — that can earn you a yellow card. Stay on your feet, play hard, and let the contact speak for itself." },
           ],
         },
       },
@@ -3092,19 +3459,133 @@ export const learningModules: LearningModule[] = [
         slug: "with-the-ball",
         title: "With the Ball",
         summary: "Spacing and support when your team has possession.",
-        body: "A team with the ball needs useful spacing, passing options, and players who can recognize when to keep the ball or go forward.",
+        body: "What With-the-Ball Means\n\nWhen your team has the ball, every player has a job — not just the player with the ball. Your team needs to be organized so the ball can move and the defense has to keep shifting.\n\nSpread Out\n\nThe first rule is simple: spread out. When players crowd together, the defense only needs to cover a small area. When players spread across all three channels and across the thirds, the defense has to cover more ground and bigger gaps open up.\n\nGive Passing Options\n\nThe player with the ball should always have at least two options. If you are not on the ball, your job is to be one of those options. Move to a place where the passer can see you and reach you with a clean pass.\n\nKeep vs. Go Forward\n\nNot every pass needs to go forward. Sometimes keeping the ball and moving it sideways or backward is the right move. This keeps the defense shifting and creates new openings. Know the difference between a moment to go forward and a moment to be patient.\n\nBall Circulation\n\nWhen the ball moves, your team moves. The whole shape shifts together. If the ball goes left, players shift left. If the ball goes into the attacking third, players push forward. This is called ball circulation — moving the ball to move the defense.\n\nSimple Rules\n\nKeep width across all three channels. Have at least two passing options near the ball. Keep your spacing — do not follow the ball into a crowded area. Move the shape when the ball moves.",
+        callouts: [
+          { title: "Spread out", body: "When your team is spread across all three channels, the defense cannot cover everything." },
+          { title: "Be useful", body: "If you are not on the ball, your job is to be an option the ball carrier can use." },
+        ],
+        bullets: [
+          {
+            title: "With-the-ball team habits",
+            items: [
+              "Keep width — stay in your channel unless there is a clear reason to move.",
+              "Create at least two passing options near the ball.",
+              "Do not follow the ball and crowd the same zone.",
+              "Be patient — sideways or backward passes are smart when forward is blocked.",
+              "Shift the whole shape when the ball moves to a new area.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Good reaction", "Bad reaction"],
+          rows: [
+            ["Ball is under pressure", "Give a safe option to feet.", "Stand and watch."],
+            ["Ball is in the center", "Wide players stay wide.", "Everyone drifts central."],
+            ["Ball goes forward", "Push the line forward.", "Stay back and leave gap."],
+            ["Defense crowds the ball", "Switch to the open side.", "Keep passing into the crowd."],
+          ],
+        },
+        coachSays: "If you are not on the ball, ask yourself: can my teammate see me? Can they reach me? If the answer is no to either, move.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "Your team has the ball and is building out of the back. Your midfielder is on the ball in the center channel with a defender closing in. You are in the right channel with space in front of you.",
+          choices: [
+            { label: "Run toward the midfielder to help them", response: "You would be moving into the same crowded area as the defender. If you come central, you remove the width option that stretches the defense. Stay wide — be the option your midfielder can use to escape pressure." },
+            { label: "Stay wide in the right channel and make yourself available", response: "Yes. Your width is valuable. By staying in your channel, you give your midfielder a clean pass option away from pressure. The defense has to choose — close the ball or track you. If they stay, the pass to you is easy." },
+            { label: "Run forward into the attacking third to get in behind", response: "Running behind is good timing if the ball is secure. But if your midfielder is under pressure, they need a short safe option first, not a long ball forward. Read the pressure — if they need help now, stay short. If they are okay, make the run." },
+          ],
+        },
       },
       {
         slug: "without-the-ball",
         title: "Without the Ball",
         summary: "Pressure, cover, and team shape when defending.",
-        body: "A team without the ball needs pressure, cover, balance, and communication so opponents do not get easy chances.",
+        body: "What Without-the-Ball Means\n\nWhen the other team has the ball, every player has a job. Defending is a team job, not just the job of the players nearest the ball.\n\nPressure\n\nThe closest player to the ball applies pressure. Pressure means closing the space, not standing back and watching. The goal is to make the ball carrier uncomfortable and reduce their options.\n\nCover\n\nThe second player near the ball provides cover. They are slightly behind and to the side of the pressing player, ready to pick up if the pressure is beaten. Cover stops easy dribbles through.\n\nBalance\n\nThe rest of the team maintains balance. Balance means players are spread across the shape so there are no empty lanes the other team can play into. Players track runners, cover space, and hold their defensive position.\n\nCompact Shape\n\nA compact defensive shape means players are not too spread out vertically. The lines are close together, which squeezes space and forces the other team sideways or backward.\n\nFirst and Second Balls\n\nWhen the ball is in the air or loose, your team needs players ready for the first ball and the second ball. The first ball is who wins the header or first touch. The second ball is who picks it up if it bounces out.\n\nSimple Rules\n\nClose the ball. Cover the presser. Stay compact. Track runners. Win first and second balls.",
+        callouts: [
+          { title: "Close quickly", body: "The closer you press, the fewer options the ball carrier has." },
+          { title: "Cover the presser", body: "The second player should be slightly behind and ready, not watching." },
+        ],
+        bullets: [
+          {
+            title: "Defensive team habits",
+            items: [
+              "Pressure the ball — the closest player closes immediately.",
+              "Cover behind the presser — the second player protects against a beat.",
+              "Stay compact — do not let gaps open between your lines.",
+              "Track runners — know who you are responsible for.",
+              "Talk — call runners, call when covered, call when free.",
+            ],
+          },
+        ],
+        comparison: {
+          left: {
+            label: "Bad defensive shape",
+            items: [
+              "Ball carrier has no pressure",
+              "Second player is too far away",
+              "Gaps between defenders",
+              "Runners not tracked",
+              "No communication",
+            ],
+          },
+          right: {
+            label: "Good defensive shape",
+            items: [
+              "Ball carrier is under pressure",
+              "Second player provides cover",
+              "Lines are compact",
+              "Runners tracked",
+              "Team is talking",
+            ],
+          },
+        },
+        coachSays: "Defending is not one person's job. When one player presses, the whole team adjusts. If your presser gets beaten, someone behind them should already be there.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When your team is defending, only the players closest to the ball need to do any work.",
+          answer: false,
+          explanation: "Defending is a team job. The player nearest the ball presses, the next player covers, and the rest of the team holds balance, tracks runners, and stays compact. If only one player defends, gaps open and the other team can easily play through.",
+        },
       },
       {
         slug: "transitions",
         title: "Transition Moments",
         summary: "What to do right after the ball changes teams.",
-        body: "The moment the ball changes teams is important. Players should react quickly and understand the next job.",
+        body: "What A Transition Is\n\nA transition is the moment the ball changes teams. It can happen in an instant. This is one of the most dangerous moments in soccer because the team losing the ball is unorganized and the team winning it can attack quickly.\n\nTransition to Attack\n\nWhen your team wins the ball, the goal is to go forward quickly before the other team can recover their shape. Look forward first. If there is a run available, use it. If the team is not ready, keep the ball and build.\n\nTransition to Defend\n\nWhen your team loses the ball, the goal is to press immediately. The closest player closes the new ball carrier. The rest of the team recovers their defensive shape fast. Do not stand and watch. React immediately.\n\nThe Critical Seconds\n\nThe first few seconds after a transition are the most important. Teams that press immediately when they lose the ball can win it back before the other team is ready. Teams that attack quickly when they win the ball can score before defenders recover.\n\nForward Runs on Transition\n\nWhen your team wins the ball, forwards and wingers should spin and run immediately. Do not wait to see if the pass is coming — make the run and see if the ball follows. Your run can open space even if you do not get the pass.\n\nImmediate Press on Transition\n\nWhen your team loses the ball, the player who just lost it usually has the first responsibility to press. Everyone around them drops into defensive shape.\n\nSimple Rules\n\nLose the ball — press immediately. Win the ball — look forward first. Transitions are team moments, not individual moments.",
+        callouts: [
+          { title: "Lose it — press", body: "The moment you lose the ball, press immediately. Do not walk." },
+          { title: "Win it — go forward", body: "The moment you win the ball, look forward. Attack before they recover." },
+        ],
+        bullets: [
+          {
+            title: "Transition to attack",
+            items: [
+              "Look forward first after winning the ball.",
+              "Forwards and wingers spin and make runs immediately.",
+              "Keep the ball if forward is not available — do not give it away.",
+              "Go quickly before the defense recovers shape.",
+            ],
+          },
+          {
+            title: "Transition to defend",
+            items: [
+              "The player who lost it presses immediately.",
+              "Everyone else recovers defensive shape fast.",
+              "Do not watch — react.",
+              "Get compact — close space between your lines.",
+            ],
+          },
+        ],
+        coachSays: "Transitions are decided in two seconds. If you spend those two seconds standing and watching, the chance is gone. React first, think after.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "Your team was attacking and your striker just had the ball taken by a defender who is now running forward. You are a midfielder standing five meters away.",
+          choices: [
+            { label: "Walk back into your defensive shape and let others press", response: "Walking back gives the defender time and space to look up and play forward. You are the closest player — your job is to press immediately and make it hard for them to find a pass. The team recovers behind you." },
+            { label: "Press the defender immediately and close their space", response: "Yes. You are the closest player. Press hard and fast. Make them uncomfortable, reduce their options, and win the ball back early. This is called pressing on the transition and it is one of the most powerful moments in soccer." },
+            { label: "Look forward and see if a teammate is open for a quick counter", response: "You do not have the ball — the other team does. Your job right now is to defend, not look for an attack. Press first, win the ball back, then go forward. You cannot attack while they have possession." },
+          ],
+        },
       },
     ],
     sections: [
@@ -3142,25 +3623,151 @@ export const learningModules: LearningModule[] = [
         slug: "scanning-before-the-ball",
         title: "Scanning Before The Ball",
         summary: "Check your shoulder before the ball arrives.",
-        body: "Scanning means looking before the ball gets to you. You are trying to see pressure, open teammates, open space, and where your first touch should go.\n\nA good scan happens early. Look before the pass is played, look again while the ball is traveling if you can, then make your decision faster when the ball arrives.\n\nSimple rule: know what is behind you before you receive.",
+        body: "What Scanning Is\n\nScanning means looking around before the ball gets to you. You are trying to gather information — where is the pressure, where are your teammates, where is the space, and where should your first touch go?\n\nWhy It Matters\n\nWhen the ball arrives, good players already know what they are going to do. They scanned before the pass was played. Players who do not scan receive the ball, then look around, then decide — and by then, the defender is already on them.\n\nWhen to Scan\n\nThe best time to scan is before you ask for the ball. Look before the pass is played. Look again while the ball is traveling to you. When the ball arrives, you already have a picture.\n\nWhat to Look For\n\nLook for pressure — is a defender close behind you? Look for open teammates — who is free and where? Look for space — is there an open channel or a gap in the defense? Look for the best first touch direction — where should the ball go to help you?\n\nShoulder Check Habit\n\nA simple way to start scanning is the shoulder check. Quickly look over one or both shoulders before you receive. This takes less than one second and gives you critical information.\n\nSimple Rule\n\nKnow what is around you before the ball arrives. Scan early and scan often.",
+        callouts: [
+          { title: "Scan early", body: "Look before the pass is played, not after the ball arrives." },
+          { title: "One second", body: "A shoulder check takes less than one second and changes everything." },
+        ],
+        bullets: [
+          {
+            title: "Scanning habit",
+            items: [
+              "Check your shoulder before you ask for the ball.",
+              "Look for pressure, open teammates, and open space.",
+              "Scan again while the ball is traveling to you.",
+              "Arrive with a decision already forming.",
+              "Do not wait until the ball is at your feet to look around.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Player type", "What they do", "What happens"],
+          rows: [
+            ["Scans early", "Looks before the ball arrives.", "Receives and plays quickly — defenders cannot get set."],
+            ["Does not scan", "Looks after the ball arrives.", "Pauses, loses time, gets closed down."],
+            ["Scans often", "Constantly updates their picture.", "Always knows where to go next."],
+          ],
+        },
+        coachSays: "By the time the ball is at your feet, your decision should already be made. That only happens if you scanned before it got there.",
+        practice: {
+          type: "true-false" as const,
+          statement: "The best time to scan and check your surroundings is right after the ball arrives at your feet.",
+          answer: false,
+          explanation: "By the time the ball arrives, you should have already scanned. Look around before the pass is played and again while the ball is traveling. When it gets to you, your decision is already made — that is how fast players stay one step ahead.",
+        },
       },
       {
         slug: "first-touch-decisions",
         title: "First Touch Decisions",
         summary: "Use your first touch to protect, pass, or go forward.",
-        body: "Your first touch should help your next action. Sometimes that means touching forward into space. Sometimes it means touching away from pressure. Sometimes it means stopping the ball so you can pass safely.\n\nDo not take the same first touch every time. Decide based on pressure, space, and your body shape.\n\nSimple rule: first touch should make the second touch easier.",
+        body: "What the First Touch Is\n\nYour first touch is the moment the ball contacts your foot, chest, or body when you receive it. That touch sets up everything that comes next. A good first touch puts you in a better position. A bad first touch puts you in trouble.\n\nForward Touch\n\nWhen you have space in front of you and no pressure behind you, touch the ball forward into that space. This lets you attack with speed and keeps defenders behind you.\n\nAway From Pressure Touch\n\nWhen a defender is close, touch the ball away from them — to the side or to your stronger foot, away from the pressure. This protects the ball and gives you time to pick your head up.\n\nStopping Touch\n\nSometimes the right first touch is controlled — stop the ball close to your feet so you can pass cleanly. This works best when you have time and a teammate is clearly open.\n\nDo Not Be Predictable\n\nIf you always take the same first touch in every situation, defenders learn your habit and close that space before you can use it. Mix your touches based on what is happening around you.\n\nBody Shape\n\nYour first touch direction is partly about body shape. If you are open-bodied, you can touch in any direction. If you are facing your own goal, your options are more limited. Good scanning before the ball helps you set your body shape before you receive.\n\nSimple Rule\n\nFirst touch should make the second touch easier — not harder.",
+        callouts: [
+          { title: "Protect or attack", body: "Touch away from pressure when tight. Touch forward when you have space." },
+          { title: "Set up the next", body: "Your first touch should make your second touch easy, not harder." },
+        ],
+        bullets: [
+          {
+            title: "First touch choices",
+            items: [
+              "Forward — space in front, no pressure behind.",
+              "Away from pressure — defender close, protect the ball.",
+              "Controlled stop — teammate clearly open, pass cleanly.",
+              "Sideways — pressure from one side, find a new angle.",
+            ],
+          },
+        ],
+        coachSays: "A first touch that puts the ball in the right place is worth more than a perfect pass that comes from a bad position. Touch first, then play.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are a midfielder receiving a pass. You scanned before the ball arrived and you know a defender is right behind you, closing fast. There is a teammate open to your left.",
+          choices: [
+            { label: "Touch the ball forward into the space ahead", response: "If a defender is right behind you, touching forward runs you into them. That is the opposite direction from your open teammate. Touch away from the pressure — left or sideways — and use the open player instead." },
+            { label: "Touch the ball away from the pressure toward the open teammate", response: "Yes. You already knew the defender was behind you from your scan. Now touch away from them, toward where the open teammate is. That single first touch solves the problem and creates the next opportunity." },
+            { label: "Stop the ball and wait to see what the defender does", response: "Stopping and waiting gives the defender time to get set and close down your space. Your scan already told you where the pressure is and where your teammate is — use that information immediately. A good first touch is faster than any reaction a defender can make." },
+          ],
+        },
       },
       {
         slug: "one-v-one-decisions",
         title: "1v1 Decisions",
         summary: "Know when to dribble, pass, shield, or turn away.",
-        body: "A 1v1 does not always mean you must beat the player. You can dribble if there is space, pass if a teammate is open, shield if pressure is tight, or turn away if the risk is too high.\n\nThe best players read the defender's speed and body shape. If the defender is off balance, attack. If the defender is set, move the ball or use support.\n\nSimple rule: do not force the hard play when an easy play helps the team.",
+        body: "Not Every 1v1 Needs a Dribble\n\nWhen a defender is in front of you, you have more options than just trying to beat them. Choosing the right option is what makes a player dangerous — not just trying the same move every time.\n\nDribble\n\nDribble when there is space behind the defender and no easy pass available. If the defender is off balance or moving the wrong way, attack. Take them on when the risk is worth the reward.\n\nPass\n\nPass when a teammate is in a better position than you. This is the simplest and most effective option. The defender cannot be in two places at once — if they are on you, a teammate is open.\n\nShield\n\nShield when pressure is coming from behind and you do not have a good forward option. Keep the ball between you and the defender. Use your body. Wait for a teammate to give you an option.\n\nTurn Away\n\nTurn away when the pressure is too high and the risk of losing the ball is greater than the reward of trying to go forward. Sometimes playing back is the smartest move.\n\nRead the Defender\n\nWatch the defender's feet and body weight. If they are off balance — leaning one way — attack the other side. If they are set and balanced, the pass is usually better than the dribble.\n\nSimple Rule\n\nDo not force the hard play when an easy play helps the team. Choose what helps the team, not what looks impressive.",
+        callouts: [
+          { title: "Read the defender", body: "Off balance — attack. Set and balanced — pass or wait." },
+          { title: "Four options", body: "Dribble, pass, shield, or turn away. Know all four." },
+        ],
+        bullets: [
+          {
+            title: "1v1 decision guide",
+            items: [
+              "Dribble — space behind the defender, defender is off balance.",
+              "Pass — teammate is open and in a better position.",
+              "Shield — pressure from behind, wait for an option.",
+              "Turn away — too much pressure, reset and keep possession.",
+            ],
+          },
+        ],
+        comparison: {
+          left: {
+            label: "Forced 1v1",
+            items: [
+              "Always tries to dribble",
+              "Ignores open teammates",
+              "High risk of losing the ball",
+              "Defenders learn the habit",
+              "Makes teammates passive",
+            ],
+          },
+          right: {
+            label: "Smart 1v1",
+            items: [
+              "Reads the defender first",
+              "Uses teammates when they are open",
+              "Dribbles when the odds are in favor",
+              "Keeps defenders guessing",
+              "Makes the whole team better",
+            ],
+          },
+        },
+        coachSays: "The defender wants you to try to beat them when they are ready for it. Be patient. The moment they are off balance, go. The moment a teammate is free, use them.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are a winger in the attacking third. A defender is right in front of you, balanced and set. You have a striker making a run across the box to your left.",
+          choices: [
+            { label: "Try to dribble past the defender anyway — you are in the attacking third", response: "The defender is balanced and set — those are the worst conditions to take someone on. Dribble when the defender is off balance, not when they are ready. The striker is making a run and that is the better option right now." },
+            { label: "Pass to the striker making the run across the box", response: "Smart. The defender cannot be in two places. If they are covering you, your striker has space. Use that. A well-timed pass to a running striker is more dangerous than a dribble against a set defender." },
+            { label: "Shield the ball and wait for another option to appear", response: "Shielding works when pressure comes from behind and you have no good forward option. But you are in the attacking third and a striker is already running — there is a clear forward option. Use it before the run ends." },
+          ],
+        },
       },
       {
         slug: "supporting-teammates",
         title: "Supporting Teammates",
         summary: "Move into useful space when a teammate has the ball.",
-        body: "Support means moving where your teammate can actually use you. Do not hide behind a defender. Move to an angle where the passer can see you and reach you.\n\nGood support can be close, wide, behind, or forward depending on pressure. If your teammate is under pressure, give a safe option. If your teammate has time, stretch the field and create space.\n\nSimple rule: if your teammate has the ball, your job is to become useful.",
+        body: "What Support Means\n\nSupporting a teammate means moving into a position where they can actually use you. Not standing near them. Not hiding behind a defender. Moving to an angle where the passer can see you and reach you with a clean pass.\n\nTwo Kinds of Support\n\nClose support means getting near the ball carrier so they have a short safe option. Wide support means spreading to the channel or the far side to stretch the defense and give a longer option. Good players give both kinds of support, depending on what the situation needs.\n\nSupport Under Pressure\n\nIf your teammate is under pressure, they need you close and easy to find. Do not drift away. Get to a short safe angle — usually to the side or slightly behind the ball — so they can release the pressure quickly.\n\nSupport With Time\n\nIf your teammate has time and no pressure, they do not need you close. Stretch the field. Get wide, make a run in behind, or create space. Give them a big option, not a small one.\n\nAngles Matter\n\nDo not stand directly behind a defender. The passer cannot reach you there. Move to the side of the defender, or into open space. Even a small shift in your position can open the passing lane.\n\nCall and Show\n\nLet your teammate know you are there. A short call — open, left, back — helps the player with the ball make their decision faster. Support is also communication.\n\nSimple Rule\n\nIf your teammate has the ball, your job is to become useful. Move. Create an option. Talk.",
+        callouts: [
+          { title: "Move to be useful", body: "Standing near a teammate is not support. Move to an angle where they can use you." },
+          { title: "Match the pressure", body: "If they are under pressure, stay short. If they have time, stretch the field." },
+        ],
+        bullets: [
+          {
+            title: "Support habits",
+            items: [
+              "Move to an angle the passer can reach — not behind a defender.",
+              "Stay short if your teammate is under pressure.",
+              "Stretch wide or run in behind if your teammate has time.",
+              "Call to let them know you are there.",
+              "If you cannot receive, move again. Do not stand still.",
+            ],
+          },
+        ],
+        coachSays: "If you are standing still while your teammate has the ball, you are not helping them. Movement creates options. Options create goals.",
+        practice: {
+          type: "true-false" as const,
+          statement: "Standing close to the player with the ball always counts as good support.",
+          answer: false,
+          explanation: "Support means being somewhere your teammate can actually use you — an angle they can see and reach. If you are standing directly behind a defender, or bunched in the same crowded zone, you are not giving a real option. Move to an open angle and show yourself clearly.",
+        },
       },
     ],
     sections: [
