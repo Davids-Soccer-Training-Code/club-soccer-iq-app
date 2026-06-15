@@ -34,6 +34,22 @@ export type LearningModule = {
     };
     coachSays?: string;
     funFact?: { title: string; body: string };
+    videos?: { title: string; youtubeId: string }[];
+    videoIntro?: string;
+    afterVideosBody?: string;
+    diagram?:
+      | "get-wide-stay-wide"
+      | "look-to-go-forward"
+      | "create-2v1-and-3v1"
+      | "get-compact-stay-compact"
+      | "first-defender"
+      | "cover-and-support"
+      | "transition-win-secure"
+      | "transition-win-safe"
+      | "transition-win-forward"
+      | "transition-lose-effort"
+      | "transition-lose-press"
+      | "transition-lose-cover";
     positionContent?: {
       prompt: string;
       positions: {
@@ -3448,352 +3464,1387 @@ export const learningModules: LearningModule[] = [
   {
     slug: "team-tactical-principles",
     title: "Team Tactical Principles",
-    summary: "Learn team ideas for attacking, defending, support, and transition moments.",
+    summary: "The team's principles for attacking, defending, transitions, restarts, and game scenarios.",
     importance: "Build Next",
     importanceTone: "low",
     imageSrc: "/module-images/team-tactical-principles.png",
     imagePrompt:
       "Youth soccer team moving together in organized shape during training, coach-style tactical feel, visible spacing and support angles, bright realistic sports image, no text, no logos, 16:9",
     lessons: [
+      // Module 1: Attacking Principles
       {
-        slug: "with-the-ball",
-        title: "With the Ball",
-        summary: "Spacing and support when your team has possession.",
-        body: "What With-the-Ball Means\n\nWhen your team has the ball, every player has a job — not just the player with the ball. Your team needs to be organized so the ball can move and the defense has to keep shifting.\n\nSpread Out\n\nThe first rule is simple: spread out. When players crowd together, the defense only needs to cover a small area. When players spread across all three channels and across the thirds, the defense has to cover more ground and bigger gaps open up.\n\nGive Passing Options\n\nThe player with the ball should always have at least two options. If you are not on the ball, your job is to be one of those options. Move to a place where the passer can see you and reach you with a clean pass.\n\nKeep vs. Go Forward\n\nNot every pass needs to go forward. Sometimes keeping the ball and moving it sideways or backward is the right move. This keeps the defense shifting and creates new openings. Know the difference between a moment to go forward and a moment to be patient.\n\nBall Circulation\n\nWhen the ball moves, your team moves. The whole shape shifts together. If the ball goes left, players shift left. If the ball goes into the attacking third, players push forward. This is called ball circulation — moving the ball to move the defense.\n\nSimple Rules\n\nKeep width across all three channels. Have at least two passing options near the ball. Keep your spacing — do not follow the ball into a crowded area. Move the shape when the ball moves.",
+        slug: "get-wide-stay-wide",
+        title: "Get Wide, Stay Wide",
+        summary: "Use the width of the field to stretch the defense.",
+        body: "Our Shape: 3-4-1\n\nWe play out of a 3-4-1 — three defenders across the back, four players across midfield, and one player up top as our target. When we have the ball, this shape is our starting point for attacking. But the shape only works if players move into the right spaces once we are in possession.\n\nWhat 'Get Wide' Means\n\nGetting wide means moving toward the touchline and using the full width of the field. In our 3-4-1, this is mainly the job of our two wingers (LW and RW), but every player should understand it — the spacing of the whole team depends on it.\n\nGet Wide AND Get Open\n\nGetting wide is not just about standing near the touchline. If you are wide but hiding behind a defender, or standing somewhere a teammate cannot pass to you, you are not actually helping. Getting wide means finding a spot on the touchline where a teammate can see you and reach you — in front of the defender, in the gap between two defenders, or in the space behind the opponent's midfield line.\n\nStay Wide — Resist the Pull to the Middle\n\nWhen the ball is on the other side of the field, your instinct might be to drift toward the center to 'get involved.' Resist that pull. If you drift inside, the touchline space disappears and the field gets smaller for our team — which makes it easier for the defense. Stay in your channel. Trust that the ball will come to you.\n\nWhy We Get Wide: Stretch the Field\n\nThe purpose of width is to stretch the field — to make it as big as possible for the other team to defend. When both wide players hold the touchlines, the defense has to spread out to cover them. That stretching opens gaps between defenders and in the middle of the field for our central players to use.\n\nStaying Connected\n\nGetting wide does not mean playing alone out there. The team still needs to stay connected — close enough that passes are on, with players creating angles to support each other. When we are wide and connected, we can swing the ball from side to side, find gaps, and play forward into the space the other team is forced to leave open.",
         callouts: [
-          { title: "Spread out", body: "When your team is spread across all three channels, the defense cannot cover everything." },
-          { title: "Be useful", body: "If you are not on the ball, your job is to be an option the ball carrier can use." },
+          { title: "Wide and open", body: "Getting wide only helps if a teammate can actually pass to you." },
+          { title: "Stretch, don't shrink", body: "Holding your width stretches the defense and opens space centrally." },
         ],
         bullets: [
           {
-            title: "With-the-ball team habits",
+            title: "Get wide checklist",
             items: [
-              "Keep width — stay in your channel unless there is a clear reason to move.",
-              "Create at least two passing options near the ball.",
-              "Do not follow the ball and crowd the same zone.",
-              "Be patient — sideways or backward passes are smart when forward is blocked.",
-              "Shift the whole shape when the ball moves to a new area.",
+              "Find the touchline in your channel.",
+              "Make sure a teammate can see you and reach you with a pass.",
+              "Do not stand directly behind a defender.",
+              "Look for the gap between the opponent's lines.",
+            ],
+          },
+          {
+            title: "Stay wide habits",
+            items: [
+              "Do not drift inside just because the ball is on the other side.",
+              "Hold your width until the ball or a teammate's run changes the picture.",
+              "Trust the switch — the ball can find you across the field.",
+              "If you do come inside, make sure a teammate fills your space.",
             ],
           },
         ],
         table: {
-          columns: ["Situation", "Good reaction", "Bad reaction"],
+          columns: ["Situation", "Get-wide habit", "What it does"],
           rows: [
-            ["Ball is under pressure", "Give a safe option to feet.", "Stand and watch."],
-            ["Ball is in the center", "Wide players stay wide.", "Everyone drifts central."],
-            ["Ball goes forward", "Push the line forward.", "Stay back and leave gap."],
-            ["Defense crowds the ball", "Switch to the open side.", "Keep passing into the crowd."],
+            ["Ball on your side", "Stay wide and show for the ball on the line.", "Gives the ball carrier a simple pass and keeps the field big."],
+            ["Ball on the far side", "Hold your width — do not drift to the ball.", "Keeps the defense stretched so the far side stays open."],
+            ["Defender steps to you", "Check into the gap they left behind.", "Creates a passing lane in the space the defender just vacated."],
+            ["You are camped behind a defender", "Move so a teammate can see and reach you.", "Turns a hidden player into a real passing option."],
           ],
         },
-        coachSays: "If you are not on the ball, ask yourself: can my teammate see me? Can they reach me? If the answer is no to either, move.",
+        coachSays: "Width is not a place to disappear — it's a place to be dangerous. Get wide, stay open, and make the defense choose between you and the ball.",
         practice: {
           type: "what-would-you-do" as const,
-          scenario: "Your team has the ball and is building out of the back. Your midfielder is on the ball in the center channel with a defender closing in. You are in the right channel with space in front of you.",
+          scenario: "You are our left winger in the 3-4-1. The ball is on the right side of the field with our right winger. You start to drift toward the center to 'get involved.'",
           choices: [
-            { label: "Run toward the midfielder to help them", response: "You would be moving into the same crowded area as the defender. If you come central, you remove the width option that stretches the defense. Stay wide — be the option your midfielder can use to escape pressure." },
-            { label: "Stay wide in the right channel and make yourself available", response: "Yes. Your width is valuable. By staying in your channel, you give your midfielder a clean pass option away from pressure. The defense has to choose — close the ball or track you. If they stay, the pass to you is easy." },
-            { label: "Run forward into the attacking third to get in behind", response: "Running behind is good timing if the ball is secure. But if your midfielder is under pressure, they need a short safe option first, not a long ball forward. Read the pressure — if they need help now, stay short. If they are okay, make the run." },
+            { label: "Keep drifting toward the ball so you are closer to the action", response: "If you drift to the ball side, both wide players end up in the same area and the left touchline disappears. The defense can shrink the field and crowd the ball. Hold your width — the switch can find you." },
+            { label: "Stay wide on the left touchline and stay ready for the switch", response: "Yes. By holding your width, you keep the field stretched. If the ball switches to you, you have space to attack. If it doesn't, you are still pulling a defender wide, which opens room for your teammates centrally." },
+            { label: "Move wide but tuck in just behind the opponent's wide defender", response: "Being wide only helps if a teammate can actually find you. If you are hidden directly behind a defender, the pass cannot reach you even if you are technically 'wide.' Get wide in a spot where you can be seen and played to." },
+          ],
+        },
+        diagram: "get-wide-stay-wide",
+      },
+      {
+        slug: "look-to-go-forward",
+        title: "Look to Go Forward",
+        summary: "Always check forward options first when you have the ball.",
+        body: "Plan A: Go Forward\n\nWhen you receive the ball, your first look should be forward. Do not be afraid of it. Forward does not just mean a pass — it can be a dribble at a defender, a pass into a teammate's path, or even a straight breakaway if the space is there. Before you do anything else, ask: is there space in front of me, and can I or a teammate get into it?\n\nPlan B: Go Wide\n\nIf forward is not on, the next look is wide — the same width we talked about in Get Wide, Stay Wide. A switch to a winger who is wide and open can open up the field again and create a new forward option a moment later. Wide is not giving up on going forward. It is often the quickest way back to it.\n\nPlan C: Play It Back — But Only If Safe\n\nIf forward and wide are both covered, playing the ball backward to keep possession is okay. It is not a failure — it can be the smart choice. The key word is safe. A backward pass should be an easy, controlled pass to a teammate who has time and space, not a rushed ball that puts a teammate under pressure right in front of our own goal.\n\nPass Into Space, Not Just to Feet\n\nLooking forward is not only about finding a teammate standing in a good spot. Often the best forward pass is played into the space ahead of a teammate's run, so they can attack it at speed. A pass to feet can get a player marked tightly from behind. A pass into space lets them turn and run at the defense.\n\nThe One Place We Never Play It\n\nNo matter what — forward, wide, or back — there is one option that is never on: a pass to the other team. If you are under pressure and forward, wide, and back all look risky, take the safer option even if it feels less exciting. A simple pass into space toward our own goal is always better than forcing a pass that gets intercepted.",
+        callouts: [
+          { title: "Forward first", body: "Before anything else, check if you, or a teammate, can go forward — dribble, pass, or breakaway." },
+          { title: "Never to them", body: "A pass to the other team is never the right choice, no matter how risky the alternatives look." },
+        ],
+        bullets: [
+          {
+            title: "Your decision order",
+            items: [
+              "1. Forward — can I dribble, pass forward, or send a teammate on a breakaway?",
+              "2. Wide — if forward is covered, can I switch to a wide, open teammate?",
+              "3. Back — if forward and wide are covered, is there a safe pass backward?",
+              "Never — a pass that gives the ball to the other team.",
+            ],
+          },
+          {
+            title: "Passing into space checklist",
+            items: [
+              "Look for the run a teammate is about to make, not just where they are standing.",
+              "Play the pass slightly ahead of them so they can run onto it.",
+              "A pass into space lets a teammate turn and attack — a pass to feet can get them marked from behind.",
+              "Weight the pass so it reaches the space before the defender does.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "What to look for", "Why"],
+          rows: [
+            ["Space in front of you", "Dribble forward or play a forward pass into space.", "The fastest way to create a chance is to attack space before the defense resets."],
+            ["Forward is covered", "Switch wide to an open teammate.", "Width can stretch the defense and open a new forward option."],
+            ["Forward and wide are covered", "Play a safe pass backward to keep possession.", "Keeping the ball is better than forcing a risky pass."],
+            ["Under heavy pressure, no safe options", "Take the safest available option, even if it is less exciting.", "Losing the ball to the other team is always the worst outcome."],
+          ],
+        },
+        coachSays: "Forward first — always. If it's not on, go wide. If that's not on, go back, but only if it's safe. The one thing that's never on is giving it to them.",
+        diagram: "look-to-go-forward",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You receive the ball in the middle third. A teammate is making a run into open space ahead of you, but they are still a few steps from the ball reaching them. Another teammate is standing still, closely marked, a few yards away.",
+          choices: [
+            { label: "Pass it firmly to the feet of the closely marked teammate", response: "This pass is risky and does not gain much. The marked teammate has a defender right on them and little room to do anything useful with it." },
+            { label: "Play the pass into the space ahead of your teammate's run", response: "Yes. This pass lets your teammate run onto the ball at speed, away from their marker, and keeps your team moving forward." },
+            { label: "Play it backward to your goalkeeper to be safe", response: "Going backward isn't wrong when forward and wide are covered, but here a good forward option exists. Going backward when forward is on gives up good attacking ground for no reason." },
           ],
         },
       },
       {
-        slug: "without-the-ball",
-        title: "Without the Ball",
-        summary: "Pressure, cover, and team shape when defending.",
-        body: "What Without-the-Ball Means\n\nWhen the other team has the ball, every player has a job. Defending is a team job, not just the job of the players nearest the ball.\n\nPressure\n\nThe closest player to the ball applies pressure. Pressure means closing the space, not standing back and watching. The goal is to make the ball carrier uncomfortable and reduce their options.\n\nCover\n\nThe second player near the ball provides cover. They are slightly behind and to the side of the pressing player, ready to pick up if the pressure is beaten. Cover stops easy dribbles through.\n\nBalance\n\nThe rest of the team maintains balance. Balance means players are spread across the shape so there are no empty lanes the other team can play into. Players track runners, cover space, and hold their defensive position.\n\nCompact Shape\n\nA compact defensive shape means players are not too spread out vertically. The lines are close together, which squeezes space and forces the other team sideways or backward.\n\nFirst and Second Balls\n\nWhen the ball is in the air or loose, your team needs players ready for the first ball and the second ball. The first ball is who wins the header or first touch. The second ball is who picks it up if it bounces out.\n\nSimple Rules\n\nClose the ball. Cover the presser. Stay compact. Track runners. Win first and second balls.",
+        slug: "pass-to-feet-space-or-angles",
+        title: "Pass to Feet, Space, or Angles",
+        summary: "Know the three kinds of passes and when to use each.",
+        body: "The Worst Thing You Can Do\n\nBefore anything else: passing the ball to the other team is the worst thing you can do on a soccer field. There are so many options on the ball that do not require panicking and kicking it away. Slow down, look at your choices, and pick one of them.\n\nPass to Feet\n\nIf a teammate is open and has space to receive, play it to their feet. A pass to feet is simple, controlled, and keeps possession moving. Before you pass, communicate — let your teammate know if an opponent is closing in behind them, or call them to come to the ball if they need to check toward you.\n\nPass to Space\n\nSometimes a pass straight to feet is not the best option, even if a teammate is technically open — maybe they are tightly marked and a pass to feet gets them in trouble immediately. In that case, play it slightly ahead of them, to their left or right, into the space where they can run onto it. A pass into space lets your teammate attack in the direction that helps the team most, instead of receiving the ball with their back to goal and a defender on top of them.\n\nPassing Angles — Breaking Lines\n\nA passing angle is a pass played through a gap in the defense to break their line — sending the ball past a row of opponents so a teammate can run onto it on the other side. A lot of these passes come from our four midfield players in the 3-4-1, threading the ball through the opposition's defensive line for a teammate to attack.\n\nWhen All Else Fails: The Tactical Clearance\n\nThis does not mean you can never just kick the ball. If you are in a tight 1v1 near your own goal, in the defensive third, under real pressure, and you cannot find a pass to feet, space, or through a gap — a tactical clearance is a smart choice. Get the ball away from danger, out of bounds, or up the field. A clearance is a thousand times better than panicking and giving the ball straight to the other team.",
         callouts: [
-          { title: "Close quickly", body: "The closer you press, the fewer options the ball carrier has." },
-          { title: "Cover the presser", body: "The second player should be slightly behind and ready, not watching." },
+          { title: "Never to them", body: "Passing to the other team is the worst outcome on the field — there is almost always a better option." },
+          { title: "Lead the run", body: "A pass into space lets a teammate attack forward instead of receiving with a defender on their back." },
         ],
         bullets: [
           {
-            title: "Defensive team habits",
+            title: "Pass to feet — do this",
             items: [
-              "Pressure the ball — the closest player closes immediately.",
-              "Cover behind the presser — the second player protects against a beat.",
-              "Stay compact — do not let gaps open between your lines.",
-              "Track runners — know who you are responsible for.",
-              "Talk — call runners, call when covered, call when free.",
+              "Check that your teammate has time and space to receive.",
+              "Communicate — call out if a defender is closing in behind them.",
+              "Tell them to check to the ball if they need to come find it.",
+              "Use a simple, controlled pass — no need to overcomplicate it.",
             ],
           },
+          {
+            title: "Pass to space — do this",
+            items: [
+              "Look at the direction your teammate can run that helps the team most.",
+              "Play the ball slightly ahead of them, into that space.",
+              "Weight the pass so it arrives as they arrive — not too far ahead, not too short.",
+              "Use this when a pass to feet would put your teammate under immediate pressure.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Pass type", "When to use it", "What it does"],
+          rows: [
+            ["To feet", "Teammate is open with time and space.", "Keeps possession simple and controlled."],
+            ["Into space", "Teammate is marked or about to make a run.", "Lets a teammate attack forward at speed, away from pressure."],
+            ["On an angle (breaking lines)", "There is a gap between opponents' lines, often from one of our midfielders.", "Sends a teammate through the defense to attack the space behind it."],
+            ["Tactical clearance", "Tight 1v1 near our own goal, no pass available.", "Gets the ball to safety — far better than giving it to the other team."],
+          ],
+        },
+        coachSays: "Giving it to them is never the answer. To feet, into space, through a gap, or away to safety — there's always something better than just kicking it to the other team.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are one of our central midfielders in the 3-4-1 and you have the ball. You spot a teammate making a run between two opponents, into the space behind their midfield line.",
+          choices: [
+            { label: "Play it straight to your teammate's feet right now", response: "Your teammate is making a run, not standing still — a pass to feet here would slow them down and might get cut out by the defenders they're running past." },
+            { label: "Thread the pass through the gap, into the space they're running into", response: "Yes. This is a passing angle that breaks the defensive line — your teammate runs onto the ball on the other side of the opponents, in space." },
+            { label: "It feels risky, so just clear it up the field instead", response: "A clearance is for emergencies — tight spaces near your own goal with no options. Here you have a clear passing angle through the line. Take it." },
+          ],
+        },
+      },
+      {
+        slug: "create-2v1-and-3v1",
+        title: "Create 2v1 and 3v1 Situations",
+        summary: "Use numbers-up situations to break down the defense.",
+        body: "The Attacking Number Always Goes First\n\nWhen we talk about numbers on the field — 2v1, 3v2, 1v0 — the attacking number always comes first, and the defending number comes second. So a 3v2 means three attackers against two defenders — the attackers have the advantage. A 1v2 means one attacker against two defenders — the attacker is outnumbered. In this lesson, we are the attacking team, so our numbers are the ones listed first.\n\nFrom 1v2 to 3v2: Support the Run\n\nAfter we look to go forward and find space — whether it's a dribble or a pass into space — we are not done. The team's job now is to support the player on the ball and turn a bad number (1v2) into a good number (3v2, 2v1, or even 1v0, a clean breakaway).\n\nPicture our CM driving forward with the ball and space to run into, but two opposing center backs are between them and the goal. On their own, that's a 1v2 — the odds favor the defense. But our CAM and ST can recognize the moment and join the run, arriving alongside the CM. Now it's 3 attackers against their 2 defenders — a 3v2. The defenders cannot mark all three of us at once, and our CM has passing angles to break through.\n\nWhere Support Comes From\n\nSupport does not come from one fixed player every time. Often it's the CAM and ST, since they are already higher up the field. But depending on which side the ball is on, a winger nearby can also join the overload. The point is recognizing the moment — when a teammate goes forward into space, the players around them should be reading it and moving to create extra numbers.\n\nCommunication and Passing Angles\n\nNone of this works without communication and good passing angles. The player making the run should call for support or signal where they're going. The supporting players need to find an angle the ball carrier can actually use — not stand directly behind a defender, but in a spot that gives a clear passing lane. Together, that's how 1v2 becomes 3v2, and how 3v2 can turn into a 1v0 breakaway on goal.\n\nWhat Not to Do: Watch Alone\n\nThe worst version of this is doing nothing — watching a teammate try to beat two defenders by themselves with no support arriving. If our CM is stuck in a 1v2 and everyone else just watches, we are giving the defense an easy job. Numbers up does not happen by accident — it happens because teammates move to create it.",
+        callouts: [
+          { title: "Attacking number first", body: "2v1, 3v2, 1v2 — the attacking number always comes first, the defending number second." },
+          { title: "Numbers up by choice", body: "A 3v2 doesn't happen on its own — teammates have to recognize the moment and move to create it." },
+        ],
+        bullets: [
+          {
+            title: "Turning 1v2 into 3v2",
+            items: [
+              "Recognize when a teammate has driven into space and is facing defenders alone.",
+              "CAM, ST, or a nearby winger reads the moment and joins the run.",
+              "Find an angle the ball carrier can actually pass to — not hidden behind a defender.",
+              "Communicate — call for the ball or signal where you're going.",
+            ],
+          },
+          {
+            title: "What to avoid",
+            items: [
+              "Standing still and watching a teammate try to beat two defenders alone.",
+              "Bunching up next to the ball carrier instead of finding a different angle.",
+              "Arriving late, after the defenders have already recovered their shape.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "What it means", "What we do"],
+          rows: [
+            ["1v2", "One of us attacking, two of them defending — we are outnumbered.", "Look for support arriving before committing to take both defenders on."],
+            ["2v1", "Two of us attacking, one of them defending — we have the advantage.", "Use the extra player to create a passing angle and break through."],
+            ["3v2", "Three of us attacking, two of them defending — a strong overload.", "Spread out so the defenders can't cover every passing angle."],
+            ["1v0", "A clean breakaway — only the goalkeeper to beat.", "The reward for turning the numbers in our favor."],
+          ],
+        },
+        coachSays: "The attacking number always goes first. A 1v2 is a problem to solve together, not something one player has to win alone. Move, support, and turn it into a 3v2.",
+        diagram: "create-2v1-and-3v1",
+        practice: {
+          type: "true-false" as const,
+          statement: "If our CM is attacking and faces two defenders alone, that's a 1v2 — and a 3v2 means three attackers against two defenders.",
+          answer: true,
+          explanation: "The attacking number always goes first, the defending number second. A 1v2 means 1 attacker vs 2 defenders — outnumbered. A 3v2 means 3 attackers vs 2 defenders — numbers up for the attack.",
+        },
+      },
+      {
+        slug: "protect-support-attack",
+        title: "Protect, Support, Attack",
+        summary: "Once we have the ball: protect it, support the player on it, and attack with purpose.",
+        body: "Protect: Win the First Touch\n\nThe moment the ball arrives, your first job is to protect it. Take a good first touch — away from pressure, and never into the other team. Before the ball even gets to you, scan the field so you know what's around you. If you already know where the pressure is coming from, a defender can't surprise you and win the ball easily.\n\nProtect: Take a Touch Into Space\n\nIf you're under pressure, take your touch into the space away from the defender — using your body to shield the ball if you need to. Once you have it under control, immediately think about what's next: can you dribble, can you keep controlling it, or is there space to break into? Do not freak out. A calm, protected first touch buys you time to make the next decision.\n\nSupport: Move, Don't Stand Still\n\nEveryone else on the team has a job too the moment we have the ball: support. Move into space, away from opponents, so you give the player on the ball an option. Never stand still — a player who isn't moving is easy to mark and gives no help at all. Good support means constantly adjusting your position based on where the ball and the defenders are.\n\nAttack with Purpose: Get It Moving\n\nOnce we have protected the ball and have support around us, the next step is to attack with purpose. If there's space, get the ball moving — don't slow the game down for no reason. Play with good speed, take clean controlling touches, and when the chance is there, don't be afraid to shoot. Every touch should be moving us closer to a goal, not just keeping the ball for the sake of it.",
+        callouts: [
+          { title: "Protect first", body: "A good first touch away from pressure is the foundation — everything else starts from there." },
+          { title: "Never stand still", body: "If you don't have the ball, your job is to move and create an option for the player who does." },
+        ],
+        bullets: [
+          {
+            title: "Protect the ball",
+            items: [
+              "Scan before the ball arrives so you know where the pressure is.",
+              "Take your first touch away from defenders — never into the other team.",
+              "Use your body to shield the ball if a defender is close.",
+              "Decide fast: dribble, keep controlling, or break into space.",
+            ],
+          },
+          {
+            title: "Support and attack with purpose",
+            items: [
+              "Move into space away from opponents — give the ball carrier an option.",
+              "Never stand still — adjust your position as the ball moves.",
+              "When there's space, get the ball moving with good speed.",
+              "Take clean touches and don't be afraid to shoot when the chance is there.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Job", "What to do", "Why it matters"],
+          rows: [
+            ["Protect", "Scan, take a good first touch away from pressure, shield if needed.", "A careless first touch is one of the easiest ways to give the ball away."],
+            ["Support", "Move into space, never stand still.", "Gives the player on the ball a real option instead of leaving them alone."],
+            ["Attack with purpose", "Get it moving with speed, take clean touches, shoot when it's on.", "Every attack should have a clear aim — scoring."],
+          ],
+        },
+        coachSays: "Protect it, support each other, then go score. Calm first touch, keep moving, and when the chance is there — don't think twice, shoot.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If you're not the one with the ball, the best thing to do is stay where you are so your teammate always knows exactly where to find you.",
+          answer: false,
+          explanation: "Standing still makes you easy to mark and gives the ball carrier no real option. Support means moving into space away from opponents — your teammate needs you to create an angle, not just stay put.",
+        },
+      },
+      // Module 2: Defending Principles
+      {
+        slug: "get-compact-stay-compact",
+        title: "Get Compact, Stay Compact",
+        summary: "Shrink the field for the other team — the opposite of getting wide.",
+        body: "The Opposite of Getting Wide\n\nWhen we attack, we get wide and look to go forward to stretch the field and create space. When we defend, we do the exact opposite. Get compact, stay compact — pull our lines close together to shrink the field and take space away from the other team.\n\nOur Back Three: CB, CB, and CDM\n\nThe clearest example is our back three. In the 3-4-1, our central center back plays a more advanced, CDM-style role when we're attacking — but when we lose the ball, all three of our defenders need to come together as a compact back line. The two outside CBs and the central CB work as a unit, staying close enough that there is no clean gap between them for the other team to run or pass through.\n\nWhy Gaps Are Dangerous\n\nIf our back three is spread too wide apart, the space between each defender becomes a highway straight at our goal. An attacker only needs to find one of those gaps to run into dangerous space. When we are compact, those gaps close up — the attacker has nowhere clean to go, and it buys time for our midfielders to get back and help.\n\nStay Compact, Not Just Get Compact\n\nGetting compact for one moment isn't enough — we have to stay compact as the ball moves. If one CB steps to challenge, the other two need to shift and adjust so the line stays connected. Just like staying wide on attack, staying compact on defense is a constant adjustment, not a one-time fix.",
+        callouts: [
+          { title: "Shrink the field", body: "Compact defending takes away the space the other team needs to play through us." },
+          { title: "Work as a unit", body: "Our back three moves together — when one shifts, the others shift with them." },
+        ],
+        bullets: [
+          {
+            title: "Get compact checklist",
+            items: [
+              "Close the gaps between our outside CBs and the central CB.",
+              "Don't let one defender get isolated far from the other two.",
+              "Match the other defenders' depth — don't be the one out of line.",
+              "Communicate to keep the back three connected.",
+            ],
+          },
+          {
+            title: "Stay compact habits",
+            items: [
+              "When the ball moves, shift together — don't leave gaps behind.",
+              "If a CB steps up to challenge, the others adjust to cover.",
+              "Keep the line tight even when the ball is far away.",
+              "Compactness buys time for midfielders to recover and help.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Stay-compact habit", "What it does"],
+          rows: [
+            ["Ball is switched wide", "Shift the back three together toward the ball side.", "Keeps the line connected instead of leaving the far side exposed."],
+            ["A CB steps to pressure", "The other two CBs adjust to cover the gap left behind.", "Closes the space the attacker would otherwise run into."],
+            ["Opponent looks to play through the middle", "Stay tight — don't let the gap between CBs open up.", "Removes the passing lane straight at our goal."],
+          ],
+        },
+        coachSays: "When we attack, we make the field big. When we defend, we make it small. Stay close, stay connected — don't let them find a gap in our back three.",
+        diagram: "get-compact-stay-compact",
+        practice: {
+          type: "true-false" as const,
+          statement: "Getting compact means our back three should spread as wide as possible across the field, just like we do when attacking.",
+          answer: false,
+          explanation: "Getting compact is the opposite of getting wide. On defense, our back three pulls together to close gaps and shrink the space the other team can play through.",
+        },
+      },
+      {
+        slug: "prevent-going-forward",
+        title: "Prevent Them from Going Forward",
+        summary: "Closest player presses, everyone else marks tight and stays ready.",
+        body: "The Opposite of Looking to Go Forward\n\nWhen we have the ball, our first instinct is to look forward. When the other team has it, our job is to take that option away from them — prevent them from going forward.\n\nThe Closest Player Goes\n\nThe player nearest to the ball is responsible for going to stop the opponent on the ball — closing them down so they cannot easily turn, dribble forward, or play a forward pass. We'll go deeper on exactly how the first defender does this in the next lesson.\n\nEveryone Else Marks Up and Stays Ready\n\nWhile the closest player presses, every other defender has a job too: mark the player closest to you, and stay on your toes. That means staying close enough to cut off a pass to your player, and being ready to step in and intercept if the ball comes their way. We'll cover the second and third defender's roles in more detail in the next lessons — for now, the idea is simple: one player presses, everyone else is alert and ready.\n\nForce It Sideways or Backward\n\nIf we do this well, the player on the ball won't find a clean way forward. Our pressure and our marking should force them to play sideways or backward instead — which is exactly what we want. A team that can't go forward can't hurt us.",
+        callouts: [
+          { title: "One presses, all stay ready", body: "The closest player goes to the ball — everyone else marks tight and watches for the chance to step in." },
+          { title: "Force it backward", body: "If they can't go forward, they can't hurt us. Sideways and backward passes are a win for us." },
+        ],
+        bullets: [
+          {
+            title: "Closest player",
+            items: [
+              "Go to the player on the ball — don't wait and watch.",
+              "Close down the space so they can't turn easily or play forward.",
+              "Slow them down rather than diving in (more on this next lesson).",
+            ],
+          },
+          {
+            title: "Everyone else",
+            items: [
+              "Mark the player closest to you so they're not free for a pass.",
+              "Stay on your toes — be ready to step and intercept.",
+              "Watch for the moment a pass gives you the chance to win the ball.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Role", "Job", "Goal"],
+          rows: [
+            ["Closest player", "Press the ball carrier immediately.", "Take away time and the forward option."],
+            ["Every other defender", "Mark your player, stay ready to intercept.", "Take away easy passing options near the ball."],
+            ["Whole team", "Force the ball sideways or backward.", "A team that can't go forward can't create danger."],
+          ],
+        },
+        coachSays: "One of us goes to the ball — everyone else stays connected to their player, ready to pounce. If we do our jobs, they'll have nowhere forward to go.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When the other team has the ball, only the player closest to the ball has a job to do — everyone else can relax until the ball gets near them.",
+          answer: false,
+          explanation: "Every defender has a job at all times: the closest player presses, while everyone else marks their player tightly and stays ready to intercept a pass.",
+        },
+      },
+      {
+        slug: "first-defender-slows-them-down",
+        title: "The First Defender Slows Them Down",
+        summary: "The closest defender's job is to delay, not dive in.",
+        body: "Who Is the First Defender?\n\nThe first defender is the player closest to the opponent on the ball who is between the ball and our goal. That second part matters: a player who is behind the ball — closer to the opponent's goal than the ball is — does not count as the first defender, even if they're technically close by. The only way that player helps now is to sprint back into the play. As Coach David puts it: you are not helping anyone if you're standing there while the ball goes toward our goal.\n\nStep Up — Do Not Dive\n\nIf you are the first defender, step up to the ball carrier immediately. And do not dive in. This cannot be stressed enough. Diving in means lunging for the ball — and if you miss, the opponent is straight through with nobody in front of them.\n\nSlow Them Down and Win the Battle\n\nInstead of diving, slow the attacker down. Get close enough to put them under pressure, stay on your feet, and wait. Wait for them to take a heavy touch or make a mistake, then get your body in front of them. This is a physical battle, and it's one we need to win — but with patience, not a desperate lunge.\n\nWhy Slowing Them Down Matters\n\nThe whole point of slowing the attacker down is to buy time — time for your teammates to recover and become the second and third defenders. If nobody presses the ball, the other team gets to dribble forward freely and build an attack with no resistance. One defender doing their job right can be the difference for the entire team's shape.\n\nOnly One Person Presses\n\nThis is also about communication: only one player presses the ball at a time. If two players rush in, that leaves another opponent completely free and unmarked. While the first defender presses, there should always be a teammate ready to support — just in case the first defender loses the 1v1.\n\nShape Our Pressure\n\nThe first defender's pressure isn't just about getting close — it's about shaping the pressure. That means using your body position to push the attacker toward a specific side, forcing them in one direction (usually away from the most dangerous space) while the rest of the team shifts to support and cover that direction.\n\nWhy This Role Is So Important\n\nIf the first defender dives in and gets beaten, it doesn't just affect that one player — it can break down the entire defensive shape. The team has no time to recover, gaps open everywhere, and the attack that follows can be very hard to stop. Doing this job right, every time, protects everyone behind you.",
+        callouts: [
+          { title: "Do not dive", body: "A missed dive leaves nobody between the attacker and our goal. Stay on your feet and wait." },
+          { title: "Only one presses", body: "If two defenders rush the ball, another opponent is left completely free." },
+        ],
+        bullets: [
+          {
+            title: "Are you the first defender?",
+            items: [
+              "You are the first defender if you're the closest player between the ball and our goal.",
+              "If you're behind the ball, you don't count — sprint back into the play instead.",
+              "Standing still while the ball goes toward our goal helps nobody.",
+            ],
+          },
+          {
+            title: "What the first defender does",
+            items: [
+              "Step up immediately — don't wait and watch.",
+              "Do not dive in — stay on your feet and slow them down.",
+              "Wait for a heavy touch or mistake, then win the ball.",
+              "Shape your pressure to push the attacker toward a specific side.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "First defender's job", "Why it matters"],
+          rows: [
+            ["You're closest, between ball and goal", "Step up and apply pressure — shape it toward one side.", "Slows the attack and buys time for teammates to recover."],
+            ["You're closest, but behind the ball", "Sprint back into the play — you're not the first defender.", "Standing in place doesn't help if the ball is already past you."],
+            ["You're tempted to dive in", "Stay on your feet and wait for a mistake.", "A missed tackle leaves nobody between the attacker and goal."],
+            ["A teammate is already pressing", "Don't press too — get into a covering position instead.", "Two defenders on the ball leaves another opponent free."],
+          ],
+        },
+        coachSays: "Step up, don't dive. Shape your pressure, push them where we want them, and trust your teammates to recover behind you. One missed dive can break the whole shape.",
+        diagram: "first-defender",
+        practice: {
+          type: "true-false" as const,
+          statement: "If an opponent with the ball runs past you and you're now behind the play, you are still the first defender as long as you're the closest defensive player to them.",
+          answer: false,
+          explanation: "The first defender must be between the ball and our goal. A player behind the ball doesn't count as the first defender, no matter how close they are — their job now is to sprint back into the play.",
+        },
+      },
+      {
+        slug: "cover-and-support-defending",
+        title: "The Second and Third Defenders Cover and Support",
+        summary: "Defending is a team job — everyone else has a role too.",
+        body: "Everyone Else Is the Second and Third Defender\n\nThe second and third defender is not just two specific players — it's everyone else on the team. Once our first defender steps up to pressure the ball, every other player has a job: be active, stay on your mark, and be ready to help.\n\nCover: Block the Pass and Be Ready for the Next 1v1\n\nThe players closest to the action — the cover group — have two jobs at once. First, block the passing lanes to your mark so the ball carrier can't easily play out of the pressure. Second, stay ready to become the next first defender if our pressure gets beaten. Covering means staying active: tracking your mark, watching the ball, and being prepared to step into a 1v1 the moment it's needed.\n\nSupport: The Last Line, Ready for Anything\n\nSupport is everyone else — players who might not be near the ball right now but are still very important. These players are usually the last line of defense. Their job is to be ready for anything that gets through our first and second defenders, sliding across to help cover space on the far side of the field.\n\nAn Example: Ball in the Left Channel, Middle Third\n\nSay the ball is in our left channel, in the middle third. Our left winger is the first defender, pressuring the ball. Our CAM, CM, and left center back give cover — they block passing lanes to the winger's nearby opponents and stay ready for the next 1v1 if our LW gets beaten. Our support is the CDM, right center back, and right winger — they shift across from the right side to help out, ready to be the last line if the ball breaks through. If the ball were on the right side instead, it would be the same idea, just with the opposite positions.\n\nThe Big Rule\n\nFor every player on the field, ask three questions: Who's closest? Who's next closest? Who's furthest away? Whatever the answer, every single player has a job in that moment. The biggest thing to remember: everyone is active.",
+        callouts: [
+          { title: "Not just two players", body: "\"Second and third defender\" means everyone on the team — not literally two specific people." },
+          { title: "Everyone is active", body: "Closest, next closest, or furthest away — every player has a job the moment we don't have the ball." },
+        ],
+        bullets: [
+          {
+            title: "Cover (closest group)",
+            items: [
+              "Block the passing lane to your mark.",
+              "Track your mark and stay on your toes.",
+              "Be ready to become the next first defender if our pressure is beaten.",
+            ],
+          },
+          {
+            title: "Support (everyone else)",
+            items: [
+              "Slide across as the last line of defense.",
+              "Be ready for anything that gets through the first two layers.",
+              "Stay connected to the rest of the team — don't get isolated.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Group", "Who", "Job"],
+          rows: [
+            ["Pressure", "The first defender — closest to the ball, between it and our goal.", "Step up, slow them down, shape the pressure."],
+            ["Cover", "The next closest players to the ball.", "Block passing lanes and be ready for the next 1v1."],
+            ["Support", "Everyone else, often the last line.", "Slide across and be ready for anything that breaks through."],
+          ],
+        },
+        coachSays: "Second and third defender isn't two players — it's everyone. Closest, next closest, or furthest away, ask yourself what your job is right now. Everyone is active.",
+        diagram: "cover-and-support",
+        practice: {
+          type: "true-false" as const,
+          statement: "If the ball is in the left channel and you play on the right side of the field, you have no defensive job to do until the ball comes to your side.",
+          answer: false,
+          explanation: "Even players far from the ball are part of the support group — the last line of defense. They slide across to help cover space and be ready for anything that breaks through. Everyone is active.",
+        },
+      },
+      {
+        slug: "create-1v2-and-1v3",
+        title: "Create 1v2 and 1v3 Situations",
+        summary: "On defense, the attacking number stays low and our defending number stays high — that's how we win the ball back.",
+        body: "The Attacking Number Always Goes First\n\nSame rule as in attacking principles: the attacking number always comes first, the defending number second. The difference now is which side we're on. When we are defending, the opponent has the attacking number and we have the defending number. So a 1v2 means 1 attacker against 2 of our defenders — that's good for us. A 1v3 means 1 attacker against 3 of our defenders — even better.\n\nThis is the exact opposite of 2v1 and 3v1 from attacking principles. When we attack, we want big attacking numbers (2v1, 3v1) in our favor. When we defend, we want the attacker's number to stay as small as possible while ours stays high — 1v2, 1v3.\n\nHow We Get There\n\nThis is everything we've already covered, working together. Get compact, stay compact closes the gaps so the attacker can't easily find a second attacker to combine with. Prevent them from going forward and the first defender slowing them down buys time. The second and third defenders covering and supporting means that by the time the ball gets close to goal, it's not 1v1 anymore — it's 1v2 or 1v3 in our favor.\n\nWhy This Matters\n\nA lone attacker against one defender (1v1) is a coin flip. A lone attacker against two or three of our defenders (1v2, 1v3) is a situation we should win almost every time — as long as everyone stays organized and doesn't dive in recklessly. The goal of every defending principle in this module is to make sure the attacker is never facing fewer of us than they are facing of themselves.",
+        callouts: [
+          { title: "Attacking number first", body: "1v2, 1v3 — the attacking number is theirs, and it should stay small while ours stays high." },
+          { title: "The mirror image", body: "Attacking wants 2v1 and 3v1 in our favor. Defending wants 1v2 and 1v3 in our favor — same idea, opposite side." },
+        ],
+        table: {
+          columns: ["Situation", "What it means", "Why it's good for us"],
+          rows: [
+            ["1v1", "One attacker, one of our defenders.", "A coin flip — we want more cover before it gets here."],
+            ["1v2", "One attacker, two of our defenders.", "The attacker is outnumbered — easy to win the ball back."],
+            ["1v3", "One attacker, three of our defenders.", "Even safer — almost no way through for the attacker."],
+          ],
+        },
+        coachSays: "Attacking principles, we chase 2v1 and 3v1 for ourselves. Defending principles, we chase 1v2 and 1v3 against them. Same rule, same numbers, just flipped.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If we are defending and it's a 1v2, that means 1 of our defenders is facing 2 attackers — bad for us.",
+          answer: false,
+          explanation: "The attacking number always goes first. A 1v2 while we're defending means 1 attacker facing 2 of our defenders — that's good for us, the same way 2v1 is good for us when we're attacking.",
+        },
+      },
+      // Module 3a: Transition Principles — When We Win the Ball
+      {
+        slug: "secure-the-ball-first",
+        title: "Secure the Ball First",
+        summary: "The instant we win the ball, our first job is to keep it — calm down before speeding up.",
+        body: "The Most Chaotic Moment in Soccer\n\nThe second the ball changes possession is the most chaotic moment in the game. One second ago you were defending — marking, pressing, recovering. Now, suddenly, you have the ball, your shape is scrambled, your teammates are still in defensive positions, and an opponent who was just attacking is right next to you, ready to pounce. This is the transition moment, and what we do in the very first second of it sets up everything that follows.\n\nControl Before Anything Else\n\nBefore you think about a forward pass, a dribble, or a big switch of play — control the ball. Take a good first touch away from the nearest opponent. If you're under immediate pressure, shield the ball with your body. This is the exact same skill from Protect, Support, Attack in our attacking principles — protect first, decide second. The only difference here is the timing: it happens the instant the ball arrives, with no warning.\n\nWhy Rushing Here Is So Costly\n\nIf you panic and try to do too much immediately — a risky first touch, a blind pass, a forced dribble — and it goes wrong, we don't just lose the ball. We lose it with our team completely disorganized, in the same scrambled shape we were just defending in. That's the worst possible moment to give the ball straight back. A clean, controlled first touch buys our team the half-second it needs to reset.\n\nCalm Down to Speed Up\n\nThis might sound like the opposite of \"go forward fast,\" but it isn't. Securing the ball first is what makes everything that comes next possible. A team that panics in transition gives the ball away constantly and never gets to use its speed. A team that secures the ball first gets to choose when to explode forward — on their terms, not by accident.",
+        callouts: [
+          { title: "Control first", body: "The instant the ball arrives in a transition, your only job is to get it under control — everything else waits." },
+          { title: "Scrambled shape", body: "Right after winning the ball, our team shape is still in 'defending' positions. A turnover here is the most costly kind." },
+        ],
+        bullets: [
+          {
+            title: "The first second after winning the ball",
+            items: [
+              "Take a touch away from the nearest opponent — never into them.",
+              "Shield the ball with your body if someone is close.",
+              "Get your head up and scan once the ball is under control — not before.",
+              "Stay calm — a clean first touch is worth more than a rushed forward ball.",
+            ],
+          },
+        ],
+        coachSays: "Win it, then control it. I don't care how good your next pass is if your first touch gives the ball straight back.",
+        diagram: "transition-win-secure",
+        practice: {
+          type: "true-false" as const,
+          statement: "The instant we win the ball back, our top priority should be to get it forward as fast as possible, even if our first touch is risky.",
+          answer: false,
+          explanation: "Securing the ball with a controlled first touch comes first — always. A risky touch that gives the ball away the instant we win it is the most costly kind of turnover, because our team shape is still scrambled.",
+        },
+      },
+      {
+        slug: "do-not-give-it-right-back",
+        title: "Do Not Give It Right Back",
+        summary: "The opponent who just lost the ball is still close — don't hand it straight back to them.",
+        body: "The Worst Transition of All\n\nOnce the ball is secure, the very next danger is giving it right back to the team that just had it. Think about it from the opponent's point of view: they just lost the ball, but they're still in their attacking shape, still close by, and still thinking like attackers. If we immediately turn it over again, they're already in position to punish us — and now WE are the disorganized ones.\n\nRead Who's Around You\n\nRemember from Pass to Feet, Space, or Angles: passing to the opponent is the worst thing you can do on a soccer field. In a transition moment, that risk is even higher, because the opponents nearest the ball are the ones who just had it — they're close, they're alert, and they're hungry to win it straight back. Before playing any pass, scan for where those opponents are and avoid threading anything through them.\n\nSimple and Safe Beats Risky and Forward\n\nThis is the moment to choose the boring option on purpose. A simple pass sideways or back to an unmarked teammate keeps possession and gives our team time to organize. It might feel like we're \"wasting\" the moment, but we're not — we're protecting the advantage we just won. There will be a better moment to go forward, and Lesson 3 is all about finding it.\n\nComposure Wins Transitions\n\nTeams that panic in this moment turn the ball over again and again, and every one of those turnovers happens with their own shape still scrambled — which is exactly how easy goals get conceded. Teams that stay composed, secure the ball, and make the safe pass when it's needed are the ones who actually get to use their transition opportunities, instead of giving them away for free.",
+        callouts: [
+          { title: "They're still close", body: "The opponent who just lost the ball is right there, alert, and ready to win it straight back." },
+          { title: "Boring on purpose", body: "A safe sideways or backward pass here isn't timid — it's protecting the possession we just won." },
         ],
         comparison: {
           left: {
-            label: "Bad defensive shape",
+            label: "Giving It Right Back",
             items: [
-              "Ball carrier has no pressure",
-              "Second player is too far away",
-              "Gaps between defenders",
-              "Runners not tracked",
-              "No communication",
+              "Forcing a pass through the player who just lost the ball",
+              "Panicking and clearing it straight to an opponent",
+              "Trying a risky forward ball before the team is ready",
             ],
           },
           right: {
-            label: "Good defensive shape",
+            label: "Keeping It",
             items: [
-              "Ball carrier is under pressure",
-              "Second player provides cover",
-              "Lines are compact",
-              "Runners tracked",
-              "Team is talking",
+              "Scanning for the opponents nearest the ball before passing",
+              "Playing simple and safe to an unmarked teammate",
+              "Waiting one more pass for the team shape to organize",
             ],
           },
         },
-        coachSays: "Defending is not one person's job. When one player presses, the whole team adjusts. If your presser gets beaten, someone behind them should already be there.",
+        coachSays: "We just worked hard to win that ball. Don't hand it back to them in the next five seconds because you were in a hurry.",
+        diagram: "transition-win-safe",
         practice: {
-          type: "true-false" as const,
-          statement: "When your team is defending, only the players closest to the ball need to do any work.",
-          answer: false,
-          explanation: "Defending is a team job. The player nearest the ball presses, the next player covers, and the rest of the team holds balance, tracks runners, and stays compact. If only one player defends, gaps open and the other team can easily play through.",
+          type: "what-would-you-do" as const,
+          scenario: "You've just won the ball in midfield with a controlled first touch. The opponent who lost it is still right next to you, and there's a tempting gap behind them toward their goal — but your CB is also free and unmarked behind you.",
+          choices: [
+            { label: "Try to thread a pass through the gap, right past the opponent who just lost the ball", response: "Risky. That opponent is closest to the ball and most likely to win it straight back. If it's intercepted, we're turning the ball over with our shape still scrambled." },
+            { label: "Play it simple and safe to your free CB, then look for the next opportunity", response: "Yes. This secures our advantage. The forward opportunity might still be there in a pass or two, once our team has organized — and now we're not gambling our shape to find out." },
+          ],
         },
       },
       {
-        slug: "transitions",
-        title: "Transition Moments",
-        summary: "What to do right after the ball changes teams.",
-        body: "What A Transition Is\n\nA transition is the moment the ball changes teams. It can happen in an instant. This is one of the most dangerous moments in soccer because the team losing the ball is unorganized and the team winning it can attack quickly.\n\nTransition to Attack\n\nWhen your team wins the ball, the goal is to go forward quickly before the other team can recover their shape. Look forward first. If there is a run available, use it. If the team is not ready, keep the ball and build.\n\nTransition to Defend\n\nWhen your team loses the ball, the goal is to press immediately. The closest player closes the new ball carrier. The rest of the team recovers their defensive shape fast. Do not stand and watch. React immediately.\n\nThe Critical Seconds\n\nThe first few seconds after a transition are the most important. Teams that press immediately when they lose the ball can win it back before the other team is ready. Teams that attack quickly when they win the ball can score before defenders recover.\n\nForward Runs on Transition\n\nWhen your team wins the ball, forwards and wingers should spin and run immediately. Do not wait to see if the pass is coming — make the run and see if the ball follows. Your run can open space even if you do not get the pass.\n\nImmediate Press on Transition\n\nWhen your team loses the ball, the player who just lost it usually has the first responsibility to press. Everyone around them drops into defensive shape.\n\nSimple Rules\n\nLose the ball — press immediately. Win the ball — look forward first. Transitions are team moments, not individual moments.",
+        slug: "transition-look-forward",
+        title: "Look to Go Forward",
+        summary: "Once the ball is safe, the seconds right after a turnover are the best chance all game to attack.",
+        body: "The Golden Window\n\nHere's the secret about transitions: the moment right after we win the ball is often the BEST attacking opportunity of the entire game — better than most moments when we've had calm possession for a while. Why? Because the opponent was just attacking. Their shape is stretched out, their defenders are out of position, and they need a few seconds to recover and get organized. If we can go forward before they get those seconds, we can catch them completely unprepared.\n\nSame Plan A, B, C — Just Faster\n\nThis is the exact same decision-making from Look to Go Forward in our attacking principles: Plan A is forward into space, Plan B is wide to a winger, Plan C is back to an unmarked defender. Nothing changes about the priorities. What changes is the urgency — once the ball is secure and safe (Lessons 1 and 2), check for Plan A immediately. A forward pass that might be a 50/50 risk in normal possession can be the right choice here, because the reward — exploiting a disorganized defense — is so much higher.\n\nDon't Let the Window Close\n\nThe opponent's recovery clock starts the instant we win the ball. Every extra touch we take, every extra pass we play sideways, gives them more time to get back into shape. That doesn't mean rush and panic — Lessons 1 and 2 still come first. But once the ball is secure and safe, don't keep it forever just because we can. Look up, find the forward option, and go.\n\nWhy This Connects to Numbers Up\n\nRemember Create 2v1 and 3v1 Situations? A disorganized defense is exactly where those numbers-up moments are easiest to find. A defender who's still jogging back to position can't also be covering a passing lane. The fast transition is often the simplest way in the entire game to turn a 1v1 into a 2v1 or 3v1 — because the defense hasn't had time to set up yet.",
         callouts: [
-          { title: "Lose it — press", body: "The moment you lose the ball, press immediately. Do not walk." },
-          { title: "Win it — go forward", body: "The moment you win the ball, look forward. Attack before they recover." },
+          { title: "The golden window", body: "Right after winning the ball, the opponent's defense is disorganized — and it won't stay that way for long." },
+          { title: "Same priorities, more urgency", body: "Forward into space, then wide, then back — the Look to Go Forward plan, just with the clock running." },
         ],
         bullets: [
           {
-            title: "Transition to attack",
+            title: "Once it's secure and safe, look for…",
             items: [
-              "Look forward first after winning the ball.",
-              "Forwards and wingers spin and make runs immediately.",
-              "Keep the ball if forward is not available — do not give it away.",
-              "Go quickly before the defense recovers shape.",
-            ],
-          },
-          {
-            title: "Transition to defend",
-            items: [
-              "The player who lost it presses immediately.",
-              "Everyone else recovers defensive shape fast.",
-              "Do not watch — react.",
-              "Get compact — close space between your lines.",
+              "A teammate making a forward run into open space (Plan A).",
+              "A winger with room to run on the flank (Plan B).",
+              "Defenders who are still jogging back and out of position.",
+              "A pass that breaks a line before the opponent can close it.",
             ],
           },
         ],
-        coachSays: "Transitions are decided in two seconds. If you spend those two seconds standing and watching, the chance is gone. React first, think after.",
+        funFact: {
+          title: "Why coaches love transitions",
+          body: "At every level of soccer, a huge share of goals come from transition moments — the few seconds right after possession changes. Defenses that are well-organized in calm possession are often at their most vulnerable in exactly this window.",
+        },
+        coachSays: "Secure it, keep it, then GO. That window doesn't stay open long — but don't open it before the first two steps are done.",
+        diagram: "transition-win-forward",
+        practice: {
+          type: "true-false" as const,
+          statement: "The seconds right after winning the ball are often a great moment to attack, because the opponent's defense is still disorganized from their own attack.",
+          answer: true,
+          explanation: "Exactly right. Once the ball is secure and safe, this is often the easiest moment in the whole game to find space and go forward — but only after Lessons 1 and 2 have happened first.",
+        },
+      },
+      // Module 3b: Transition Principles — When We Lose the Ball
+      {
+        slug: "expend-max-effort",
+        title: "Give Max Effort to Win It Back",
+        summary: "The first few seconds after losing the ball are the best chance in the game to win it straight back.",
+        body: "It's the Same Golden Window — for Them\n\nWe just learned that the moment right after winning the ball is a golden window to attack, because the other team is disorganized. Guess what — the moment right after WE lose the ball is that exact same golden window, except now it belongs to the other team. Their attack just started, and it's not organized yet either. If we react immediately, we have a real chance to win the ball straight back before they ever get going.\n\nDon't Hang Your Head\n\nThe single worst reaction to losing the ball is the one we see all the time: a player stops, puts their hands on their hips, maybe shouts in frustration — and jogs back. Every second of that is a free gift to the other team. It doesn't matter whose fault it was, or how unfair the call was, or how tired you are. The team that wins the ball back fastest after losing it is the team that reacts fastest, full stop.\n\nWhoever Lost It Has the Most Responsibility\n\nThis connects directly to something we said in The First Defender Slows Them Down: \"you are not helping anyone if you're standing there while the ball goes toward our goal.\" The player who lost the ball is almost always the closest player to the new attack. That player has the most responsibility to sprint back into the play immediately — not to dwell on the mistake, but to be part of fixing it.\n\nFive Seconds That Change the Game\n\nThink of it like a five-second alarm that goes off the moment we lose the ball. For those five seconds, every nearby player should be sprinting to close down space and recover positions — not walking, not complaining, sprinting. After that, if the ball isn't won back, we settle into our normal defensive shape (Get Compact, Stay Compact and onward). But those first five seconds, given with full effort, can turn a bad moment into a great one.",
+        callouts: [
+          { title: "Same window, flipped", body: "Right after we lose the ball, the opponent's attack is just as disorganized as ours was right after we won it." },
+          { title: "Five-second sprint", body: "The first few seconds after losing the ball deserve full sprint effort — from everyone nearby, starting with whoever lost it." },
+        ],
+        bullets: [
+          {
+            title: "The instant we lose the ball",
+            items: [
+              "Don't stop, don't sulk — sprint back into the play immediately.",
+              "The player who lost the ball is usually closest — they react first.",
+              "Nearby teammates sprint to close space, not just jog.",
+              "If the ball isn't won back in a few seconds, settle into our normal shape.",
+            ],
+          },
+        ],
+        coachSays: "I will never be mad about a mistake. I will be upset if you don't sprint back the second after it happens.",
+        diagram: "transition-lose-effort",
+        practice: {
+          type: "true-false" as const,
+          statement: "If a player makes a mistake and loses the ball, their best response is to take a moment to reset before getting back into the play.",
+          answer: false,
+          explanation: "The best response is to sprint back into the play immediately. The first few seconds after losing the ball are the best chance to win it straight back — every second of hesitation is a gift to the other team.",
+        },
+      },
+      {
+        slug: "closest-player-pressure",
+        title: "The Closest Player Applies Pressure",
+        summary: "The instant we lose the ball, the nearest player becomes the first defender — no waiting required.",
+        body: "Same Job, New Moment\n\nWe already know this job from The First Defender Slows Them Down: the player closest to the opponent on the ball, and between that ball and our goal, is the first defender. Step up, don't dive in, slow them down, and shape the pressure to push them where we want them to go. Every single rule from that lesson still applies here. The only thing that's different is the moment it happens — instead of settling into it from our normal defensive shape, it happens in the chaos of the second right after we lost the ball.\n\nNo Time to Wait for the Team\n\nIn our normal defensive shape, the first defender steps up while the rest of the team is already organized behind them. In transition, that's not true yet — everyone is still recovering. But that doesn't mean the closest player should wait for everyone else to get ready first. Somebody has to delay the attacker right now, even if support isn't there yet, because every second without pressure is a second the opponent gets to run freely toward our goal.\n\nStill Just One Presser\n\nEven in the chaos of a transition, the rule from First Defender still holds: only one player presses at a time. It can be tempting for two or three players to all rush at the ball in a panic — but that just leaves other opponents completely free, and if the presser gets beaten, there's nobody else positioned to help. One player presses. Everyone else is doing Lesson 3's job: recovering into cover and support.\n\nWhy Speed Matters Here Specifically\n\nIn our normal defending shape, if the first defender is a half-second late, the team behind them can usually adjust. In transition, the team behind them is still scrambling — there's much less margin for error. A quick, controlled press from the closest player is often the difference between the opponent's counter-attack dying immediately and it turning into a real problem.",
+        callouts: [
+          { title: "Instant first defender", body: "The closest player between the ball and our goal becomes the first defender immediately — same rules, just faster." },
+          { title: "Still only one", body: "Even in the chaos of a transition, only one player presses. Everyone else recovers into shape." },
+        ],
+        table: {
+          columns: ["Rule from First Defender", "How it applies in transition"],
+          rows: [
+            ["Step up, don't dive in", "Especially important here — a missed dive leaves a scrambled team with nobody covering."],
+            ["Slow them down, win the battle", "Buys the extra half-second the rest of the team desperately needs to recover."],
+            ["Shape the pressure", "Push the attacker away from our most dangerous space while teammates recover that side."],
+            ["Only one player presses", "Resist the urge to swarm — everyone else has a recovery job to do."],
+          ],
+        },
+        coachSays: "Whoever's closest, that's you — go. Don't wait for the team to be perfect first. Slow them down NOW.",
+        diagram: "transition-lose-press",
+        practice: {
+          type: "true-false" as const,
+          statement: "In a transition moment, it's fine for two or three nearby players to all press the ball at once, since the team is still scrambling anyway.",
+          answer: false,
+          explanation: "Still just one presser — same rule as always. If multiple players rush the ball, other opponents are left completely free, and a scrambling team has even less cover if the press is beaten.",
+        },
+      },
+      {
+        slug: "cover-and-support-transition",
+        title: "Everyone Else Covers and Supports",
+        summary: "While the closest player presses, everyone else races to get compact and cover the danger.",
+        body: "Same Roles, Faster Reaction\n\nThis is The Second and Third Defenders Cover and Support, applied the moment the ball is lost. While the closest player becomes the first defender and presses (Lesson 2), every other player has a job: the cover group blocks the most dangerous passing lanes and stays ready for the next 1v1, and the support group recovers into the last line, ready for anything that breaks through. Closest, next closest, furthest away — everyone is active, exactly like before.\n\nGet Compact, Fast\n\nHere's what makes this moment different: when we lose the ball, our team was just in its attacking shape — spread out, players forward, gaps everywhere. Get Compact, Stay Compact is always important, but right after losing the ball, it's urgent. Every player needs to recognize that the team shape that worked for attacking is now wide open for the opponent to exploit, and react by closing those gaps immediately.\n\nThe Goal: Make It 1v2 or 1v3\n\nRemember Create 1v2 and 1v3 Situations — when we're defending, we want the attacking number to stay low and our defending number to stay high. A transition moment, if we don't react, can easily become a 2v1 or 3v1 in the OPPONENT's favor, because our team is spread out attacking and they're breaking with numbers. But if everyone sprints back, gets compact, and covers the right spaces, that same moment can become a 1v2 or 1v3 in OUR favor within just a few seconds.\n\nThis Is the Whole Point\n\nThis is why all six of these transition lessons work together. Secure it, don't give it back, and look forward when WE win it. Max effort, closest player presses, everyone else covers when WE lose it. Both halves are really the same idea: the first few seconds after possession changes are the most important seconds in the game, and a team that reacts well in both directions will win far more of those moments than it loses.",
+        callouts: [
+          { title: "Spread out becomes a problem", body: "Our attacking shape is wide and spread — exactly what the opponent wants to attack the instant we lose the ball. Close it down fast." },
+          { title: "Flip the numbers", body: "React fast enough, and a moment that could become 2v1 or 3v1 against us turns into 1v2 or 1v3 for us." },
+        ],
+        bullets: [
+          {
+            title: "While the closest player presses, everyone else…",
+            items: [
+              "Sprints to close the gaps left by our attacking shape — get compact now.",
+              "Cover group blocks the most dangerous passing lanes near the ball.",
+              "Support group recovers as the last line, ready for anything that breaks through.",
+              "Communicates — closest, next closest, furthest away, everyone has a job.",
+            ],
+          },
+        ],
+        coachSays: "We just spent five lessons learning to win the ball back. This is the moment all of it is for — react together, and react fast.",
+        diagram: "transition-lose-cover",
         practice: {
           type: "what-would-you-do" as const,
-          scenario: "Your team was attacking and your striker just had the ball taken by a defender who is now running forward. You are a midfielder standing five meters away.",
+          scenario: "We just lost the ball in the middle third while pushed forward in our attacking shape. Our CDM is sprinting to press the ball carrier. You're a CB on the far side, well away from the ball.",
           choices: [
-            { label: "Walk back into your defensive shape and let others press", response: "Walking back gives the defender time and space to look up and play forward. You are the closest player — your job is to press immediately and make it hard for them to find a pass. The team recovers behind you." },
-            { label: "Press the defender immediately and close their space", response: "Yes. You are the closest player. Press hard and fast. Make them uncomfortable, reduce their options, and win the ball back early. This is called pressing on the transition and it is one of the most powerful moments in soccer." },
-            { label: "Look forward and see if a teammate is open for a quick counter", response: "You do not have the ball — the other team does. Your job right now is to defend, not look for an attack. Press first, win the ball back, then go forward. You cannot attack while they have possession." },
+            { label: "Stay where you are — the ball is far away and not your problem yet", response: "Risky. Our shape is spread out from attacking, and the opponent could break quickly into the space you're leaving uncovered. Standing still here is exactly the 'not helping anyone' mistake." },
+            { label: "Sprint to get compact and cover the dangerous space, even though the ball isn't near you yet", response: "Yes. This is cover and support in transition — get compact fast, before the gaps in our attacking shape get exploited. By the time the ball gets close, you want it to be 1v2 or 1v3 in our favor." },
+          ],
+        },
+      },
+      // Module 4: Restart Scenarios
+      {
+        slug: "restart-goal-kicks",
+        title: "Goal Kicks",
+        summary: "Watch our goal kicks and opponent goal kicks.",
+        body: "Watch both videos below to see exactly how we set up on our own goal kicks and how we approach it when the other team has a goal kick.",
+        videos: [
+          { title: "Our Goal Kicks", youtubeId: "8yyumq8I9HU" },
+          { title: "Opponent Goal Kicks", youtubeId: "3v5zsOQeIHc" },
+        ],
+      },
+      {
+        slug: "restart-corners",
+        title: "Corners",
+        summary: "Watch our corners and opponent corners.",
+        body: "Watch both videos below to see exactly how we set up on our own corner kicks and how we defend when the other team has a corner.",
+        videos: [
+          { title: "Our Corners", youtubeId: "gYoBwWaZyjc" },
+          { title: "Opponent Corners", youtubeId: "DpPW91-pOPs" },
+        ],
+      },
+      {
+        slug: "restart-throw-ins",
+        title: "Throw-Ins",
+        summary: "Watch the throw-ins video.",
+        body: "Watch the video below for our approach to throw-ins.",
+        videos: [{ title: "Throw-Ins", youtubeId: "UeM_diD6anQ" }],
+        afterVideosBody: "Defending Throw-Ins Against Us\n\nThere isn't a video for defending throw-ins because it's pretty self-explanatory — but that doesn't mean it's not important. Here's exactly what to focus on.\n\nDon't Let It Go Over Your Head\n\nThe single biggest mistake when defending a throw-in is letting the ball sail over your head into space behind you. The moment that happens, you're turning and sprinting back toward your own goal while the attacker is already facing forward — that's the worst possible position to be in. Always know where the thrower's target is before the ball is released, and get yourself in a spot where a ball over your head isn't even an option.\n\nBack Up Enough So You Don't Have to Turn and Run\n\nThis ties directly into the first point. If you're standing too tight to the man you're marking, any ball played over the top forces you to spin around and chase it down from behind — and a player running at full speed toward their own goal almost never wins that race. Give yourself a step or two of cushion so you can see both the ball and your mark, and so you're moving forward to meet any pass instead of backward to chase one.\n\nWin the 50/50 and the Second Ball — Be Brave\n\nA lot of throw-ins turn into scrappy, bouncing-ball situations where nobody has full control. In those moments, hesitation loses. Whoever commits first and goes to win the ball — header, foot, whatever it takes — usually comes away with it. Don't wait for someone else to deal with it and don't shy away from a 50/50 challenge. The same goes for second balls: if a throw-in is flicked on or knocked down, that loose ball is just as winnable as the first one, and being the first to react to it is what separates good defending from bad defending.",
+      },
+      {
+        slug: "restart-free-kicks",
+        title: "Free Kicks",
+        summary: "Watch our free kicks and opponent free kicks.",
+        body: "Watch both videos below to see exactly how we approach our own free kicks and how we defend when the other team has a free kick.",
+        videos: [
+          { title: "Our Free Kicks", youtubeId: "tIeaDUOa4gs" },
+          { title: "Opponent Free Kicks", youtubeId: "5R96WUJQTUk" },
+        ],
+      },
+      {
+        slug: "restart-kickoff",
+        title: "Kickoff",
+        summary: "Watch our kickoffs and opponent kickoffs.",
+        body: "Watch both videos below to see exactly how we approach our own kickoffs and how we approach it when the other team kicks off.",
+        videos: [
+          { title: "Our Kickoffs", youtubeId: "vL0EWtghcqA" },
+          { title: "Opponent Kickoffs", youtubeId: "zO7Kp4W6UxA" },
+        ],
+      },
+      // Module 5: Open Play Scenarios
+      {
+        slug: "open-play-defending-third",
+        title: "Defending Third",
+        summary: "Open play in our own third, split into the central channel and the wide channels — what we do when defending and when attacking.",
+        body: "Two Channels, Two Jobs\n\nThe defending third is our own end of the field, closest to our goal. To keep it simple, we split it into two areas: the central channel through the middle, and the wide channels down each side. In each area we have a job when the other team has the ball — defending — and a job when we have it — attacking. Everything below comes straight from our team's defending and attacking principles, just applied to this part of the field.\n\nDefending the Central Channel\n\nThe middle of our defending third is the most dangerous space, because it points straight at our goal. This is where Get Compact, Stay Compact matters most. Our back three — the two outside center backs and the central center back, who plays the CDM-style role — pull together as a tight unit so there is no clean gap to run or pass through. When the ball moves, they shift together and stay connected.\n\nWe do not defend the middle with just three players. Our CM drops in to help, and sometimes our CAM comes back too, so the center is packed and compact. The more bodies we have connected in the middle, the fewer passing lanes and angles the other team can find. That extra cover is also how we turn a 1v1 into a 1v2 or 1v3 — the lone attacker in the middle should always be outnumbered by the time the ball gets near our goal.\n\nEven when we are compact, one player still has to be the first defender on the ball — the closest player between the ball and our goal. That player steps up to slow the attacker down but does not dive in, because a missed dive in the middle of our own third leaves nobody between the attacker and the goal. Only one player presses at a time; everyone else marks tight and stays ready. The aim is to prevent them from going forward and force the ball sideways or backward, away from the middle.\n\nDefending the Wide Channels\n\nBecause we play a 3-4-1, our only real width comes from our two wingers — so the wingers must drop back at all times and be a full part of our defense. When the other team moves the ball into a wide channel of our defending third, the winger on that side becomes the first defender and presses the ball, while the rest of the team stays compact and slides across. Someone is always pressuring the ball.\n\nThe winger's main job out wide is to slow the attacker down so there is no breakaway down the side — because a breakaway wide usually ends in a dangerous cross or a shot. Instead of diving in, the winger shapes the pressure to push the attacker into a space where we have help: either forcing them inside toward the center, where our center mids are waiting to defend, or steering them down the line and out of bounds. Either way — slow them down and send them where our team is.\n\nSometimes a center back has to shift out into the wide channel to deal with the ball. When that happens, the space behind them has to be covered — our central center back in the CDM role and the other center back slide over to fill in, staying compact so the move doesn't open a gap. The winger is still the first layer of help out wide, but the back three adjusting behind is what keeps us safe.\n\nAttacking Out of the Central Channel\n\nWhen we win the ball in the middle of our own defending third, our first job is Protect, Support, Attack. Take a calm first touch away from pressure — never into an opponent — and never force a risky pass in front of our own goal, because a giveaway here is the most dangerous kind. Our center backs, the central CDM, and the dropping center mids give close support so the player on the ball always has an option.\n\nOnce the ball is safe, we Look to Go Forward — forward first, then wide, then a safe pass back if forward and wide are covered. The difference in our own third is that 'safe' matters even more. If there is no good forward or wide option and pressure is coming, a backward pass to a teammate with time, or a tactical clearance when we are in a tight 1v1 near our goal with no pass on, is the smart choice. The one thing we never do is give the ball straight back to them in front of our goal.\n\nAttacking Out of the Wide Channels\n\nOur wingers are not just defenders — they are also our width in attack, and they give us a way out of our own third. When we have the ball in a wide channel, the winger gets wide and stays wide to stretch the field and become an outlet, so we can escape pressure down the side. A center back or the central CDM can play the ball out to that wide winger to relieve the pressure.\n\nFrom there we follow the same priorities: protect the ball, look to go forward into space up the line, and pass to feet, into space, or through an angle. If forward isn't on, the winger can play it back inside to a supporting center mid to switch the point of attack — the same idea as going wide, then central, to find a new forward option. And out wide near our own goal the same rule holds: a clean, safe pass beats a risky one every time, and we never play it straight to the other team.",
+        callouts: [
+          { title: "Compact in the middle", body: "Our back three, plus the CM and sometimes the CAM, pack the central channel so there are no passing lanes at our goal." },
+          { title: "Wingers always drop back", body: "In a 3-4-1 the wingers are our only width — they defend and attack, slowing wide attackers so there is no breakaway." },
+        ],
+        bullets: [
+          {
+            title: "Defending the defending third",
+            items: [
+              "Stay compact — the back three (two CBs plus the central CDM) close the gaps in the middle.",
+              "Our CM drops in, and sometimes the CAM, to outnumber attackers centrally (1v2, 1v3).",
+              "One player is always the first defender on the ball — press, but never dive in.",
+              "Wingers drop back and press wide, pushing attackers inside to our center mids or down the line out of bounds.",
+              "If a CB shifts wide, the central CDM and other CB cover the space behind and stay compact.",
+            ],
+          },
+          {
+            title: "Attacking out of the defending third",
+            items: [
+              "Protect first — calm first touch away from pressure, never into an opponent.",
+              "Look to go forward: forward, then wide, then a safe pass back.",
+              "Use the wingers as our width to escape pressure down the sides.",
+              "Near our own goal, safe wins — a backward pass or tactical clearance beats a risky one.",
+              "Never give the ball straight back to them in front of our goal.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Area", "Defending job", "Attacking job"],
+          rows: [
+            ["Central channel", "Back three plus CM/CAM stay compact; one player presses, never dives.", "Protect the ball, support close, look forward — but keep it safe near goal."],
+            ["Wide channels", "Winger drops back and slows them down; force inside or down the line.", "Winger gets wide as our outlet; play up the line or back inside."],
+            ["If a CB goes wide", "The central CDM and other CB cover the space behind and stay compact.", "Use the freed-up winger and center mids to play out of the pressure."],
+          ],
+        },
+        coachSays: "In our own third, defending is all about staying compact and slowing them down — no diving in, and someone is always on the ball. When we win it, protect it first. Use your wingers to get wide, look forward — but never, ever hand it back to them in front of our goal.",
+        diagram: "get-compact-stay-compact",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The other team has the ball in a wide channel of our defending third. You are our winger and you have dropped back to defend. The attacker is dribbling at you down the side.",
+          choices: [
+            { label: "Dive in to win the ball before they can cross it", response: "Diving in is exactly what we don't do — if you miss, the attacker is past you with a breakaway down the side, and that usually ends in a cross or a shot. Stay on your feet and slow them down." },
+            { label: "Slow them down and force them inside toward our center mids, or down the line and out of bounds", response: "Yes. Your job out wide is to slow the attacker down so there is no breakaway, and to shape your pressure to push them where we have help — inside to our center mids, or down the line and out of bounds." },
+            { label: "Drop all the way back and let them cross it in", response: "Backing off and giving them a free cross is dangerous — that's the wide breakaway ending in a cross we're trying to prevent. Step up enough to pressure and slow them, just without diving in." },
+          ],
+        },
+        videoIntro:
+          "Watch the videos below, and make sure you read through everything above too — they go together.\n\nHere's the most important part: it can feel like a lot at once, so don't try to take it all in. Start by finding your own position in the video and just follow where that player goes and what they do. Once that makes sense, watch how they connect with the teammates around them, and you'll start to see how the whole team moves as one.\n\nYou don't need to memorize any of this or get it perfect. The goal is just to build a picture in your head, so that when you're out on the field learning it for real, it clicks faster and makes more sense. If something looks confusing, that's completely normal — watch your position first, get the big idea, and the rest will come with time.",
+        videos: [
+          { title: "Defending in Our Defending Third", youtubeId: "EQSX8lAlXBk" },
+          { title: "Attacking in Our Defending Third", youtubeId: "tfZWJjiYMoQ" },
+        ],
+      },
+      {
+        slug: "open-play-middle-third",
+        title: "Middle Third",
+        summary: "Open play in the middle of the field, split into the central channel and the wide channels — what we do when defending and when attacking.",
+        body: "Two Channels, Two Jobs\n\nThe middle third is the center of the field, and it is where we are at our strongest — because of our three central midfielders: the CAM, the CM, and the CDM. They each play a different role, but they are all connected to each other. Like every part of the field, we split the middle third into the central channel through the middle and the wide channels down each side, and in each area we have a defending job and an attacking job. It all comes straight from our defending and attacking principles.\n\nDefending the Central Channel\n\nThis is the very middle of the field, and our three central midfielders are our strongest suit here. When the other team has the ball through the middle, it comes down to The First Defender and The Second and Third Defenders doing their jobs. If our CAM is the first defender, they press and slow the ball down — without diving in. As they do, the CM and CDM are the cover and support behind them, blocking passing lanes and ready to become the next first defender if our pressure is beaten.\n\nWhile our midfielders defend the ball, our center backs stay alert for any long balls played into the central channel — they are the support layer, the last line, ready for anything that breaks through. Our striker usually stays as high as possible so we keep a forward outlet, but if the ball is higher up the field, the striker can get involved in the press too. Everyone is active — closest, next closest, or furthest away, each player has a job.\n\nDefending the Wide Channels\n\nIn the wide channels of the middle third, our wingers should already be dropping back to somewhere between the middle third and our defending third. Exactly how far back depends on the other team's winger. If their winger is playing high up the field, our winger has to follow and stay with them — if their number 7 is very high, our number 11 needs to be right there to defend that player. The wide channels are the wingers' responsibility, even this far up the field.\n\nOne thing to watch: our defenders should not get pulled out and close in too much, especially when the opponent is playing very wide. Getting dragged out wide opens gaps in our shape. The winger handles the wide attacker; the back line holds its position and stays compact behind.\n\nAttacking Out of the Central Channel\n\nWhen we come out through the center, 99% of the time it starts one of two ways: our center backs play into a central midfielder, or a winger finds a pocket of space in the center of the field. From there we look to Pass to Feet, Space, or Angles — specifically the angled passes that break the defensive line. We want to thread the ball through the defense so our wingers and our striker can run onto it, attacking the space behind. Breaking lines from the middle third into the attacking third is the whole goal.\n\nBecause we are in a safer area than our own defending third, don't be afraid to take on the 1v1 when it is there. But don't try to dribble through two defenders — a 1v2 — because beating two players alone is low-percentage. When you are outnumbered, it is easier and smarter to pass to an open teammate. Take the 1v1, but never force the 1v2.\n\nAttacking Out of the Wide Channels\n\nWhen our wingers have the ball in the wide channels of the middle third, we have two main looks. The first is to get it down the line — play the ball ahead into space and use speed to carry it down the wing, setting up a cross in the attacking third. The second is to play a ball over the heads of the defenders for our CAM or striker to run onto and go in for goal. Both are Look to Go Forward, carrying us into the final third.\n\nThere is one big warning here. If a winger loses the ball in the wide channel of the middle third, the transition is scary: we have just lost it, and the other team is in a great spot to counterattack down the field. So it is super, super important that our wingers protect the ball and do not lose it easily when they are in control out wide. Get wide, stay wide, look forward — but take care of the ball.",
+        callouts: [
+          { title: "Our strongest area", body: "Three central midfielders — CAM, CM, CDM — make the middle our strongest suit. First defender presses; the other two cover and support." },
+          { title: "Don't lose it wide", body: "A winger losing the ball in the wide middle third hands the other team a counterattack. Protect the ball and don't give it away easily." },
+        ],
+        bullets: [
+          {
+            title: "Defending the middle third",
+            items: [
+              "Central: the first defender (often the CAM) presses and slows it down — no diving in.",
+              "The CM and CDM cover and support behind, ready to be the next first defender.",
+              "Center backs stay alert for long balls into the central channel.",
+              "The striker stays high as an outlet, but can join the press if the ball is higher up.",
+              "Wide: wingers drop back between the middle and defending third and track the opponent's winger.",
+              "Don't let defenders get dragged out wide — the winger handles the wide attacker.",
+            ],
+          },
+          {
+            title: "Attacking out of the middle third",
+            items: [
+              "Central: build from the center backs into a midfielder, or a winger drops into a central pocket.",
+              "Make angled, line-breaking passes for the wingers and striker to run onto.",
+              "Take on the 1v1 here — it's safer than our own third — but don't force a 1v2; pass to an open teammate.",
+              "Wide: get it down the line with speed for a cross, or play it over the top for the CAM or striker.",
+              "Above all, wingers protect the ball — losing it wide invites a counterattack.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Area", "Defending job", "Attacking job"],
+          rows: [
+            ["Central channel", "First defender presses (often the CAM); CM and CDM cover and support.", "Build through a midfielder; break lines with angled passes for runners."],
+            ["Wide channels", "Wingers drop back and track the opponent's winger; don't drag defenders out.", "Get down the line for a cross, or play over the top — and don't lose it."],
+            ["Behind it all", "Center backs watch for long balls; striker stays high.", "Take the 1v1, but pass out of a 1v2 to an open teammate."],
+          ],
+        },
+        coachSays: "The middle third is our house — three center mids who press, cover, and support as a unit. When we win it, break lines into our runners and take on the 1v1. But wingers, take care of that ball out wide — lose it there and they're countering us.",
+        diagram: "cover-and-support",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are our CM with the ball in the central channel of the middle third. There is space ahead to break the line, but two defenders step toward you together. A teammate is open to your side.",
+          choices: [
+            { label: "Try to dribble through both defenders and break the line yourself", response: "That's taking on a 1v2 — beating two defenders alone is low-percentage, and losing it here lets them break the other way. When you're outnumbered, don't force it." },
+            { label: "Pass to the open teammate instead of forcing it", response: "Yes. We take on the 1v1, but not the 1v2. When two defenders step to you, the smart, easy choice is to pass to an open teammate and keep the attack alive." },
+            { label: "Boot it forward and hope a teammate runs onto it", response: "A hopeful boot when you have an open teammate is giving the ball away. We only clear like that in a tight spot near our own goal — here in the middle third, find the open pass." },
+          ],
+        },
+        videoIntro:
+          "Watch the videos below, and make sure you read through everything above too — they go together.\n\nHere's the most important part: it can feel like a lot at once, so don't try to take it all in. Start by finding your own position in the video and just follow where that player goes and what they do. Once that makes sense, watch how they connect with the teammates around them, and you'll start to see how the whole team moves as one.\n\nYou don't need to memorize any of this or get it perfect. The goal is just to build a picture in your head, so that when you're out on the field learning it for real, it clicks faster and makes more sense. If something looks confusing, that's completely normal — watch your position first, get the big idea, and the rest will come with time.",
+        videos: [
+          { title: "Defending in Our Middle Third", youtubeId: "OjT268Y245E" },
+          { title: "Attacking in Our Middle Third", youtubeId: "KOhimYaRRYk" },
+        ],
+      },
+      {
+        slug: "open-play-attacking-third",
+        title: "Attacking Third",
+        summary: "Open play in the other team's end, split into the central channel and the wide channels — what we do when attacking and the moment we lose the ball.",
+        body: "Two Channels, Two Jobs\n\nThe attacking third is the other team's end of the field, where we score our goals. We split it the same way as everywhere else — the central channel through the middle and the wide channels down each side. The difference here is that attacking comes first: this is where we want the ball most. But the second we lose it up here, our job flips instantly to stopping a counter-attack. Both halves come straight from our attacking principles and our transition principles for when we lose the ball.\n\nAttacking the Central Channel\n\nThis is our goal-scoring channel. It is where the box is and where Zone 14 sits — the area just outside the box where, statistically, most goals get scored. When we have the ball in the central channel of the attacking third, we almost always look for a shot. Connecting passes to get the best possible shot is important, but the goal is simple: take shots as much as we can. If a shot isn't on, playing out to the wide channels for a quick reset and a cross is never a bad idea.\n\nWho is in there matters. Our striker, CAM, and CM should all be in the central channel ready to attack. Our CDM most of the time should not be — they stay somewhere between the middle third and the attacking third, as our safety against a counter. And depending on the side, the far-side winger comes inside: if the ball is in the left channel, our right winger tucks into the central channel to attack the cross. Bring numbers into the box and create the overload — that's how we get the best chance.\n\nAttacking the Wide Channels\n\nIn the wide channels of the attacking third it is almost always a cross — from our winger, or from whoever is wide on the ball. If the wide player isn't a winger — say it's a CM or CAM who ended up out there — then the winger takes that player's spot and becomes a central option to attack the cross in the box. We don't want to waste the wide player who is already there.\n\nYour job off the ball depends on where you are. If you are away from the ball and you see a cross might be coming, join the central channel and attack the box. If you are waiting to see whether the ball comes out to you, get wide and stay wide so you're an option. And when in doubt, we find a pass out to the width — that buys us time to reset and try the cross again.\n\nDefending the Central Channel\n\nThe biggest thing we want to stop is a counter-attack the moment we lose the ball in the attacking third. A counter happens when one team loses the ball, is slow to get back on defense, and the other team takes advantage — breaking with numbers to create a 3v1 against us. That is exactly why our CDM and two center backs stay back to support at all times.\n\nBut that safety layer isn't always enough on its own. The instant we lose it, every player needs the intelligence to sprint back and defend the attack coming our way — whoever lost the ball has the most responsibility to react first. The other half is speed of winning it back: if we can pressure and steal it straight back from a center back who is still trying to turn defense into attack, we might win it high up the field and find a goal-scoring chance of our own. Closest player presses, everyone else gets compact behind them.\n\nDefending the Wide Channels\n\nThe far corner of the attacking third is usually the best place on the whole field for us to lose the ball — it's as far as possible from our own goal. So if our wingers lose it out wide up here, it should be an immediate attempt to win it straight back, with our center mids rushing over to support. We want it back fast, because a team that wins the ball in the wide channel of their own defensive corner usually doesn't have many options to play out of there.\n\nThat means our quick pressure often forces them into a tough spot. If they just kick it away to escape, that's fine — our CDM and a center back are ready behind, and they can go win that ball and maybe send it wide again to restart our attack. Win it back if we can; if not, the ball gets cleared a long way from our goal and we reset.",
+        callouts: [
+          { title: "Shoot in Zone 14", body: "The central channel of the attacking third — around Zone 14 and the box — is where most goals are scored. Connect passes, then shoot." },
+          { title: "Counter-attack is the danger", body: "Lose the ball up here and the biggest threat is the counter. Sprint back, press the closest, and try to win it right back." },
+        ],
+        bullets: [
+          {
+            title: "Attacking in the attacking third",
+            items: [
+              "Central: this is our goal-scoring channel — connect passes for the best look, but shoot as much as possible.",
+              "The striker, CAM, and CM fill the central channel; the CDM stays between the middle and attacking third.",
+              "On a cross, the far-side winger comes inside — if the ball's on the left, the right winger attacks the box.",
+              "Wide: it's almost always a cross from a winger or whoever is wide on the ball.",
+              "If a CM or CAM is the wide player, the winger takes their spot as a central option for the cross.",
+              "When in doubt, reset out to the width — get wide, stay wide — and try the cross again.",
+            ],
+          },
+          {
+            title: "Defending in the attacking third (we just lost it)",
+            items: [
+              "The biggest danger is a counter-attack — react the second we lose the ball.",
+              "Whoever lost it sprints back first; the closest player presses, and only one presses.",
+              "Try to win it back fast, before their center back can turn defense into attack.",
+              "Our CDM and two center backs are the safety layer at all times — get compact behind the press.",
+              "Wide: if a winger loses it, win it back immediately; the center mids rush over to support.",
+              "The far corner is the best place to lose it — they have few options to play out, so press and win it back.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Area", "Attacking job", "Defending job (we just lost it)"],
+          rows: [
+            ["Central channel", "Shoot — connect into Zone 14 and the box; striker, CAM, CM in there, CDM just behind.", "Stop the counter: sprint back, press the closest, CDM and CBs hold as the safety layer."],
+            ["Wide channels", "Cross from the wide player; far-side winger comes inside; reset to width when in doubt.", "Win it back immediately; center mids rush to support — they have few options to play out."],
+          ],
+        },
+        coachSays: "Get us into Zone 14 and shoot — that's how we score. But the second we lose it up here, it's a sprint: closest player presses, everyone gets back, and we try to win it right back before they can counter.",
+        diagram: "create-2v1-and-3v1",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You are our winger and you just lost the ball in the wide channel of our attacking third — the far corner from our goal. The defender who won it is turning to play out.",
+          choices: [
+            { label: "Jog back and get into your defensive shape", response: "Jogging back is the gift we never want to give. This is the five-second window — the player who lost it is closest and has the most responsibility to react. Sprint and try to win it back now." },
+            { label: "Immediately press to win the ball back before they can play out", response: "Yes. Losing it in the far corner is actually a good place to lose it — they have few options to play out. Press right away, with the center mids rushing to support, and we can win it straight back." },
+            { label: "Foul the defender to stop them", response: "We don't stop a transition with a foul up there — that just gives them a free restart and lets their shape reset. Win it back the right way: immediate, controlled pressure with support arriving." },
+          ],
+        },
+        videoIntro:
+          "Watch the videos below, and make sure you read through everything above too — they go together.\n\nHere's the most important part: it can feel like a lot at once, so don't try to take it all in. Start by finding your own position in the video and just follow where that player goes and what they do. Once that makes sense, watch how they connect with the teammates around them, and you'll start to see how the whole team moves as one.\n\nYou don't need to memorize any of this or get it perfect. The goal is just to build a picture in your head, so that when you're out on the field learning it for real, it clicks faster and makes more sense. If something looks confusing, that's completely normal — watch your position first, get the big idea, and the rest will come with time.",
+        videos: [
+          { title: "Defending in Our Attacking Third", youtubeId: "7S-Km9zra9s" },
+          { title: "Attacking in Our Attacking Third", youtubeId: "FVwYPZm_KQ8" },
+        ],
+      },
+      // Module 6: Ball Recovery and Loss Scenarios
+      {
+        slug: "clearances",
+        title: "Clearances",
+        summary: "Whether we're clearing the ball or facing one, knowing what happens next — and where the ball is going — is everything.",
+        body: "Always Know Where the Ball Is Going\n\nThere's one habit that matters more than anything else in this lesson, whether we're attacking or defending: always know where the ball is going. A clearance isn't the end of a play — it's the start of a new one, and the team that reacts first to where the ball is headed comes out ahead. Everything below is really just this one idea applied to three different situations.",
+        callouts: [
+          { title: "Our clearance", body: "We want to see it bounce — bounces mean distance, and distance is the whole point of clearing it." },
+          { title: "Their clearance", body: "We don't want the bounce — get to it on the first or second bounce before it skips past or over us." },
+          { title: "No belts", body: "Body in front, controlled direction. A smart clearance beats a wild full-power swing every time." },
+        ],
+        bullets: [
+          {
+            title: "When We Clear It (Attacking)",
+            items: [
+              "Bounces are good — they mean the ball is carrying distance away from our goal.",
+              "Don't panic if our clearance bounces a few times before someone gets to it. That's it doing its job.",
+              "In attack, we almost never want to clear the ball on purpose — this is a last resort, not a plan.",
+              "Under pressure with no good option, a tactical clearance beats a careless pass that could go straight to them.",
+              "Trust our midfielders and forwards to go win that ball in the air after a tactical clearance.",
+            ],
+          },
+          {
+            title: "When They Clear It (Defending)",
+            items: [
+              "We don't want the bounce — every bounce is a chance for it to skip past us or go over our heads.",
+              "Get to it on the first or second bounce, every time. A third or fourth bounce is how this gets dangerous.",
+              "On a windy day, the ball can carry, curve, or die unexpectedly — when in doubt, drop back.",
+              "Dropping back gives you room to react to the ball instead of guessing and getting beaten by it.",
+            ],
+          },
+          {
+            title: "Winning the Ball Back",
+            items: [
+              "Track the flight, roll, and bounce early — know how far it's going and where it'll land before it arrives.",
+              "Winning it out of the air takes confidence — get used to battling for it, because someone else wants it too.",
+              "Time your jump and use your body. The more reps, the more natural it feels.",
+              "If you have to clear it defensively, get your body in front and clear with control — no belts.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "What to do"],
+          rows: [
+            ["We clear it and it bounces", "Good — that's distance. React to where it rolls next."],
+            ["They clear it toward us", "Get to it on the first or second bounce, no later."],
+            ["Windy conditions, unsure flight", "When in doubt, drop back and let it come to you."],
+            ["We're under pressure, no good option", "Tactical clearance — get it out, let our attackers win the air battle."],
+            ["We have to clear it defensively", "Body in front, controlled direction — no belts."],
+          ],
+        },
+        coachSays: "A clearance isn't the end of the play — it's the start of the next one. Know where the ball is going before it even gets there.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If the other team clears the ball and it's going to bounce a couple of times before we can get to it, that's totally fine — we can just wait for it to settle.",
+          answer: false,
+          explanation: "Waiting on their clearance is exactly how a ball ends up skipping past us or over our heads. We want to get to it on the first or second bounce, not let it run.",
+        },
+      },
+      {
+        slug: "second-balls",
+        title: "Second Balls",
+        summary: "Almost every duel that matters isn't won on the first try — it's won on the second, third, or fourth.",
+        body: "What Is a Second Ball?\n\nPicture a 1v1 — you and an opponent both going for the same ball at the same time. Most of the time, neither player cleanly wins that challenge. The ball deflects off a leg, a foot, a shoulder, and pops loose into a nearby space that nobody controls yet. That loose ball is the second ball — and the moment it pops free, it's a brand new 50/50 that anyone can win.\n\nA Chain of 50/50s\n\nHere's the part that wins games: a second ball isn't the end of the contest — it's the start of another one. The first challenge creates a second ball. If that one is also a 50/50, it creates a third ball. Then a fourth. Most loose-ball situations are really a chain of small battles stacked back to back, and the team that keeps winning those small battles — over and over — is the team that ends up with the ball.\n\nWho Goes for the Second Ball?\n\nIt isn't always the same player who contested the first ball. Sometimes that player is the one who reacts quickest and wins it again. But just as often, it's a teammate nearby — someone who wasn't in the original challenge at all, but was close enough and alert enough to pounce on the loose ball the moment it broke free. Second balls are a team responsibility, not just a one-on-one rematch.\n\nAnticipate — But Don't Abandon Your Space\n\nThe best players sense that a 50/50 probably won't be won cleanly, so they're already leaning toward where the loose ball might land. But anticipating is not the same as automatically running off to chase it. If you're covering a space or marking a player, and you bolt the moment the first challenge happens, you've just opened up the exact space you were responsible for — and if the second ball doesn't come your way, that space is now empty. Anticipate with your eyes and your body position first. Only fully commit and leave your spot once you can see the second ball is actually there to be won.\n\nIf the First One Doesn't Go Your Way, Go Again\n\nThe most important mindset with second balls is this: losing the first challenge doesn't mean the play is over. If the ball pops loose, that's a fresh chance — for whoever is closest and best placed to win it, whether that's you or a teammate. Keep moving, keep competing, and go win the next one. Teams that give up after one lost challenge get beaten by second and third balls all game long. Teams that keep going after every loose ball — together, not just individually — are the teams that win.",
+        callouts: [
+          { title: "What it is", body: "The loose ball that pops free after a 50/50 — nobody owns it yet, and anyone can win it." },
+          { title: "Who wins it", body: "Could be the same player going again, or a teammate nearby who reacts first. It's a team job." },
+        ],
+        bullets: [
+          {
+            title: "How to win second balls",
+            items: [
+              "Anticipate with your eyes and body shape — sense it's coming before it happens.",
+              "Don't auto-run to chase it — if you leave your space too early and it doesn't come, that space is now open.",
+              "Only fully commit and leave your spot once you can actually see the second ball is there to win.",
+              "If you lose the first ball, stay ready — you or a nearby teammate can win the next one.",
+              "Get your whole body into the contest when it's really there — second balls reward effort, not just skill.",
+            ],
+          },
+        ],
+        coachSays: "One lost challenge is not the end of the play. The second ball is a brand new fight — go win it.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You go in for a 50/50 challenge with an opponent. The ball deflects off both of you and bounces loose a few yards away — nobody has it.",
+          choices: [
+            { label: "Take a second to reset since the first challenge didn't work out", response: "That pause is exactly how second balls get lost. The moment the ball is loose, it's a brand new contest — the player who reacts first usually wins it." },
+            { label: "Immediately react and go win the loose ball", response: "Yes. The first challenge being a 50/50 doesn't matter anymore — what matters now is who gets to the second ball first. Keep competing." },
+          ],
+        },
+      },
+      {
+        slug: "rebounds",
+        title: "Rebounds",
+        summary: "There are only three ways a rebound happens — off a block, off the post, or off the goalkeeper. Know what to do for each.",
+        body: "Three Ways a Rebound Happens\n\nA rebound only happens in one of three ways: the shot or pass gets blocked, it comes back off the post, or it comes back off the goalkeeper. That's it. Each one plays out a little differently, so let's go through them.\n\nRebounds Off a Block\n\nIf the ball gets blocked, it usually doesn't travel far — it's probably still close to where we already are. If that block lands in a spot where we can easily win it back, go for it, no matter what. Two other things can happen off a block, and both are fine outcomes: if it goes out for a throw-in, take that throw-in fast, before the defense resets. If it goes out for a corner, you've won us a corner — be happy about that. That's what I call \"getting us something.\" Overall, nothing crazy with blocks — just stay alert, go win it if it's winnable, and take whatever the ball gives us.\n\nRebounds Off the Post or Goalkeeper\n\nThis is the big one — always follow your shot. Whether you're a winger or a striker, always follow through on your shot — and everyone nearby should be doing the same, ready to attack a second ball off the rebound. Goalkeepers make a lot of saves where the ball doesn't get caught cleanly — it parries away, drops just in front of them, or clips the post and comes back out. Those moments happen constantly, and they're a huge chance if someone is there to react.\n\nThe Striker's Moment\n\nThink about it this way: a winger takes a shot, the goalkeeper gets a hand to it, and the ball spills out in front of the goal. That split second is the ultimate moment for a striker to arrive and finish the rebound. None of that happens if everyone just watches the first shot — but if the striker followed their run in, that loose ball in the six-yard box is now theirs to attack.",
+        callouts: [
+          { title: "Off a block", body: "Usually stays close — win it if you can, take a fast throw-in, or be happy with a corner. \"Getting us something\" is a good outcome." },
+          { title: "Off the post or keeper", body: "Always follow your shot. The rebound is often the easiest chance of the entire sequence." },
+        ],
+        table: {
+          columns: ["Rebound type", "What usually happens", "What we do"],
+          rows: [
+            ["Off a block", "Ball stays close by", "Win it back if it's winnable — no matter what."],
+            ["Off a block → throw-in", "Ball goes out of bounds", "Take the throw-in fast, before they reset."],
+            ["Off a block → corner", "Ball goes behind for a corner", "Good outcome — we 'got us something,' be happy."],
+            ["Off the post", "Ball comes back into play", "Follow your shot — be ready to finish the second chance."],
+            ["Off the goalkeeper", "Ball spills out in front", "Strikers especially — attack that loose ball immediately."],
+          ],
+        },
+        coachSays: "Follow your shot. Every single time. The rebound is sometimes the easiest goal you'll ever score — but only if you're there for it.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "Our winger strikes a shot from the edge of the box. The goalkeeper gets a strong hand to it and the ball spills out a few yards in front of the goal. You're our striker, and you made a run in when the shot was taken.",
+          choices: [
+            { label: "Stay where you are — the keeper made the save, the chance is over", response: "The save isn't the end of the play — the ball spilling out in front is a brand new chance, often an easier one than the original shot. This is exactly the moment to attack." },
+            { label: "Attack the loose ball immediately and try to score the rebound", response: "Yes. This is the striker's moment — the keeper couldn't hold it, and the ball is sitting in front of an open goal. Following your run in puts you right there to finish it." },
           ],
         },
       },
     ],
     sections: [
       {
-        slug: "team-with-the-ball",
-        title: "Module 1: Team With The Ball",
-        summary: "Spacing and support when your team has possession.",
-        lessonSlugs: ["with-the-ball"],
+        slug: "attacking-principles",
+        title: "Module 1: Attacking Principles",
+        summary: "Our core principles for when we have the ball.",
+        lessonSlugs: [
+          "protect-support-attack",
+          "get-wide-stay-wide",
+          "look-to-go-forward",
+          "pass-to-feet-space-or-angles",
+          "create-2v1-and-3v1",
+        ],
       },
       {
-        slug: "team-without-the-ball",
-        title: "Module 2: Team Without The Ball",
-        summary: "Pressure, cover, and team shape when defending.",
-        lessonSlugs: ["without-the-ball"],
+        slug: "defending-principles",
+        title: "Module 2: Defending Principles",
+        summary: "Our core principles for when the other team has the ball.",
+        lessonSlugs: [
+          "get-compact-stay-compact",
+          "prevent-going-forward",
+          "first-defender-slows-them-down",
+          "cover-and-support-defending",
+          "create-1v2-and-1v3",
+        ],
       },
       {
-        slug: "team-transitions",
-        title: "Module 3: Team Transition Moments",
-        summary: "What to do right after the ball changes teams.",
-        lessonSlugs: ["transitions"],
+        slug: "transition-when-we-win",
+        title: "Module 3: Transition Principles — When We Win the Ball",
+        summary: "What we do in the moments right after winning possession.",
+        lessonSlugs: [
+          "secure-the-ball-first",
+          "do-not-give-it-right-back",
+          "transition-look-forward",
+        ],
+      },
+      {
+        slug: "transition-when-we-lose",
+        title: "Module 3: Transition Principles — When We Lose the Ball",
+        summary: "What we do in the moments right after losing possession.",
+        lessonSlugs: [
+          "expend-max-effort",
+          "closest-player-pressure",
+          "cover-and-support-transition",
+        ],
+      },
+      {
+        slug: "restart-scenarios",
+        title: "Module 4: Restart Scenarios",
+        summary: "How our principles apply to restarts.",
+        lessonSlugs: [
+          "restart-goal-kicks",
+          "restart-corners",
+          "restart-throw-ins",
+          "restart-free-kicks",
+          "restart-kickoff",
+        ],
+      },
+      {
+        slug: "open-play-scenarios",
+        title: "Module 5: Open Play Scenarios",
+        summary: "How our principles apply in open play.",
+        lessonSlugs: [
+          "open-play-defending-third",
+          "open-play-middle-third",
+          "open-play-attacking-third",
+        ],
+      },
+      {
+        slug: "ball-recovery-and-loss-scenarios",
+        title: "Module 6: Ball Recovery and Loss Scenarios",
+        summary: "Clearances, second balls, and rebounds.",
+        lessonSlugs: ["clearances", "second-balls", "rebounds"],
       },
     ],
   },
   {
     slug: "player-tactical-principles",
     title: "Player Tactical Principles",
-    summary: "Learn individual habits for scanning, first touch, 1v1 decisions, and support.",
+    summary: "Position-by-position principles for main play, transitions, ball recovery, and restarts.",
     importance: "Build Next",
     importanceTone: "low",
     imageSrc: "/module-images/team-tactical-principles.png",
     imagePrompt:
       "Youth soccer player scanning before receiving the ball with teammates creating support angles, bright realistic training image, no text, no logos, 16:9",
     lessons: [
+      // GK
       {
-        slug: "scanning-before-the-ball",
-        title: "Scanning Before The Ball",
-        summary: "Check your shoulder before the ball arrives.",
-        body: "What Scanning Is\n\nScanning means looking around before the ball gets to you. You are trying to gather information — where is the pressure, where are your teammates, where is the space, and where should your first touch go?\n\nWhy It Matters\n\nWhen the ball arrives, good players already know what they are going to do. They scanned before the pass was played. Players who do not scan receive the ball, then look around, then decide — and by then, the defender is already on them.\n\nWhen to Scan\n\nThe best time to scan is before you ask for the ball. Look before the pass is played. Look again while the ball is traveling to you. When the ball arrives, you already have a picture.\n\nWhat to Look For\n\nLook for pressure — is a defender close behind you? Look for open teammates — who is free and where? Look for space — is there an open channel or a gap in the defense? Look for the best first touch direction — where should the ball go to help you?\n\nShoulder Check Habit\n\nA simple way to start scanning is the shoulder check. Quickly look over one or both shoulders before you receive. This takes less than one second and gives you critical information.\n\nSimple Rule\n\nKnow what is around you before the ball arrives. Scan early and scan often.",
-        callouts: [
-          { title: "Scan early", body: "Look before the pass is played, not after the ball arrives." },
-          { title: "One second", body: "A shoulder check takes less than one second and changes everything." },
-        ],
-        bullets: [
-          {
-            title: "Scanning habit",
-            items: [
-              "Check your shoulder before you ask for the ball.",
-              "Look for pressure, open teammates, and open space.",
-              "Scan again while the ball is traveling to you.",
-              "Arrive with a decision already forming.",
-              "Do not wait until the ball is at your feet to look around.",
-            ],
-          },
-        ],
-        table: {
-          columns: ["Player type", "What they do", "What happens"],
-          rows: [
-            ["Scans early", "Looks before the ball arrives.", "Receives and plays quickly — defenders cannot get set."],
-            ["Does not scan", "Looks after the ball arrives.", "Pauses, loses time, gets closed down."],
-            ["Scans often", "Constantly updates their picture.", "Always knows where to go next."],
-          ],
-        },
-        coachSays: "By the time the ball is at your feet, your decision should already be made. That only happens if you scanned before it got there.",
-        practice: {
-          type: "true-false" as const,
-          statement: "The best time to scan and check your surroundings is right after the ball arrives at your feet.",
-          answer: false,
-          explanation: "By the time the ball arrives, you should have already scanned. Look around before the pass is played and again while the ball is traveling. When it gets to you, your decision is already made — that is how fast players stay one step ahead.",
-        },
+        slug: "gk-main-principles",
+        title: "GK (1): Main Principles",
+        summary: "Core habits for the goalkeeper in open play.",
+        body: "Coming soon. This lesson will cover the goalkeeper's main principles during open play.",
       },
       {
-        slug: "first-touch-decisions",
-        title: "First Touch Decisions",
-        summary: "Use your first touch to protect, pass, or go forward.",
-        body: "What the First Touch Is\n\nYour first touch is the moment the ball contacts your foot, chest, or body when you receive it. That touch sets up everything that comes next. A good first touch puts you in a better position. A bad first touch puts you in trouble.\n\nForward Touch\n\nWhen you have space in front of you and no pressure behind you, touch the ball forward into that space. This lets you attack with speed and keeps defenders behind you.\n\nAway From Pressure Touch\n\nWhen a defender is close, touch the ball away from them — to the side or to your stronger foot, away from the pressure. This protects the ball and gives you time to pick your head up.\n\nStopping Touch\n\nSometimes the right first touch is controlled — stop the ball close to your feet so you can pass cleanly. This works best when you have time and a teammate is clearly open.\n\nDo Not Be Predictable\n\nIf you always take the same first touch in every situation, defenders learn your habit and close that space before you can use it. Mix your touches based on what is happening around you.\n\nBody Shape\n\nYour first touch direction is partly about body shape. If you are open-bodied, you can touch in any direction. If you are facing your own goal, your options are more limited. Good scanning before the ball helps you set your body shape before you receive.\n\nSimple Rule\n\nFirst touch should make the second touch easier — not harder.",
-        callouts: [
-          { title: "Protect or attack", body: "Touch away from pressure when tight. Touch forward when you have space." },
-          { title: "Set up the next", body: "Your first touch should make your second touch easy, not harder." },
-        ],
-        bullets: [
-          {
-            title: "First touch choices",
-            items: [
-              "Forward — space in front, no pressure behind.",
-              "Away from pressure — defender close, protect the ball.",
-              "Controlled stop — teammate clearly open, pass cleanly.",
-              "Sideways — pressure from one side, find a new angle.",
-            ],
-          },
-        ],
-        coachSays: "A first touch that puts the ball in the right place is worth more than a perfect pass that comes from a bad position. Touch first, then play.",
-        practice: {
-          type: "what-would-you-do" as const,
-          scenario: "You are a midfielder receiving a pass. You scanned before the ball arrived and you know a defender is right behind you, closing fast. There is a teammate open to your left.",
-          choices: [
-            { label: "Touch the ball forward into the space ahead", response: "If a defender is right behind you, touching forward runs you into them. That is the opposite direction from your open teammate. Touch away from the pressure — left or sideways — and use the open player instead." },
-            { label: "Touch the ball away from the pressure toward the open teammate", response: "Yes. You already knew the defender was behind you from your scan. Now touch away from them, toward where the open teammate is. That single first touch solves the problem and creates the next opportunity." },
-            { label: "Stop the ball and wait to see what the defender does", response: "Stopping and waiting gives the defender time to get set and close down your space. Your scan already told you where the pressure is and where your teammate is — use that information immediately. A good first touch is faster than any reaction a defender can make." },
-          ],
-        },
+        slug: "gk-transitions",
+        title: "GK (1): Transitions",
+        summary: "What the goalkeeper does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the goalkeeper's role in transition moments.",
       },
       {
-        slug: "one-v-one-decisions",
-        title: "1v1 Decisions",
-        summary: "Know when to dribble, pass, shield, or turn away.",
-        body: "Not Every 1v1 Needs a Dribble\n\nWhen a defender is in front of you, you have more options than just trying to beat them. Choosing the right option is what makes a player dangerous — not just trying the same move every time.\n\nDribble\n\nDribble when there is space behind the defender and no easy pass available. If the defender is off balance or moving the wrong way, attack. Take them on when the risk is worth the reward.\n\nPass\n\nPass when a teammate is in a better position than you. This is the simplest and most effective option. The defender cannot be in two places at once — if they are on you, a teammate is open.\n\nShield\n\nShield when pressure is coming from behind and you do not have a good forward option. Keep the ball between you and the defender. Use your body. Wait for a teammate to give you an option.\n\nTurn Away\n\nTurn away when the pressure is too high and the risk of losing the ball is greater than the reward of trying to go forward. Sometimes playing back is the smartest move.\n\nRead the Defender\n\nWatch the defender's feet and body weight. If they are off balance — leaning one way — attack the other side. If they are set and balanced, the pass is usually better than the dribble.\n\nSimple Rule\n\nDo not force the hard play when an easy play helps the team. Choose what helps the team, not what looks impressive.",
-        callouts: [
-          { title: "Read the defender", body: "Off balance — attack. Set and balanced — pass or wait." },
-          { title: "Four options", body: "Dribble, pass, shield, or turn away. Know all four." },
-        ],
-        bullets: [
-          {
-            title: "1v1 decision guide",
-            items: [
-              "Dribble — space behind the defender, defender is off balance.",
-              "Pass — teammate is open and in a better position.",
-              "Shield — pressure from behind, wait for an option.",
-              "Turn away — too much pressure, reset and keep possession.",
-            ],
-          },
-        ],
-        comparison: {
-          left: {
-            label: "Forced 1v1",
-            items: [
-              "Always tries to dribble",
-              "Ignores open teammates",
-              "High risk of losing the ball",
-              "Defenders learn the habit",
-              "Makes teammates passive",
-            ],
-          },
-          right: {
-            label: "Smart 1v1",
-            items: [
-              "Reads the defender first",
-              "Uses teammates when they are open",
-              "Dribbles when the odds are in favor",
-              "Keeps defenders guessing",
-              "Makes the whole team better",
-            ],
-          },
-        },
-        coachSays: "The defender wants you to try to beat them when they are ready for it. Be patient. The moment they are off balance, go. The moment a teammate is free, use them.",
-        practice: {
-          type: "what-would-you-do" as const,
-          scenario: "You are a winger in the attacking third. A defender is right in front of you, balanced and set. You have a striker making a run across the box to your left.",
-          choices: [
-            { label: "Try to dribble past the defender anyway — you are in the attacking third", response: "The defender is balanced and set — those are the worst conditions to take someone on. Dribble when the defender is off balance, not when they are ready. The striker is making a run and that is the better option right now." },
-            { label: "Pass to the striker making the run across the box", response: "Smart. The defender cannot be in two places. If they are covering you, your striker has space. Use that. A well-timed pass to a running striker is more dangerous than a dribble against a set defender." },
-            { label: "Shield the ball and wait for another option to appear", response: "Shielding works when pressure comes from behind and you have no good forward option. But you are in the attacking third and a striker is already running — there is a clear forward option. Use it before the run ends." },
-          ],
-        },
+        slug: "gk-ball-recovery",
+        title: "GK (1): Ball Recovery",
+        summary: "How the goalkeeper helps win the ball back.",
+        body: "Coming soon. This lesson will cover the goalkeeper's role in ball recovery situations.",
       },
       {
-        slug: "supporting-teammates",
-        title: "Supporting Teammates",
-        summary: "Move into useful space when a teammate has the ball.",
-        body: "What Support Means\n\nSupporting a teammate means moving into a position where they can actually use you. Not standing near them. Not hiding behind a defender. Moving to an angle where the passer can see you and reach you with a clean pass.\n\nTwo Kinds of Support\n\nClose support means getting near the ball carrier so they have a short safe option. Wide support means spreading to the channel or the far side to stretch the defense and give a longer option. Good players give both kinds of support, depending on what the situation needs.\n\nSupport Under Pressure\n\nIf your teammate is under pressure, they need you close and easy to find. Do not drift away. Get to a short safe angle — usually to the side or slightly behind the ball — so they can release the pressure quickly.\n\nSupport With Time\n\nIf your teammate has time and no pressure, they do not need you close. Stretch the field. Get wide, make a run in behind, or create space. Give them a big option, not a small one.\n\nAngles Matter\n\nDo not stand directly behind a defender. The passer cannot reach you there. Move to the side of the defender, or into open space. Even a small shift in your position can open the passing lane.\n\nCall and Show\n\nLet your teammate know you are there. A short call — open, left, back — helps the player with the ball make their decision faster. Support is also communication.\n\nSimple Rule\n\nIf your teammate has the ball, your job is to become useful. Move. Create an option. Talk.",
-        callouts: [
-          { title: "Move to be useful", body: "Standing near a teammate is not support. Move to an angle where they can use you." },
-          { title: "Match the pressure", body: "If they are under pressure, stay short. If they have time, stretch the field." },
-        ],
-        bullets: [
-          {
-            title: "Support habits",
-            items: [
-              "Move to an angle the passer can reach — not behind a defender.",
-              "Stay short if your teammate is under pressure.",
-              "Stretch wide or run in behind if your teammate has time.",
-              "Call to let them know you are there.",
-              "If you cannot receive, move again. Do not stand still.",
-            ],
-          },
-        ],
-        coachSays: "If you are standing still while your teammate has the ball, you are not helping them. Movement creates options. Options create goals.",
-        practice: {
-          type: "true-false" as const,
-          statement: "Standing close to the player with the ball always counts as good support.",
-          answer: false,
-          explanation: "Support means being somewhere your teammate can actually use you — an angle they can see and reach. If you are standing directly behind a defender, or bunched in the same crowded zone, you are not giving a real option. Move to an open angle and show yourself clearly.",
-        },
+        slug: "gk-restarts",
+        title: "GK (1): Restarts",
+        summary: "The goalkeeper's role on restarts.",
+        body: "Coming soon. This lesson will cover the goalkeeper's role on restarts.",
+      },
+      // CB
+      {
+        slug: "cb-main-principles",
+        title: "CB (4/5): Main Principles",
+        summary: "Core habits for the center back in open play.",
+        body: "Coming soon. This lesson will cover the center back's main principles during open play.",
+      },
+      {
+        slug: "cb-transitions",
+        title: "CB (4/5): Transitions",
+        summary: "What the center back does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the center back's role in transition moments.",
+      },
+      {
+        slug: "cb-ball-recovery",
+        title: "CB (4/5): Ball Recovery",
+        summary: "How the center back helps win the ball back.",
+        body: "Coming soon. This lesson will cover the center back's role in ball recovery situations.",
+      },
+      {
+        slug: "cb-restarts",
+        title: "CB (4/5): Restarts",
+        summary: "The center back's role on restarts.",
+        body: "Coming soon. This lesson will cover the center back's role on restarts.",
+      },
+      // CM
+      {
+        slug: "cm-main-principles",
+        title: "CM (8): Main Principles",
+        summary: "Core habits for the center midfielder in open play.",
+        body: "Coming soon. This lesson will cover the center midfielder's main principles during open play.",
+      },
+      {
+        slug: "cm-transitions",
+        title: "CM (8): Transitions",
+        summary: "What the center midfielder does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the center midfielder's role in transition moments.",
+      },
+      {
+        slug: "cm-ball-recovery",
+        title: "CM (8): Ball Recovery",
+        summary: "How the center midfielder helps win the ball back.",
+        body: "Coming soon. This lesson will cover the center midfielder's role in ball recovery situations.",
+      },
+      {
+        slug: "cm-restarts",
+        title: "CM (8): Restarts",
+        summary: "The center midfielder's role on restarts.",
+        body: "Coming soon. This lesson will cover the center midfielder's role on restarts.",
+      },
+      // CAM
+      {
+        slug: "cam-main-principles",
+        title: "CAM (10): Main Principles",
+        summary: "Core habits for the attacking midfielder in open play.",
+        body: "Coming soon. This lesson will cover the attacking midfielder's main principles during open play.",
+      },
+      {
+        slug: "cam-transitions",
+        title: "CAM (10): Transitions",
+        summary: "What the attacking midfielder does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the attacking midfielder's role in transition moments.",
+      },
+      {
+        slug: "cam-ball-recovery",
+        title: "CAM (10): Ball Recovery",
+        summary: "How the attacking midfielder helps win the ball back.",
+        body: "Coming soon. This lesson will cover the attacking midfielder's role in ball recovery situations.",
+      },
+      {
+        slug: "cam-restarts",
+        title: "CAM (10): Restarts",
+        summary: "The attacking midfielder's role on restarts.",
+        body: "Coming soon. This lesson will cover the attacking midfielder's role on restarts.",
+      },
+      // CDM
+      {
+        slug: "cdm-main-principles",
+        title: "CDM (6): Main Principles",
+        summary: "Core habits for the defensive midfielder in open play.",
+        body: "Coming soon. This lesson will cover the defensive midfielder's main principles during open play.",
+      },
+      {
+        slug: "cdm-transitions",
+        title: "CDM (6): Transitions",
+        summary: "What the defensive midfielder does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the defensive midfielder's role in transition moments.",
+      },
+      {
+        slug: "cdm-ball-recovery",
+        title: "CDM (6): Ball Recovery",
+        summary: "How the defensive midfielder helps win the ball back.",
+        body: "Coming soon. This lesson will cover the defensive midfielder's role in ball recovery situations.",
+      },
+      {
+        slug: "cdm-restarts",
+        title: "CDM (6): Restarts",
+        summary: "The defensive midfielder's role on restarts.",
+        body: "Coming soon. This lesson will cover the defensive midfielder's role on restarts.",
+      },
+      // ST
+      {
+        slug: "st-main-principles",
+        title: "ST (9): Main Principles",
+        summary: "Core habits for the striker in open play.",
+        body: "Coming soon. This lesson will cover the striker's main principles during open play.",
+      },
+      {
+        slug: "st-transitions",
+        title: "ST (9): Transitions",
+        summary: "What the striker does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the striker's role in transition moments.",
+      },
+      {
+        slug: "st-ball-recovery",
+        title: "ST (9): Ball Recovery",
+        summary: "How the striker helps win the ball back.",
+        body: "Coming soon. This lesson will cover the striker's role in ball recovery situations.",
+      },
+      {
+        slug: "st-restarts",
+        title: "ST (9): Restarts",
+        summary: "The striker's role on restarts.",
+        body: "Coming soon. This lesson will cover the striker's role on restarts.",
+      },
+      // LB
+      {
+        slug: "lb-main-principles",
+        title: "LB (3): Main Principles",
+        summary: "Core habits for the left back in open play.",
+        body: "Coming soon. This lesson will cover the left back's main principles during open play.",
+      },
+      {
+        slug: "lb-transitions",
+        title: "LB (3): Transitions",
+        summary: "What the left back does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the left back's role in transition moments.",
+      },
+      {
+        slug: "lb-ball-recovery",
+        title: "LB (3): Ball Recovery",
+        summary: "How the left back helps win the ball back.",
+        body: "Coming soon. This lesson will cover the left back's role in ball recovery situations.",
+      },
+      {
+        slug: "lb-restarts",
+        title: "LB (3): Restarts",
+        summary: "The left back's role on restarts.",
+        body: "Coming soon. This lesson will cover the left back's role on restarts.",
+      },
+      // RB
+      {
+        slug: "rb-main-principles",
+        title: "RB (2): Main Principles",
+        summary: "Core habits for the right back in open play.",
+        body: "Coming soon. This lesson will cover the right back's main principles during open play.",
+      },
+      {
+        slug: "rb-transitions",
+        title: "RB (2): Transitions",
+        summary: "What the right back does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the right back's role in transition moments.",
+      },
+      {
+        slug: "rb-ball-recovery",
+        title: "RB (2): Ball Recovery",
+        summary: "How the right back helps win the ball back.",
+        body: "Coming soon. This lesson will cover the right back's role in ball recovery situations.",
+      },
+      {
+        slug: "rb-restarts",
+        title: "RB (2): Restarts",
+        summary: "The right back's role on restarts.",
+        body: "Coming soon. This lesson will cover the right back's role on restarts.",
+      },
+      // LW
+      {
+        slug: "lw-main-principles",
+        title: "LW (11): Main Principles",
+        summary: "Core habits for the left winger in open play.",
+        body: "Coming soon. This lesson will cover the left winger's main principles during open play.",
+      },
+      {
+        slug: "lw-transitions",
+        title: "LW (11): Transitions",
+        summary: "What the left winger does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the left winger's role in transition moments.",
+      },
+      {
+        slug: "lw-ball-recovery",
+        title: "LW (11): Ball Recovery",
+        summary: "How the left winger helps win the ball back.",
+        body: "Coming soon. This lesson will cover the left winger's role in ball recovery situations.",
+      },
+      {
+        slug: "lw-restarts",
+        title: "LW (11): Restarts",
+        summary: "The left winger's role on restarts.",
+        body: "Coming soon. This lesson will cover the left winger's role on restarts.",
+      },
+      // RW
+      {
+        slug: "rw-main-principles",
+        title: "RW (7): Main Principles",
+        summary: "Core habits for the right winger in open play.",
+        body: "Coming soon. This lesson will cover the right winger's main principles during open play.",
+      },
+      {
+        slug: "rw-transitions",
+        title: "RW (7): Transitions",
+        summary: "What the right winger does the moment possession changes.",
+        body: "Coming soon. This lesson will cover the right winger's role in transition moments.",
+      },
+      {
+        slug: "rw-ball-recovery",
+        title: "RW (7): Ball Recovery",
+        summary: "How the right winger helps win the ball back.",
+        body: "Coming soon. This lesson will cover the right winger's role in ball recovery situations.",
+      },
+      {
+        slug: "rw-restarts",
+        title: "RW (7): Restarts",
+        summary: "The right winger's role on restarts.",
+        body: "Coming soon. This lesson will cover the right winger's role on restarts.",
       },
     ],
     sections: [
       {
-        slug: "scanning",
-        title: "Module 1: Scanning",
-        summary: "Check your shoulder before the ball arrives.",
-        lessonSlugs: ["scanning-before-the-ball"],
+        slug: "gk-position",
+        title: "Module 1: GK (1) — Goalkeeper",
+        summary: "Goalkeeper principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["gk-main-principles", "gk-transitions", "gk-ball-recovery", "gk-restarts"],
       },
       {
-        slug: "first-touch",
-        title: "Module 2: First Touch",
-        summary: "Use your first touch to protect, pass, or go forward.",
-        lessonSlugs: ["first-touch-decisions"],
+        slug: "cb-position",
+        title: "Module 2: CB (4/5) — Center Back",
+        summary: "Center back principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["cb-main-principles", "cb-transitions", "cb-ball-recovery", "cb-restarts"],
       },
       {
-        slug: "one-v-one",
-        title: "Module 3: 1v1 Decisions",
-        summary: "Know when to dribble, pass, shield, or turn away.",
-        lessonSlugs: ["one-v-one-decisions"],
+        slug: "cm-position",
+        title: "Module 3: CM (8) — Center Midfielder",
+        summary: "Center midfielder principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["cm-main-principles", "cm-transitions", "cm-ball-recovery", "cm-restarts"],
       },
       {
-        slug: "support",
-        title: "Module 4: Support",
-        summary: "Move into useful space when a teammate has the ball.",
-        lessonSlugs: ["supporting-teammates"],
+        slug: "cam-position",
+        title: "Module 4: CAM (10) — Attacking Midfielder",
+        summary: "Attacking midfielder principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["cam-main-principles", "cam-transitions", "cam-ball-recovery", "cam-restarts"],
+      },
+      {
+        slug: "cdm-position",
+        title: "Module 5: CDM (6) — Defensive Midfielder",
+        summary: "Defensive midfielder principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["cdm-main-principles", "cdm-transitions", "cdm-ball-recovery", "cdm-restarts"],
+      },
+      {
+        slug: "st-position",
+        title: "Module 6: ST (9) — Striker",
+        summary: "Striker principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["st-main-principles", "st-transitions", "st-ball-recovery", "st-restarts"],
+      },
+      {
+        slug: "lb-position",
+        title: "Module 7: LB (3) — Left Back",
+        summary: "Left back principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["lb-main-principles", "lb-transitions", "lb-ball-recovery", "lb-restarts"],
+      },
+      {
+        slug: "rb-position",
+        title: "Module 8: RB (2) — Right Back",
+        summary: "Right back principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["rb-main-principles", "rb-transitions", "rb-ball-recovery", "rb-restarts"],
+      },
+      {
+        slug: "lw-position",
+        title: "Module 9: LW (11) — Left Winger",
+        summary: "Left winger principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["lw-main-principles", "lw-transitions", "lw-ball-recovery", "lw-restarts"],
+      },
+      {
+        slug: "rw-position",
+        title: "Module 10: RW (7) — Right Winger",
+        summary: "Right winger principles for open play, transitions, ball recovery, and restarts.",
+        lessonSlugs: ["rw-main-principles", "rw-transitions", "rw-ball-recovery", "rw-restarts"],
       },
     ],
   },

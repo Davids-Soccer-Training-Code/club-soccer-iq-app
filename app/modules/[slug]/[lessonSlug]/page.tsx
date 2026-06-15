@@ -6,6 +6,14 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 import { markLessonComplete } from "@/app/actions";
 import { FieldNumberPlacementGame } from "@/components/field-number-placement-game";
+import { GetWideStayWideDiagram } from "@/components/get-wide-stay-wide-diagram";
+import { Create2v1And3v1Diagram } from "@/components/create-2v1-3v1-diagram";
+import { TransitionWinDiagram } from "@/components/transition-win-diagram";
+import { TransitionLoseDiagram } from "@/components/transition-lose-diagram";
+import { CoverAndSupportDiagram } from "@/components/cover-and-support-diagram";
+import { FirstDefenderDiagram } from "@/components/first-defender-diagram";
+import { GetCompactStayCompactDiagram } from "@/components/get-compact-stay-compact-diagram";
+import { LookToGoForwardDiagram } from "@/components/look-to-go-forward-diagram";
 import { PositionSelector } from "@/components/position-selector";
 import { TapTheZone } from "@/components/tap-the-zone";
 import { TrueFalseCard } from "@/components/true-false-card";
@@ -236,6 +244,18 @@ export default async function LessonPage({
               <p className="mt-2 text-lg leading-8 !text-white">&ldquo;{lesson.coachSays}&rdquo;</p>
             </div>
           ) : null}
+          {lesson.diagram === "get-wide-stay-wide" ? <GetWideStayWideDiagram /> : null}
+          {lesson.diagram === "look-to-go-forward" ? <LookToGoForwardDiagram /> : null}
+          {lesson.diagram === "create-2v1-and-3v1" ? <Create2v1And3v1Diagram /> : null}
+          {lesson.diagram === "get-compact-stay-compact" ? <GetCompactStayCompactDiagram /> : null}
+          {lesson.diagram === "first-defender" ? <FirstDefenderDiagram /> : null}
+          {lesson.diagram === "cover-and-support" ? <CoverAndSupportDiagram /> : null}
+          {lesson.diagram === "transition-win-secure" ? <TransitionWinDiagram defaultStep="secure" /> : null}
+          {lesson.diagram === "transition-win-safe" ? <TransitionWinDiagram defaultStep="safe" /> : null}
+          {lesson.diagram === "transition-win-forward" ? <TransitionWinDiagram defaultStep="forward" /> : null}
+          {lesson.diagram === "transition-lose-effort" ? <TransitionLoseDiagram defaultStep="effort" /> : null}
+          {lesson.diagram === "transition-lose-press" ? <TransitionLoseDiagram defaultStep="press" /> : null}
+          {lesson.diagram === "transition-lose-cover" ? <TransitionLoseDiagram defaultStep="cover" /> : null}
           {lesson.practice === "field-number-placement" ? <FieldNumberPlacementGame /> : null}
           {typeof lesson.practice === "object" && lesson.practice.type === "tap-the-zone" ? (
             <TapTheZone
@@ -253,6 +273,55 @@ export default async function LessonPage({
               explanation={lesson.practice.explanation}
               statement={lesson.practice.statement}
             />
+          ) : null}
+          {lesson.videos ? (
+            <div className="mt-8 grid gap-4">
+              {lesson.videoIntro ? (
+                <div className="rounded-lg border border-sky-200 bg-sky-50 p-5">
+                  <p className="text-sm font-black uppercase tracking-wide text-sky-700">Before you watch</p>
+                  <div className="mt-2 grid gap-3">
+                    {lesson.videoIntro.split("\n\n").map((paragraph, index) => (
+                      <p className="m-0 text-base leading-7 text-slate-700" key={`${paragraph}-${index}`}>
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+              <div className={`grid gap-4 ${lesson.videos.length > 1 ? "sm:grid-cols-2" : ""}`}>
+                {lesson.videos.map((video) => (
+                  <div key={video.youtubeId}>
+                    <p className="mb-2 text-sm font-black uppercase tracking-wide text-slate-700">{video.title}</p>
+                    <div className="overflow-hidden rounded-lg border border-green-100 bg-black" style={{ aspectRatio: "16 / 9" }}>
+                      <iframe
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="h-full w-full"
+                        src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                        title={video.title}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {lesson.afterVideosBody ? (
+                <div className="mt-1 grid gap-5">
+                  {lesson.afterVideosBody.split("\n\n").map((paragraph, index) => {
+                    const isHeading = paragraph.length <= 56 && !/[.!?]$/.test(paragraph);
+
+                    return isHeading ? (
+                      <h3 className="text-2xl font-black tracking-normal text-slate-900" key={`${paragraph}-${index}`}>
+                        {paragraph}
+                      </h3>
+                    ) : (
+                      <p className="m-0 text-lg leading-8 text-slate-700" key={`${paragraph}-${index}`}>
+                        {paragraph}
+                      </p>
+                    );
+                  })}
+                </div>
+              ) : null}
+            </div>
           ) : null}
         </div>
 
