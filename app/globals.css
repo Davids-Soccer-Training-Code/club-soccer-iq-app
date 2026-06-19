@@ -483,6 +483,25 @@ textarea:focus {
   backdrop-filter: blur(8px);
 }
 
+.autosave-status {
+  margin-right: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.autosave-status[data-status="idle"] {
+  visibility: hidden;
+}
+
+.autosave-status[data-status="saved"] {
+  color: var(--grass-dark);
+}
+
+.autosave-status[data-status="error"] {
+  color: #b4341f;
+}
+
 .field-guide {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

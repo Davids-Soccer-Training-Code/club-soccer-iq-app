@@ -9,6 +9,7 @@ import {
   getResponses,
   saveKnowledgeAnswers,
   saveTacticsAnswers,
+  saveTacticsDraft,
   upsertPlayer,
 } from "@/lib/data";
 import { getLearningModule, getModuleLesson } from "@/lib/modules";
@@ -32,6 +33,22 @@ function cleanAnswer(value: FormDataEntryValue | null) {
 function answersFromForm(formData: FormData, questions: readonly { id: string }[]) {
   return questions.reduce<AnswerMap>((answers, question) => {
     answers[question.id] = cleanAnswer(formData.get(question.id));
+    return answers;
+  }, {});
+}
+
+const MAX_DRAFT_ANSWER_LENGTH = 5000;
+
+// Drafts come straight from the client, so only trust known question ids and
+// coerce each value to a length-capped string.
+function draftAnswers(input: unknown, questions: readonly { id: string }[]) {
+  const source =
+    input && typeof input === "object" ? (input as Record<string, unknown>) : {};
+
+  return questions.reduce<AnswerMap>((answers, question) => {
+    const value = source[question.id];
+    answers[question.id] =
+      typeof value === "string" ? value.slice(0, MAX_DRAFT_ANSWER_LENGTH) : "";
     return answers;
   }, {});
 }
@@ -70,6 +87,29 @@ export async function saveTacticsQuiz(formData: FormData) {
 
   await saveTacticsAnswers(userId, answersFromForm(formData, tacticsQuestions));
   redirect("/dashboard");
+}
+
+export async function saveKnowledgeDraft(answers: AnswerMap) {
+  const userId = await requireUserId();
+  const responses = await getResponses(userId);
+
+  // Never overwrite a finished quiz with a late-arriving autosave.
+  if (responses?.completedAt) {
+    return;
+  }
+
+  await saveKnowledgeAnswers(userId, draftAnswers(answers, positionQuestions));
+}
+
+export async function saveTacticsDraftAnswers(answers: AnswerMap) {
+  const userId = await requireUserId();
+  const responses = await getResponses(userId);
+
+  if (responses?.completedAt) {
+    return;
+  }
+
+  await saveTacticsDraft(userId, draftAnswers(answers, tacticsQuestions));
 }
 
 export async function markLessonComplete(formData: FormData) {

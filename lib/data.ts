@@ -141,6 +141,22 @@ export async function saveTacticsAnswers(userId: string, answers: AnswerMap) {
   return mapResponses(result.rows[0]);
 }
 
+export async function saveTacticsDraft(userId: string, answers: AnswerMap) {
+  const result = await query<ResponseRow>(
+    `
+      INSERT INTO soccer_iq_responses (user_id, tactics_answers)
+      VALUES ($1, $2::jsonb)
+      ON CONFLICT (user_id) DO UPDATE
+      SET tactics_answers = EXCLUDED.tactics_answers,
+          updated_at = now()
+      RETURNING id, user_id, knowledge_answers, tactics_answers, completed_at, updated_at
+    `,
+    [userId, JSON.stringify(answers)],
+  );
+
+  return mapResponses(result.rows[0]);
+}
+
 export async function getLessonCompletions(userId: string) {
   const result = await query<CompletionRow>(
     `

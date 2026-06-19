@@ -1,7 +1,8 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
-import { savePositionsQuiz } from "@/app/actions";
+import { saveKnowledgeDraft, savePositionsQuiz } from "@/app/actions";
+import { QuizForm } from "@/components/quiz-form";
 import { authOptions } from "@/lib/auth/options";
 import { getPlayer, getResponses } from "@/lib/data";
 import { positionQuestions } from "@/lib/questions";
@@ -37,28 +38,13 @@ export default async function PositionQuizPage() {
         </p>
       </section>
 
-      <form className="quiz-form" action={savePositionsQuiz}>
-        {positionQuestions.map((question, index) => (
-          <label className="question-card" key={question.id} htmlFor={question.id}>
-            <span className="question-number">{index + 1}</span>
-            <span className="question-title">{question.label}</span>
-            <span className="question-hint">{question.hint}</span>
-            <textarea
-              id={question.id}
-              name={question.id}
-              defaultValue={previous[question.id] ?? ""}
-              placeholder="Your answer..."
-              rows={6}
-            />
-          </label>
-        ))}
-
-        <div className="sticky-submit">
-          <button className="primary-button" type="submit">
-            Save and go to field questions
-          </button>
-        </div>
-      </form>
+      <QuizForm
+        questions={positionQuestions}
+        previousAnswers={previous}
+        draftAction={saveKnowledgeDraft}
+        submitAction={savePositionsQuiz}
+        submitLabel="Save and go to field questions"
+      />
     </main>
   );
 }

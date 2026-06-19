@@ -1,7 +1,8 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
-import { saveTacticsQuiz } from "@/app/actions";
+import { saveTacticsDraftAnswers, saveTacticsQuiz } from "@/app/actions";
+import { QuizForm } from "@/components/quiz-form";
 import { authOptions } from "@/lib/auth/options";
 import { getPlayer, getResponses } from "@/lib/data";
 import { tacticsQuestions } from "@/lib/questions";
@@ -68,28 +69,13 @@ export default async function TacticsQuizPage() {
         </div>
       </section>
 
-      <form className="quiz-form" action={saveTacticsQuiz}>
-        {tacticsQuestions.map((question, index) => (
-          <label className="question-card" key={question.id} htmlFor={question.id}>
-            <span className="question-number">{index + 1}</span>
-            <span className="question-title">{question.label}</span>
-            <span className="question-hint">{question.hint}</span>
-            <textarea
-              id={question.id}
-              name={question.id}
-              defaultValue={previous[question.id] ?? ""}
-              placeholder="Your answer..."
-              rows={6}
-            />
-          </label>
-        ))}
-
-        <div className="sticky-submit">
-          <button className="primary-button" type="submit">
-            Finish and see dashboard
-          </button>
-        </div>
-      </form>
+      <QuizForm
+        questions={tacticsQuestions}
+        previousAnswers={previous}
+        draftAction={saveTacticsDraftAnswers}
+        submitAction={saveTacticsQuiz}
+        submitLabel="Finish and see dashboard"
+      />
     </main>
   );
 }
