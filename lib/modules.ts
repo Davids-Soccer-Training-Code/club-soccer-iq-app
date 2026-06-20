@@ -4539,250 +4539,1310 @@ export const learningModules: LearningModule[] = [
         slug: "gk-main-principles",
         title: "GK (1): Main Principles",
         summary: "Core habits for the goalkeeper in open play.",
-        body: "Coming soon. This lesson will cover the goalkeeper's main principles during open play.",
+        body: "Watch the video below for the goalkeeper's main principles in our style of play.",
+        videos: [{ title: "Goalkeeper", youtubeId: "GI07BwuS9F0" }],
       },
       {
         slug: "gk-transitions",
         title: "GK (1): Transitions",
         summary: "What the goalkeeper does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the goalkeeper's role in transition moments.",
+        body: "The Calmest Head on the Field\n\nThe transition — the second the ball changes hands — is the most chaotic moment in the game. Everyone else is scrambling. You are the one player who can see the whole field in front of you, and the one player who is never in a rush. Your job in every transition is to be the calm head and the loudest voice while everyone around you reacts.\n\nWhen We Win It: Be the Safety Valve\n\nThe moment we win the ball, you become an option — the safe one. If a teammate wins it but is under pressure, you are the easy pass backward that keeps us out of trouble (Plan C from Look to Go Forward: back is fine, as long as it's safe). Take a clean touch or catch, get your head up, and then start the attack. If there's a quick forward or wide pass on, take it — the seconds after we win it are the golden window. If there isn't, stay calm and keep the ball; never force a risky ball, and never play it square across our own goal.\n\nWhen We Lose It: Sweeper and Organizer\n\nWhen we attack, we push up into a 2-5-1 and we are light at the back on purpose. That makes you the last line — and an extra defender. The instant we lose the ball, read for the ball played in behind our high defenders. If it's coming, come off your line and sweep it up before it turns into a breakaway. As the ball gets closer to our goal, drop back with it and get set.\n\nYour Voice Starts the Reaction\n\nYou can see what no one else can, so you start the defensive reaction. Call who presses — the closest player goes — and tell everyone else to get compact and recover. This is the five-second sprint from our transition principles, and you're the one who can see it and call it before your teammates even know it's happening.\n\nPosition Follows the Ball — But Home Is Your Box\n\nThe simple rule: mostly, you hang back and own your goal box — that's home. When we're committed forward in attack you can step up off your line a little to sweep up a ball played in behind, but stepping up is the exception, not the habit — and the instant we lose it, drop straight back. When they have it and are coming at us, get back toward your goal and get big. Your position moves with the ball, but home base is always your box.",
+        callouts: [
+          { title: "Secure, then start it", body: "When we win it, your first job is to be a safe option and calm the game — then begin the attack, forward or wide if it's on." },
+          { title: "Sweep behind the line", body: "In our 2-5-1 we're light at the back. When we lose it, come off your line to clear a ball over the top before it becomes a breakaway." },
+        ],
+        bullets: [
+          {
+            title: "The moment we win the ball",
+            items: [
+              "Be the safe backward option for a teammate under pressure.",
+              "Take a clean touch or catch, then get your head up and scan.",
+              "Start the attack forward or wide if it's on — the window is open.",
+              "If nothing's on, stay calm and keep it — never a risky ball, never square across our goal.",
+            ],
+          },
+          {
+            title: "The moment we lose the ball",
+            items: [
+              "Read for the ball played in behind our high line.",
+              "Come off your line and sweep if you can get there first.",
+              "Drop back toward goal as the ball gets closer and get set.",
+              "Use your voice — call who presses, tell everyone else to get compact.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We just won it, teammate under pressure", "Offer a safe short option and secure it.", "Calms the chaos so we don't give it right back."],
+            ["We won it with space ahead", "Distribute quickly, forward or wide.", "Starts the counter while they're still disorganized."],
+            ["We're attacking, their defense is high", "Push up off your line, ready to sweep.", "Kills a ball over the top before it becomes a breakaway."],
+            ["We just lost it", "Call the press and drop toward goal.", "One player presses, everyone else gets compact — and you can see it first."],
+          ],
+        },
+        coachSays: "When everyone else is panicking, you're the calm one. Win it — be the safe option. Lose it — be the voice that starts everyone moving, and the sweeper behind the line.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We just won the ball. Your left center back is under pressure near our box and plays it back to you. An opponent is closing you down, and the only 'easy' pass is square across the front of your own goal to the other center back.",
+          choices: [
+            { label: "Play the square pass across your goal to the other center back", response: "This is the one ball we never play. If it's read, their striker steps in and it's a tap-in — and it forces the whole team to rotate. There's always a safer choice." },
+            { label: "Take a calm touch away from the pressure and play up the line or clear it to safety", response: "Yes. Secure it first, then send it away from danger — up the line to a wide teammate or safely clear. Calm beats forcing it, and it never goes across our own goal." },
+            { label: "Hold the ball and wait for a teammate to come close", response: "Holding it with an opponent closing you down invites a mistake right in front of goal. Decide early — take your touch away from pressure and move it to safety." },
+          ],
+        },
       },
       {
         slug: "gk-ball-recovery",
         title: "GK (1): Ball Recovery",
         summary: "How the goalkeeper helps win the ball back.",
-        body: "Coming soon. This lesson will cover the goalkeeper's role in ball recovery situations.",
+        body: "You Are the Last Line — and an Extra Defender\n\nWinning the ball back isn't only for the players up the field. As the goalkeeper, you help recover the ball every time you claim a cross, sweep up a through ball, or win a 1v1. You're the safety behind everyone, which is exactly what turns a scary moment into our ball.\n\nClaim What's Yours: Crosses and Loose Balls\n\nYour box is your house. When a ball comes into it that you can win, go and get it — and call it loudly ('keeper's!') so your defenders clear out of your way. Come with confidence: don't let the ball bounce in your own box if you can take it out of the air, because a bounce is a chance for it to skip past everyone. Catch it clean when you can. When you can't catch it, punch or parry it away — wide and away from goal, never spilled back into the middle where it's dangerous.\n\nSweeping Behind the Line\n\nBecause we push up to attack, balls get played in behind our defenders. Read the flight early — always know where the ball is going before it gets there — and come off your line to win it. Getting there first, even just to clear it, beats letting an attacker run onto it for a breakaway.\n\nThe 1v1: Slow Them Down, Don't Dive\n\nWhen an attacker breaks through alone, this is the first defender principle, just with you as the defender. Don't dive in. Stay on your feet, make yourself as big as possible, and close the space to cut down their angle. Force them wide, away from the middle, and wait for the touch or the shot — a keeper who dives early and misses is beaten, with the goal wide open behind them.\n\nClearing and Rebounds: Send It Away From Goal\n\nIf you have to clear with your feet, get your body behind it and clear with control — no wild belts. And remember rebounds: you'll make saves you can't hold cleanly, so when you parry, push the ball wide and away from goal, never back into the center. Then recover your feet and get set fast, because that loose ball is a brand-new 50/50 — talk to your defenders and get first to it.",
+        callouts: [
+          { title: "Catch it or send it away from goal", body: "When you can't hold it, punch or parry wide and away — never spill it back into the dangerous central space." },
+          { title: "Big and patient in a 1v1", body: "Stay on your feet, make yourself big, and force the attacker wide. A dive you miss is a goal." },
+        ],
+        bullets: [
+          {
+            title: "Commanding your box",
+            items: [
+              "Call it loudly so defenders clear out of your way.",
+              "Come for what you can win — don't let crosses bounce in your box.",
+              "Catch clean when you can; punch or parry wide when you can't.",
+              "Read the ball's flight early so you're moving before it arrives.",
+            ],
+          },
+          {
+            title: "Sweeping and 1v1s",
+            items: [
+              "Come off your line to win balls played in behind our high defenders.",
+              "In a 1v1, stay big and stay on your feet — don't dive in.",
+              "Force the attacker wide, away from the middle, and wait for their mistake.",
+              "After a parry, recover fast — the rebound is a fresh 50/50.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["Cross into your box", "Call early; come and catch, or punch wide.", "Owning the box wins the ball back and stops a tap-in."],
+            ["Through ball behind a high line", "Come off your line and sweep it up.", "Beat the attacker to it before it becomes a breakaway."],
+            ["1v1, attacker through on goal", "Stay big, stay on your feet, force them wide.", "Forcing a mistake beats a dive you might miss."],
+            ["A save you can't hold", "Parry or punch wide, away from the middle.", "Keeps the rebound out of the danger zone."],
+            ["Loose or second ball in the box", "Claim it, or organize a clear with your defenders.", "First to react wins the chain of 50/50s."],
+          ],
+        },
+        coachSays: "Your box is your house. Come get what's yours, and when you can't hold it, send it away from goal — never back into the middle. In a 1v1, stay big and make them blink first.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "An attacker beats our last defender and is running through on goal, one-on-one with you, from the edge of the box.",
+          choices: [
+            { label: "Rush out and dive at their feet as fast as you can", response: "Diving early is how keepers get beaten — one touch around you and the goal is wide open. Stay on your feet as long as you can." },
+            { label: "Stay big, close the space to cut the angle, and force them wide while you wait for their touch", response: "Yes. This is the first defender principle: don't dive, make yourself big, take away the angle, and force them away from the middle. Patience wins the 1v1." },
+            { label: "Back-pedal to your line and wait for the shot", response: "Backing all the way off gives the attacker time and a clear look at goal. You want to close the space and shrink their target — just without diving in early." },
+          ],
+        },
       },
       {
         slug: "gk-restarts",
         title: "GK (1): Restarts",
         summary: "The goalkeeper's role on restarts.",
-        body: "Coming soon. This lesson will cover the goalkeeper's role on restarts.",
+        body: "You Have a Job on Every Restart\n\nEvery restart — ours and theirs — has a job for you. On our restarts you're often the one who starts the play; on theirs you're the commander of your box. Watch the team's restart videos for the full picture, and use this as your position-specific checklist.\n\nOur Goal Kicks: Start the Build, Stay Calm\n\nThis is your moment. Almost every time, you play short to a center back — the 4 or the 5 — to start building out. Only go to the 6 if there's no center back option. Here's the rule that matters most: never play the pass square across the front of your own goal. It's the most dangerous ball on the field. Stay calm, because on a goal kick we are always numbers-up — there is always an open man somewhere. And if you've ended up with no one open, a tactical reset is completely fine: drive the ball up to the 9 or 10 and let us reset our shape. A smart long ball beats forcing a short one into trouble.\n\nTheir Goal Kicks: Organize the Press\n\nWhen they have the goal kick, you're the eyes behind our press. We push up to trap them and win it high, so stay alert for the long ball played over the top — be ready to come off your line and sweep. Talk the team into the trap from behind.\n\nCorners — Ours: Stay Home\n\nOn our corners, you stay back with the center backs as our safety against a counter. You do not go up for the corner. If they win it and break, you're the one who's already set to deal with it.\n\nCorners — Theirs: Command Your Box\n\nDefending corners is chaos. Own your six-yard box: come for what you can win, organize your markers before the ball comes in, and be brave in the air — don't let it bounce. When you get it, catch it clean or punch it away, out and wide, never spilled into the middle.\n\nTheir Free Kicks Near Goal: Set the Wall\n\nWhen they have a free kick near our box, you build and position the wall — usually from our center mids. Line it up to cover one side, then take your position to guard the rest of the goal yourself. Get your hands in front of any low or chest-height ball. You can't do much about a perfect strike into the top corner — even real keepers can't — so don't worry about that one; just be set for everything else.\n\nOur Free Kicks & Kickoffs: Be the Reset\n\nOn our free kicks, you're part of the safety behind the ball, ready to be the reset option if we play it back. On our kickoffs, the team hits it long into their corner and pushes up — slide up off your line a little and stay alert as the last line. On their kickoffs, we press immediately, so be ready to sweep if they go long.\n\nThrow-Ins\n\nWe always throw up the line, never backward, so you're rarely the option on our throw-ins — your job is to organize and stay alert. When they throw it near our box, watch for a long throw played in like a corner, and be ready to command it.",
+        callouts: [
+          { title: "Never across your own goal", body: "On goal kicks, the square pass in front of your net is the one ball we never play. Short to a center back, or reset it long." },
+          { title: "Own your box on their set pieces", body: "Corners and free kicks near goal: be loud, organize your markers, come for what you can, and send everything away from the middle." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts (goal kicks, free kicks, kickoffs)",
+            items: [
+              "Goal kicks: play short to a center back (4 or 5), rarely the 6.",
+              "Never play it square across the front of your own goal.",
+              "Stay calm — we're always numbers-up on a goal kick.",
+              "No one open? Tactical reset — drive it up to the 9 or 10.",
+              "Free kicks and kickoffs: be the safety and the reset option behind the play.",
+            ],
+          },
+          {
+            title: "On their restarts (corners, free kicks, throw-ins)",
+            items: [
+              "Corners: command your box, organize markers, be brave in the air.",
+              "Free kicks near goal: set and position the wall, guard the open side.",
+              "Hands in front of low and chest-height balls.",
+              "Send everything away from goal — never spill it into the middle.",
+              "Watch for a long throw played into your box like a corner.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our goal kick", "Short to a center back (4/5), never square across goal; stay calm — we're numbers-up. Reset long to the 9/10 if no one's open."],
+            ["Their goal kick", "Organize the press from behind; watch for the long ball over the top, ready to sweep."],
+            ["Our corner", "Stay back with the center backs as counter-safety — don't go up."],
+            ["Their corner", "Command your box; come for what you can; don't let it bounce; send it out and wide."],
+            ["Their free kick near goal", "Set and position the wall; guard the open side; hands in front of low/chest balls."],
+            ["Our free kick", "Part of the safety behind the ball; be the reset option."],
+            ["Kickoff (ours)", "Slide up as the team pushes for the long ball; stay alert as the last line."],
+            ["Kickoff (theirs)", "Alert as we press high; ready to sweep a long ball."],
+            ["Throw-in", "We throw up the line, never back; organize, and watch for a long throw into your box."],
+          ],
+        },
+        coachSays: "On our goal kicks: calm, short, and never across your own goal — reset it long if you have to. On their set pieces: it's your box. Be loud, be brave, and send everything away from goal.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You have a goal kick. Your center backs are marked, the winger is covered, and the only 'open' pass is square across the front of your own goal to the other center back.",
+          choices: [
+            { label: "Play the square pass across your goal to the other center back", response: "Never this one. A square ball across your own goal is the most dangerous pass on the field — if it's read, it's a tap-in. There's always a safer choice." },
+            { label: "Take the tactical reset — drive it up the field to the 9 or 10", response: "Yes. When nothing short is on, a smart long ball up to our striker or 10 lets us reset our shape. A tactical reset beats forcing a dangerous short pass every time." },
+            { label: "Wait and hold the ball until someone gets open", response: "You can't hold a goal kick, and waiting just lets their press get set. If no short option is on, reset it long and let us reorganize." },
+          ],
+        },
       },
       // CB
       {
         slug: "cb-main-principles",
         title: "CB (4/5): Main Principles",
         summary: "Core habits for the center back in open play.",
-        body: "Coming soon. This lesson will cover the center back's main principles during open play.",
+        body: "Watch the video below for the center backs' main principles in our style of play.",
+        videos: [{ title: "Center Backs", youtubeId: "a7VtVQrwvpU" }],
       },
       {
         slug: "cb-transitions",
         title: "CB (4/5): Transitions",
         summary: "What the center back does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the center back's role in transition moments.",
+        body: "Secure First, Then Start the Build\n\nThe moment we win the ball, you are usually the one who starts our attack. Before anything else, protect it: take a calm first touch away from pressure, never into an opponent, and never force a risky pass in front of our own goal — a giveaway there is the most dangerous kind there is. Once it's safe, look to go forward.\n\nYou Are 99% of How We Start\n\nAlmost every attack we build begins with a center back. Nearly all the time, that means playing into one of our central midfielders, or switching out to a winger to escape pressure. So when the ball comes to you with time, stay calm and pick the right pass — to feet, into space, or through an angle. You don't have to do anything fancy; you have to be the calm, clean start of the attack.\n\nTactical Reset Is Allowed\n\nIf you look up and there's no good option, driving the ball long to reset our shape is completely fine. It is not a failure — it buys the whole team time to reorganize. A smart long ball beats forcing a dangerous short pass every time. The only thing we never do is give it straight to them in front of our goal.\n\nWhen We Lose It: Collapse and Cover\n\nWhen we attack, we push up into a 2-5-1, which leaves you and your center back partner as the safety layer. The instant we lose the ball, get compact: the two of you pull together to close the central gap so there's no clean lane at our goal. Whoever was closest sprints back. You are the players the whole team trusts to be there when it breaks down.\n\nStepping Out and Covering\n\nIf one of our wingers gets beaten down the side, the center back on that side steps out to press the wide attacker — but never both of you at once. While one steps out, the other center back and the 6 slide over to cover the space behind and keep us compact. And don't get dragged out chasing the ball: hold your position, watch for the ball over the top, and keep the middle protected.",
+        callouts: [
+          { title: "You start the build", body: "When we win it, almost every attack begins with a calm pass from you into a midfielder or out to a winger. Secure it first." },
+          { title: "Collapse and cover", body: "When we lose it, the two center backs pull together to close the middle. Only the same-side CB steps out for a beaten winger — never both." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Calm first touch away from pressure — never into an opponent.",
+              "Never force a risky pass in front of our own goal.",
+              "Play into a central mid, or switch out to a winger to escape.",
+              "No good option? Drive it long — a tactical reset is smart, not a failure.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Get compact immediately — close the central gap with your partner.",
+              "Whoever's closest sprints back; you're the safety layer in our 2-5-1.",
+              "Step out to cover a beaten winger — but only the same-side CB.",
+              "Don't get dragged out wide; hold the line and watch the ball over the top.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We win it under pressure near our goal", "Calm touch, safe pass to a mid or winger — never across goal.", "A giveaway in front of our goal is the most dangerous kind."],
+            ["We win it with time", "Start the build into a central mid, or switch to a winger.", "That's how 99% of our attacks begin."],
+            ["No good option on the ball", "Drive it long — tactical reset.", "Buys time to reset our shape; beats forcing it."],
+            ["We just lost it", "Get compact, close the middle, sprint back.", "You're the safety layer in our 2-5-1."],
+            ["A winger gets beaten wide", "Same-side CB steps out; partner and the 6 cover.", "Keeps us compact without both CBs pulled out."],
+          ],
+        },
+        coachSays: "Almost everything we do starts with you — so be calm and pick the right pass, never across our goal. The second we lose it, squeeze together and cover. You're the safety the whole team trusts.",
+        practice: {
+          type: "true-false" as const,
+          statement: "If one of our wingers gets beaten down the side, both center backs should step out together to win the ball back as fast as possible.",
+          answer: false,
+          explanation: "Only the same-side center back steps out to press the wide attacker. The other center back and the 6 slide over to cover behind and stay compact — if both CBs step out, the middle opens up right in front of our goal.",
+        },
       },
       {
         slug: "cb-ball-recovery",
         title: "CB (4/5): Ball Recovery",
         summary: "How the center back helps win the ball back.",
-        body: "Coming soon. This lesson will cover the center back's role in ball recovery situations.",
+        body: "Win the Ball Back as a Pair\n\nYou and your center back partner work as a unit. Get compact, stay compact — keep no clean gap between the two of you, because that gap is a straight lane to our goal. When the ball moves, you shift together; when one of you steps, the other adjusts to cover. Almost everything below comes from defending as a connected pair.\n\nFirst Defender Near Goal: Step Up, Never Dive\n\nA center back is often the first defender — the closest player between the ball and our goal. Step up to slow the attacker down, but do not dive in. This matters more for you than for anyone, because a missed dive leaves nobody between the attacker and the goal. Stay on your feet, stay patient, and wait for a heavy touch or a mistake before you go to win it.\n\nStagger to Kill the Through Ball\n\nWhen the other team has two strikers central, the smartest setup is often staggered: one of you steps to the striker on the ball, and the other drops a step behind to cover. That turns a risky 1v1 into a safe 1v2, and it blocks the through ball that would split you. Keeping the attacker outnumbered — 1v2 or 1v3 — is the whole goal of our defending.\n\nWin the Air, Win the Second Ball\n\nCenter backs own the central air. When a long ball comes into the middle, be brave: time your jump, use your body, and win the header. Winning it once isn't enough, though — react first to the second ball, because a flick-on or a knockdown is a brand-new 50/50 that's just as winnable as the first.\n\nClearing With Control — No Belts\n\nWhen you have to clear, get your body behind the ball and clear with control, away from goal — wide, never back across the middle. A clearance that bounces and carries is doing its job: distance away from our goal. And if you're stuck in a tight 1v1 near our goal with no pass on, a tactical clearance is a smart choice — getting it to safety beats a risky pass in front of our net.",
+        callouts: [
+          { title: "Step up, never dive", body: "As the last line, a missed dive leaves nobody behind you. Slow the attacker down and wait for the mistake." },
+          { title: "Stagger to kill the through ball", body: "One CB on the striker, one behind, turns a risky 1v1 into a safe 1v2 and blocks the ball in behind." },
+        ],
+        bullets: [
+          {
+            title: "Defending as a pair",
+            items: [
+              "Stay compact — no clean gap between you and your partner.",
+              "Shift together when the ball moves; cover when one of you steps.",
+              "Keep the attacker outnumbered — 1v2 or 1v3.",
+              "Don't get dragged out of position chasing the ball.",
+            ],
+          },
+          {
+            title: "Winning the ball",
+            items: [
+              "Step up to slow the first attacker — but never dive in.",
+              "Win the aerial battle bravely: time it, use your body.",
+              "React first to the second ball after a header.",
+              "Clear with control, away from goal — no wild belts.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["Attacker running at our back line", "Step up, slow them down, don't dive.", "A missed dive leaves the goal open behind you."],
+            ["Facing two strikers centrally", "Stagger: one on the ball, one behind.", "Stops a 1v1 becoming a 1v2 and blocks the through ball."],
+            ["Long ball into the middle", "Be brave, win the header, use your body.", "Center backs own the central air."],
+            ["After winning a header", "React first to the second ball.", "A flick-on or knockdown is a fresh 50/50."],
+            ["Tight 1v1 near goal, no pass on", "Tactical clearance, away from goal.", "Safety beats a risky pass in front of our net."],
+          ],
+        },
+        coachSays: "You and your partner are a unit — stay tight, cover each other, and never dive in front of your own goal. Win the air, win the second ball, and when in doubt, get it away from danger.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The other team has two strikers playing centrally, and they're about to play a ball toward them through the middle. How should you and your center back partner set up?",
+          choices: [
+            { label: "Both step up tight to the strikers, side by side", response: "Side by side, a single through ball between you splits you both, and a 1v1 can quickly become a 1v2. Against two strikers you need cover, not a flat line." },
+            { label: "Stagger — one steps to the ball-side striker, the other drops a step behind to cover", response: "Yes. Staggering turns a risky 1v1 into a safe 1v2 and blocks the through ball that would split a flat pair. This is exactly how we defend two central strikers." },
+            { label: "Both drop deep to the goal line and wait", response: "Dropping all the way off invites them to run straight at you with time and space. Stay compact and staggered so you can step, cover, and keep them outnumbered." },
+          ],
+        },
       },
       {
         slug: "cb-restarts",
         title: "CB (4/5): Restarts",
         summary: "The center back's role on restarts.",
-        body: "Coming soon. This lesson will cover the center back's role on restarts.",
+        body: "You Have a Job on Every Restart\n\nEvery restart, ours and theirs, has a job for you. On our goal kicks you're the first pass; on their set pieces you're one of the bravest defenders in the box. Watch the team's restart videos for the full picture, and use this as your position-specific checklist.\n\nOur Goal Kicks: You're the First Pass\n\nAlmost every goal kick comes to you — the 4 on the right, the 5 on the left. The most important thing: don't freak out when you get it, because on a goal kick we are always numbers-up, so there is always an open man somewhere. Receive it calmly, then play to the winger's feet, into the space for the 6 to run onto, or up the field. Never play the pass square across the front of our own goal. And if nobody is open, a tactical reset — driving it up to the 9 or 10 — is completely fine.\n\nTheir Goal Kicks: Be the Safety Behind the Press\n\nWhen they have the goal kick, we push up to press and trap them. That makes you the deepest player and the safety. Stay alert for the long ball played over our press, and be brave — win the aerial battle on the first or second bounce, don't let it run.\n\nOur Corners: Stay Home\n\nOn our corners, you stay back with the goalkeeper as our protection against a counter. You do not go up for the corner. If they win it and break, you're already set to stop it.\n\nTheir Corners: Defend the Central Area\n\nWhen they have a corner, come up a step off the goal line — you don't need to stand on the posts. Get compact, mark your player, and own the central area in front of goal. Be brave in the air, and when the ball comes in, get it out — and never let it bounce in your box.\n\nTheir Free Kicks: Defend Behind the Wall\n\nWhen they have a free kick near our goal, you defend behind the wall. Mark up, leave no one unmarked, and if they play the ball up into the box, be brave and be first to it.\n\nOur Free Kicks, Kickoffs & Throw-Ins\n\nOn our free kicks, you're part of the back-line safety, ready in case it breaks down — and on free kicks in the attacking third, you can push up into the box. On our kickoffs, hold as the last line while the team pushes up for the long ball. On kickoffs against us, be ready to defend a ball played long. And on throw-ins, shift across with the team and stay alert for a long throw played into your box.",
+        callouts: [
+          { title: "You're the first pass on goal kicks", body: "Almost every goal kick comes to you. Stay calm — we're numbers-up — and never play it square across your own goal." },
+          { title: "Be brave in the air", body: "On their set pieces and long balls, win the header, get it out, and never let it bounce in your box." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts (goal kicks, free kicks, kickoffs)",
+            items: [
+              "Receive goal kicks calmly — we're always numbers-up.",
+              "Play to the winger, into space for the 6, or up the field.",
+              "Never play it square across our own goal; reset long if stuck.",
+              "Stay as the back-line safety on free kicks and kickoffs.",
+            ],
+          },
+          {
+            title: "On their restarts (corners, free kicks, throw-ins)",
+            items: [
+              "Corners: come a step off the line, stay compact, mark up, get it out.",
+              "Free kicks: defend behind the wall, leave no one unmarked.",
+              "Win the long ball in the air — be brave and first to it.",
+              "Don't let the ball bounce in your box; watch for a long throw in.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our goal kick", "You're the main receiver (4/5). Stay calm — numbers-up. Play to the winger, into space for the 6, or up; never square across goal; reset long if stuck."],
+            ["Their goal kick", "Deepest safety behind our press; win the long ball in the air, be brave."],
+            ["Our corner", "Stay back with the keeper as counter-safety — don't go up."],
+            ["Their corner", "Come a step off the line, stay compact, mark up; get it out and don't let it bounce."],
+            ["Their free kick near goal", "Defend behind the wall; mark up, leave no one unmarked, be first to a ball played up."],
+            ["Our free kick", "Part of the back-line safety; push into the box on attacking-third free kicks."],
+            ["Kickoff (ours)", "Hold as the last line while the team pushes up."],
+            ["Kickoff (theirs)", "Ready to defend a long ball; win it in the air."],
+            ["Throw-in", "Shift across with the team; watch for a long throw into your box."],
+          ],
+        },
+        coachSays: "On our goal kicks, you're the first pass — calm, simple, and never across our goal. On their set pieces, be the bravest one in the box: win the header, get it out, don't let it bounce.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When defending a corner, the best spot for our center backs is standing right on the goal posts to guard the corners of the net.",
+          answer: false,
+          explanation: "We don't stand our center backs on the posts — at this age nobody is hitting it cleanly into the corner. Instead, come a step off the line, stay compact, mark up, and defend the central area so we can win the ball and get it out.",
+        },
       },
       // CM
       {
         slug: "cm-main-principles",
         title: "CM (8): Main Principles",
         summary: "Core habits for the center midfielder in open play.",
-        body: "Coming soon. This lesson will cover the center midfielder's main principles during open play.",
+        body: "Watch the video below for the center mid's main principles in our style of play.",
+        videos: [{ title: "Center Mid", youtubeId: "VsoR_fI-xYQ" }],
       },
       {
         slug: "cm-transitions",
         title: "CM (8): Transitions",
         summary: "What the center midfielder does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the center midfielder's role in transition moments.",
+        body: "Box to Box: You Cover the Whole Field\n\nThe most important idea for our 8 is this: you are a box-to-box midfielder. That means you cover the entire field — from our own penalty box all the way to their penalty box, and back again. When we attack, you get forward to support and arrive in their box. When we defend, you sprint back to help protect our box. You are the engine that links our defense and our attack, and transitions are exactly where that engine matters most.\n\nWhen We Win It: Be the Link Forward\n\nThe second we win the ball, you connect the back to the front. Offer a supporting angle to the teammate who won it, and look to receive — a lot of our attacks come from a center back playing into a central midfielder, and that's you. Take a good first touch, get your head up, and look to go forward: break a line with a pass, or carry it. In the golden window right after we win it, push forward to support the counter and get yourself into their box.\n\nWhen We Lose It: Sprint Back First\n\nHere's the other half of box to box. When we attack we push up into a 2-5-1, so you're often high up the field when we lose the ball. The instant we lose it, your first job is to sprint back — get compact and protect the central lane before their counter can use the space behind us. An 8 who gets caught upfield and jogs back is how we get countered; an 8 who sprints back is how we kill it.\n\nThe Engine Never Stops\n\nBox to box means you are always moving. Support the attack, then recover to defend. Whether we have the ball or they do, you have a run to make — the worst thing an 8 can do is stand still and watch. Your legs and your reading of the game are what hold our two halves together.",
+        callouts: [
+          { title: "Box to box", body: "You cover the whole field — our box to theirs and back. You're the engine that links our defense and our attack." },
+          { title: "Win it: link forward. Lose it: sprint back.", body: "That's your transition job in one line — and why your stamina is the team's secret weapon." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Offer a supporting angle to the teammate who won it.",
+              "Receive from a center back to start the build — that's you.",
+              "Good first touch, head up, look to go forward or break a line.",
+              "Push forward in the golden window — arrive in their box.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Sprint back first — don't get caught upfield from our 2-5-1.",
+              "Get compact and protect the central lane.",
+              "Become a cover-and-support defender behind the press.",
+              "Help turn their counter into a 1v2 or 1v3 for us.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We just won it", "Offer an angle and link the ball forward.", "You connect our defense to our attack."],
+            ["Golden window, space ahead", "Get forward, support the counter, arrive in the box.", "Box-to-box runs are how we score from transitions."],
+            ["We just lost it", "Sprint back to get compact.", "You're a cover defender — don't get caught upfield."],
+            ["Ball loose in midfield, either way", "Keep moving — never stand still.", "The engine of the team never stops."],
+          ],
+        },
+        funFact: {
+          title: "Why they call it 'box to box'",
+          body: "The two penalty areas are called 'the boxes.' A box-to-box midfielder is one with the engine to run from defending in their own box one moment to attacking in the other team's box the next — covering the full length of the field, over and over, for the whole game. It's one of the hardest-working roles on the team.",
+        },
+        coachSays: "You're the engine — box to box, all game. Win it, you're the link forward. Lose it, you're the first one sprinting back. Never stand and watch; there's always a run to make.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We've pushed up into our attacking shape and you, the 8, are high up the field near their box. We suddenly lose the ball, and they look to counter through the middle.",
+          choices: [
+            { label: "Stay high in case we win it straight back and you can attack again", response: "Staying high is how an 8 gets caught upfield. We're in our 2-5-1 and light at the back — if you don't recover, their counter runs right through the space you left. This is the moment to be box-to-box." },
+            { label: "Sprint back immediately to get compact and protect the middle", response: "Yes. This is the box-to-box job: the instant we lose it, you're the first one sprinting back to close the central lane and help turn their counter into a 1v2 or 1v3 for us." },
+            { label: "Jog back slowly to save energy for the next attack", response: "A slow jog is a gift to their counter. The five-second window after losing it is when full effort matters most — sprint back, then you can catch your breath once we're compact." },
+          ],
+        },
       },
       {
         slug: "cm-ball-recovery",
         title: "CM (8): Ball Recovery",
         summary: "How the center midfielder helps win the ball back.",
-        body: "Coming soon. This lesson will cover the center midfielder's role in ball recovery situations.",
+        body: "The Heart of Our Cover and Support\n\nWhen the other team has the ball in midfield, you are one of our key second-and-third defenders. While someone closer presses the ball — often our 10 — you give the cover and support behind them: block the passing lanes, stay on your toes, and be ready to become the next first defender the moment our pressure gets beaten. Defending in the middle is pressure, cover, support, and you are a huge part of the cover and support.\n\nForce Them Backward, Never Forward\n\nWhen we defend the middle, let the other team play backward and sideways all they want — that doesn't hurt us. The one thing we cannot allow is a clean ball forward. If their player turns and plays forward through us, that's the dangerous ball, because now we're scrambling. So press a forward turn hard — but do not dive in. A dive that misses in midfield can turn a 3v3 into a 5v5 with their wingers running, and we never want to be numbers-even on defense.\n\nWin the Second Ball — You're Everywhere\n\nBeing box to box means you're constantly around the ball, which makes you our best second-ball winner in midfield. When a header or a tackle pops the ball loose, anticipate where it's going and be first to react. Most midfield battles are really a chain of 50/50s, and the 8 who keeps winning the next one ends up with the ball.\n\nRecovery Runs Win the Ball Back\n\nYour stamina is a weapon on defense, not just in attack. When a runner breaks past our shape, track them all the way back, get goal-side, and nick the ball when the moment comes. A center back stepping out, a winger too tired to track — the 8 covering that ground with a recovery run is often what saves us and wins possession back.",
+        callouts: [
+          { title: "You're the cover and support", body: "When a teammate presses, you block the lane behind and get ready to be the next first defender." },
+          { title: "Force them backward, never forward", body: "Let them go side to side; a forward turn is the danger. Press it hard — but never dive in." },
+        ],
+        bullets: [
+          {
+            title: "Cover and support in midfield",
+            items: [
+              "Block the passing lanes behind the player pressing the ball.",
+              "Be ready to become the next first defender if we're beaten.",
+              "Keep the attacker outnumbered — 1v2 or 1v3.",
+              "Never let us be numbers-even in the middle.",
+            ],
+          },
+          {
+            title: "Winning the ball as the engine",
+            items: [
+              "Be first to second balls in midfield — anticipate where it pops out.",
+              "Press a forward turn hard, but don't dive in.",
+              "Make recovery runs to track runners and get goal-side.",
+              "Use your stamina to cover for a stepping CB or a tired winger.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["A teammate presses the ball", "Cover behind and block the lane.", "Ready to be the next first defender if they're beaten."],
+            ["They play backward or sideways", "Stay patient, hold your shape.", "They can't hurt us going backward."],
+            ["They turn and play forward", "Press it hard — don't dive in.", "A forward ball is the danger; a missed dive makes it worse."],
+            ["Loose ball in midfield", "React first, win the second ball.", "Box-to-box means you're already there."],
+            ["A runner breaks past our shape", "Track them all the way back, get goal-side.", "Recovery runs are how we win it back."],
+          ],
+        },
+        coachSays: "In the middle you're the cover and the support — block the lane, stay ready, and never dive. Win the second ball, track every runner, and use those lungs to save us.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When a teammate steps up to press the ball in midfield, the 8 should dive in too and double up to win it back faster.",
+          answer: false,
+          explanation: "Only one player presses the ball at a time. As the 8, your job is to cover behind — block the passing lane and be ready to become the next first defender. If you both dive in, another opponent is left free and we can get split open.",
+        },
       },
       {
         slug: "cm-restarts",
         title: "CM (8): Restarts",
         summary: "The center midfielder's role on restarts.",
-        body: "Coming soon. This lesson will cover the center midfielder's role on restarts.",
+        body: "You're Our Main Set-Piece Taker\n\nOf all the field players, you have the biggest job on our restarts, because you take most of them. Watch the team's restart videos for the full picture — here's your position-specific checklist.\n\nOur Corners: You Take It\n\nMost of the time, you take our corners. Wait for the signal — the taker raises a hand, and on the hand coming down, the three stacked runners go: the first to the middle of the box, the second to the near post, the third to the far post. Deliver the ball in for them to attack, aiming for the ricochet off one of us into the goal. (If one of the other mids takes it instead, you fill their spot.)\n\nOur Free Kicks: You Take It\n\nYou take almost every free kick in our middle and defending third. Your job is to make the smart decision: play it short to the 6 so we can dribble out and build, long to the 11 out wide, or very long to the 9 up top. Play it up, play it smart, and never give it away. In the attacking third, the free kick can be decisive and the 9 might take it instead.\n\nOur Goal Kicks: Support the Build\n\nOn goal kicks, you're one of our rotating midfielders. As the press shifts and the 9 steps up to leave the 6 open, the rotations open you too — move into space to receive and keep supporting the ball-side channel so we can play out.\n\nOur Throw-Ins & Kickoffs\n\nOn throw-ins, move to create the throw up the line, and in the attacking third, attack the box like it's a corner. On our kickoffs, you push up high as we hit the long ball into their corner — go win it and support.\n\nDefending Their Restarts\n\nOn their corners, mark your player and defend the central area of the box — help smother it and get the ball out. On their free kicks near our goal, you're often one of the center mids in the wall (with the 10 and 6); if you're not in the wall, mark up tight. On their kickoffs we press immediately, so be ready, and on their throw-ins, mark up, stay compact, and win the second ball.",
+        callouts: [
+          { title: "You're our set-piece taker", body: "Most corners and free kicks are yours. Deliver smart, play it up, and never give it to the other team." },
+          { title: "In the wall on their free kicks", body: "You're often one of the center mids in the wall with the 10 and 6 — otherwise, mark up tight." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Corners: you usually take it — deliver for the three runners (near post, far post, middle).",
+              "Free kicks: short to the 6, long to the 11, or very long to the 9 — smart and up.",
+              "Goal kicks: rotate into space to receive and support the build.",
+              "Throw-ins: create the throw up the line; attack the box in the attacking third.",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Corners: mark your player and defend the central box area.",
+              "Free kicks near goal: be part of the wall, or mark up tight.",
+              "Kickoffs: press immediately with the team.",
+              "Throw-ins: mark up, stay compact, win the second ball.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our corner", "You usually take it — deliver for the three runners (near post, far post, middle); aim for the ricochet."],
+            ["Our free kick", "You take most of them (mid/def third). Short to the 6, long to the 11, or very long to the 9 — smart and up."],
+            ["Our goal kick", "Support the build — rotate into space to receive when the press opens you up."],
+            ["Our throw-in", "Move to create the throw up the line; in the attacking third, attack the box like a corner."],
+            ["Our kickoff", "Push up high for the long ball into their corner; win it and support."],
+            ["Their corner", "Mark your player; defend the central box area; help get it out."],
+            ["Their free kick near goal", "Part of the wall (with the 10 and 6), or mark up tight."],
+            ["Their kickoff", "Press immediately with the team."],
+            ["Their throw-in", "Mark up, stay compact, win the second ball."],
+          ],
+        },
+        coachSays: "Corners and free kicks are yours — deliver with quality and always play it up, never to them. When they have the set piece, get in the wall or mark up, and be first to every second ball.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You're standing over a free kick in our own defending third. The 6 is open and close by, the 11 is wide up the line, and the 9 is high up top. An opponent is shouting to rush you.",
+          choices: [
+            { label: "Blast it as far toward their goal as you can and hope someone gets on the end", response: "A hopeful blast with no target is just giving the ball away. You have real options — the 6, the 11, and the 9 are all available. Pick the smart one and play it up with purpose." },
+            { label: "Make the smart choice — short to the 6 to build out, or up to the 11 or 9 in space", response: "Yes. As our free-kick taker, you decide: short to the 6 to dribble out and build, long to the 11 out wide, or very long to the 9. Play it up, play it smart, and don't give it away." },
+            { label: "Tap it sideways with no real plan just to get it moving", response: "A sideways tap with no purpose wastes the restart and can put a teammate under pressure. Make a deliberate choice — build through the 6, or go up to the 11 or 9." },
+          ],
+        },
       },
       // CAM
       {
         slug: "cam-main-principles",
         title: "CAM (10): Main Principles",
         summary: "Core habits for the attacking midfielder in open play.",
-        body: "Coming soon. This lesson will cover the attacking midfielder's main principles during open play.",
+        body: "Watch the video below for the center attacking mid's main principles in our style of play.",
+        videos: [{ title: "Center Attacking Mid", youtubeId: "2bK36NbeGVg" }],
       },
       {
         slug: "cam-transitions",
         title: "CAM (10): Transitions",
         summary: "What the attacking midfielder does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the attacking midfielder's role in transition moments.",
+        body: "Live in Zone 14\n\nThe most important spot on the field for you is zone 14 — the area just outside the top of their box. It's not just us saying that; statistically, more goals are created from zone 14 than anywhere else, and it's where you and the 9 like to live. In every transition, this is the home base you're thinking about: when we win it, that's where you want the ball; when we lose it, that's often where you are to win it straight back.\n\nWhen We Win It: Be the Forward Outlet\n\nYou are the highest of our central midfielders, which makes you the link into the attack. The instant we win the ball, show for it in a pocket of space between their lines — not hidden behind a defender. Receive, turn, and go forward. In the golden window right after we win it, you and the 9 are the players who spring the counter: get into zone 14 and the box and become a goal threat before their defense can reorganize.\n\nWhen We Lose It: Be the First Presser, Then Recover\n\nBecause you play so high, when we lose the ball in their half you are very often the closest player to it. That makes you the first defender — press immediately to slow them down, don't dive in, and shape your pressure to push them where we have help. If the ball gets past your press, recover back into our shape. The one thing you can never do is stand and watch the ball go by.\n\nConnect the Press and the Counter\n\nThis is what makes your transitions special: you connect our defending and our attacking in the most dangerous area of the field. Win the ball back high near zone 14 and we have a great chance to score immediately; drop into a pocket and you're the outlet that links us forward. Either way, you're working right where goals are made.",
+        callouts: [
+          { title: "Live in zone 14", body: "The best place on the field to score from. In transition, that's where you want to receive — and where you want to win it back." },
+          { title: "Highest mid = first presser", body: "When we lose it high, you're often the closest player. Press immediately to slow them, then recover if you're beaten." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Show in a pocket between their lines — not behind a defender.",
+              "Receive, turn, and look to go forward.",
+              "You and the 9 spring the counter in the golden window.",
+              "Get into zone 14 and the box and become a goal threat.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "If you're closest (often the case high up), press immediately.",
+              "Step up to slow them — don't dive in.",
+              "Shape your pressure to push them toward our cover.",
+              "If your press is beaten, recover into shape — never ball-watch.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We just won it", "Show in a pocket and link the ball forward.", "You're the highest mid — the outlet into attack."],
+            ["Golden window, defense disorganized", "Get into zone 14 and the box.", "Best place to score, and they haven't reset."],
+            ["We lose it high up", "Press immediately — you're often closest.", "Win it back fast and punish from zone 14."],
+            ["Your press gets beaten", "Recover into our shape.", "Don't get caught ball-watching up the field."],
+          ],
+        },
+        coachSays: "You live in zone 14 — the best place on the field to score. Win it, get in a pocket and link us forward. Lose it high, you're the first one pressing. Work where the goals are made.",
+        practice: {
+          type: "true-false" as const,
+          statement: "When we lose the ball high up the field, the 10 should always drop straight back into our defensive shape before doing anything else.",
+          answer: false,
+          explanation: "If you're the closest player — which you often are when we lose it high — you press immediately to slow them down and try to win it back high near zone 14. You only recover into shape if the ball gets past your press.",
+        },
       },
       {
         slug: "cam-ball-recovery",
         title: "CAM (10): Ball Recovery",
         summary: "How the attacking midfielder helps win the ball back.",
-        body: "Coming soon. This lesson will cover the attacking midfielder's role in ball recovery situations.",
+        body: "Often the First Defender in the Middle\n\nWhen the other team has the ball in the middle third, you are usually the one who pressures it. Step up to the ball carrier, slow them down, and do not dive in. Shape your pressure with your body so you push them away from the dangerous central space — toward a sideline or backward, where the rest of the team is waiting to help. You set the trap; your teammates spring it.\n\nPress High, Win It High\n\nHere's why your defending is so valuable: you do it high up the field. A ball you win back near zone 14 isn't just a stop — it's a scoring chance, because you're already in the best place on the field to score and their defense is disorganized from attacking. Winning the ball high is one of the most dangerous things we can do.\n\nCut the Central Ball\n\nYour pressure and your positioning take away the forward, central pass — the one thing we never let the other team have. Force them backward or out wide where we have cover. A team that can only go sideways and backward isn't hurting us.\n\nRecover and Cover When Beaten\n\nIf your press gets beaten, don't drop your head — get back. The 8 and 6 are behind you to cover, but you still have to recover into shape and help; we never want to be numbers-even on defense. Ball-watching after a lost press is how a small problem becomes a big one.\n\nWin the Second Ball in Dangerous Areas\n\nBecause you live around the box and zone 14, the loose balls near you are golden. A flick-on, a blocked shot, a knockdown — be first to react. A second ball won in zone 14 can become a shot a moment later.",
+        callouts: [
+          { title: "Press to win it high", body: "You defend high, so the ball you win can be a scoring chance right in zone 14 — the best place on the field." },
+          { title: "Step up, don't dive", body: "Slow the ball carrier, shape them away from the middle toward our cover, and wait for the mistake." },
+        ],
+        bullets: [
+          {
+            title: "Pressing as the highest mid",
+            items: [
+              "Be the first defender in the middle third — step up to the ball.",
+              "Shape your pressure to force them backward or wide.",
+              "Take away the forward, central pass.",
+              "Don't dive in — stay on your feet and wait for the mistake.",
+            ],
+          },
+          {
+            title: "Winning the ball",
+            items: [
+              "Win it high to punish them from zone 14.",
+              "Be first to second balls near the box.",
+              "Recover and cover if your press is beaten — never ball-watch.",
+              "Keep us from ever being numbers-even on defense.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["They have it in the middle third", "Step up and press — don't dive.", "You're often our first defender there."],
+            ["You're pressing the ball", "Shape it to force them backward or wide.", "Takes away the forward, central ball."],
+            ["You win it high near zone 14", "Look to attack immediately.", "Best place to score, defense disorganized."],
+            ["Your press gets beaten", "Recover into shape — don't ball-watch.", "The 8 and 6 cover, but you still have to help."],
+            ["Loose ball near the box", "Be first to it.", "Second balls in dangerous areas become shots."],
+          ],
+        },
+        coachSays: "You press in the most dangerous part of the field — so step up, shape them away from the middle, and never dive. Win it high near zone 14 and we're a step from a goal.",
+        practice: {
+          type: "true-false" as const,
+          statement: "Winning the ball back high near zone 14 is usually a worse situation for us than winning it deep in our own half.",
+          answer: false,
+          explanation: "It's much better. Zone 14 is the best place on the field to score from, and when you win it high their defense is still disorganized from attacking. That's exactly why your high pressing is so valuable.",
+        },
       },
       {
         slug: "cam-restarts",
         title: "CAM (10): Restarts",
         summary: "The attacking midfielder's role on restarts.",
-        body: "Coming soon. This lesson will cover the attacking midfielder's role on restarts.",
+        body: "Restarts Are a Big Deal for You\n\nBecause you live in zone 14 and the box, you have a real job on almost every restart — especially the attacking ones. Watch the team's restart videos for the full picture; here's your position-specific checklist.\n\nOur Free Kicks: Always in the Box\n\nThis is your signature restart job: on our free kicks, the 10 is always in the box. While others take it and others stay back as safety, you get into the box, find a pocket of space, and be ready to attack the delivery — win the header, pounce on a loose ball, and finish. When the ball comes in, you're the one we want arriving on it.\n\nOur Corners: Attack the Box\n\nOn our corners, you're one of the runners attacking the box. Time your run to the signal — when the taker's hand drops — and attack your spot (the middle, the near post, or the far post). Go hard for the ricochet or the finish. The whole set piece is built to get the ball to runners like you.\n\nTheir Goal Kicks: Cut the Central Ball\n\nWhen they have a goal kick and we press high, your job is to come in and mark their 6 so they can't play through the middle. Take away that central pass and you force them to go wide or long — right into our trap, where we win it and try to score quickly.\n\nTheir Free Kicks: In the Wall\n\nWhen they have a free kick near our goal, you're often one of the center mids in the wall, with the 8 and 6. Hold your spot in the wall, then defend once the ball is played.\n\nOur Goal Kicks, Kickoffs & Throw-Ins\n\nOn our goal kicks, support the build and stay high as an outlet — if we reset long, you and the 9 are the targets up top. On kickoffs, you move up into the attacking area for the long ball into their corner (and against us, you're up on the line pressing immediately). On throw-ins in the attacking third, attack the box like it's a corner.\n\nTheir Corners & Throw-Ins\n\nOn their corners, mark your player and defend the central area of the box — help smother it and get the ball out. On their throw-ins, mark up, stay compact, and be ready for the second ball.",
+        callouts: [
+          { title: "Always in the box on our free kicks", body: "That's your signature restart job — find a pocket, attack the delivery, and finish." },
+          { title: "Cut the central ball on their goal kicks", body: "Mark their 6 so they can't play through the middle — force them wide or long into our press." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Free kicks: always get into the box — attack the delivery and finish.",
+              "Corners: be one of the runners attacking the box on the signal.",
+              "Goal kicks: support the build and stay high as an outlet.",
+              "Kickoffs: push up into the attacking area for the long ball.",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Goal kicks: mark their 6 to cut the central pass.",
+              "Free kicks near goal: be one of the center mids in the wall.",
+              "Corners: mark up and defend the central box area.",
+              "Kickoffs: press immediately; throw-ins: mark up and win the second ball.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our free kick", "Always in the box — find a pocket, attack the delivery, win the header or loose ball, finish."],
+            ["Our corner", "One of the runners attacking the box (middle / near post / far post) on the signal — go for the finish."],
+            ["Our goal kick", "Support the build and stay high as an outlet; a target up top with the 9 if we reset long."],
+            ["Our throw-in", "In the attacking third, attack the box like a corner."],
+            ["Our kickoff", "Move up into the attacking area for the long ball into their corner."],
+            ["Their goal kick", "Mark their 6 to cut the central pass; force them wide or long."],
+            ["Their free kick near goal", "One of the center mids in the wall (with the 8 and 6)."],
+            ["Their corner", "Mark your player; defend the central box area; help get it out."],
+            ["Their kickoff", "Up on the line; press immediately."],
+            ["Their throw-in", "Mark up, stay compact, win the second ball."],
+          ],
+        },
+        coachSays: "On our set pieces, get in that box — you're our zone-14 threat, so be the one arriving to finish. On theirs, hold the wall or mark up tight, and cut off their central ball on goal kicks.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We win a free kick in the attacking third, in a good spot to deliver into the box. You're the 10. Where do you go?",
+          choices: [
+            { label: "Drop back toward the halfway line to help defend, just in case", response: "That's not your job here. On our free kicks the 10 is always in the box — if you drop back, we lose our best zone-14 threat right when we have a chance to score." },
+            { label: "Get into the box, find a pocket of space, and be ready to attack the delivery and finish", response: "Yes. On our free kicks the 10 is always in the box. Find space, attack the ball when it comes in, and be the one arriving to win the header or the loose ball and finish." },
+            { label: "Stand wide and watch to see what happens", response: "Standing and watching wastes your biggest strength. You live in the box and zone 14 — get in there and be ready to attack the delivery." },
+          ],
+        },
       },
       // CDM
       {
         slug: "cdm-main-principles",
         title: "CDM (6): Main Principles",
         summary: "Core habits for the defensive midfielder in open play.",
-        body: "Coming soon. This lesson will cover the defensive midfielder's main principles during open play.",
+        body: "Watch the video below for the center defensive mid's main principles in our style of play.",
+        videos: [{ title: "Center Defensive Mid", youtubeId: "0nPPJZuMXXU" }],
       },
       {
         slug: "cdm-transitions",
         title: "CDM (6): Transitions",
         summary: "What the defensive midfielder does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the defensive midfielder's role in transition moments.",
+        body: "You Are the Hinge of Our Whole Shape\n\nNo position lives in transition more than you do — because you are the player who changes our shape. When we attack, you push up into midfield and play more of an attacking role, and our 3-4-1 becomes a 2-5-1, giving us a fifth midfielder. When we defend, you drop into the back line and become the third center back of our back three. You are the hinge: push up and we're a 2-5-1, drop in and we're a back three. That's why your transitions matter more than anyone's on the team.\n\nSix Always Gets Back\n\nHere is your golden rule, and you'll hear it over and over: six always gets back. You're allowed to push up and play an attacking role — but the very moment we lose the ball, you are the first one getting home. You and the two center backs are the safety layer at all times, so you can never get caught too high. The whole team can take risks going forward because they trust that you'll always be there behind them.\n\nWhen We Win It: Be the Pivot Outlet\n\nThe second we win the ball, you become the safe, calm option in front of our defense. Show for it, take a controlled first touch, and start the build — into a center mid, out to a winger, or up the field. You're the player who calms the chaos and gets us organized to attack. Don't rush it; secure the ball first, then pick the smart pass. A team with a calm 6 in transition almost never gives the ball right back.\n\nWhen We Lose It: Drop and Protect First\n\nThe instant we lose it, your first job is to drop into the central space in front of our back line and protect the most dangerous area — the lane straight at our goal. Screen that lane, slow the counter, and become the third center back. You are the single biggest reason a counter-attack dies before it ever reaches our box.\n\nRead It Before It Happens\n\nThe best 6s feel the transition coming. When our attack starts to look risky, you're already dropping to cover before we even lose it. When we're about to win it back, you're already showing as the outlet. Always be a step ahead of the moment.",
+        comparison: {
+          left: {
+            label: "When We Attack (2-5-1)",
+            items: [
+              "Push up into midfield as a fifth mid.",
+              "Play more of an attacking role — the pivot.",
+              "Be the calm outlet in front of the attack.",
+              "Sit between the middle and attacking thirds as counter-insurance.",
+            ],
+          },
+          right: {
+            label: "When We Defend (3-4-1, back three)",
+            items: [
+              "Drop into the back line.",
+              "Become the third center back.",
+              "Screen the central lane in front of our goal.",
+              "You and the two center backs are the safety layer.",
+            ],
+          },
+        },
+        callouts: [
+          { title: "You are the hinge", body: "Push up and we're a 2-5-1; drop in and we're a back three. You transition our whole shape." },
+          { title: "Six always gets back", body: "Your golden rule. Join the attack, but be the first one home the second we lose it." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Be the safe, calm outlet in front of our defense.",
+              "Controlled first touch, then start the build — mid, winger, or up.",
+              "Calm the chaos and get us organized to attack.",
+              "Secure first, don't rush — a calm 6 rarely gives it right back.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Drop into the central space and protect first.",
+              "Screen the lane straight at our goal and slow the counter.",
+              "Become the third center back of our back three.",
+              "Never get caught high — you're the safety layer with the CBs.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We're attacking", "Push up, play the pivot — we become a 2-5-1.", "You give us a fifth midfielder."],
+            ["We just won it", "Show as the safe outlet and start the build.", "You calm the game and get us organized."],
+            ["We just lost it", "Drop in and protect the central lane.", "You're the counter-insurance — the counter dies on you."],
+            ["We're defending deep", "Become the third center back.", "You complete our back-three defensive shape."],
+          ],
+        },
+        coachSays: "You're the hinge of the whole team — push up and we're a 2-5-1, drop in and we're a back three. Everyone else takes risks because they trust one thing: six always gets back.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We've pushed up into our 2-5-1 attacking shape and you, the 6, have joined the attack near the middle third. The attack breaks down and we lose the ball — they look to counter through the middle.",
+          choices: [
+            { label: "Stay forward and try to win it back high so we can attack again", response: "This is the one thing a 6 can't do. We're in our 2-5-1 and light at the back — if you don't get home, the counter goes straight through the middle you left open. Six always gets back." },
+            { label: "Immediately drop back to protect the central space as our counter-insurance", response: "Yes. Six always gets back. The instant we lose it, you drop in, screen the lane at our goal, and become the third center back. You're the reason the counter dies before it reaches our box." },
+            { label: "Drift wide to help the winger defend the flank", response: "Drifting wide leaves the most dangerous space — the middle — wide open. Your job is to protect the central lane first; the wide areas are the wingers' and center backs' responsibility." },
+          ],
+        },
       },
       {
         slug: "cdm-ball-recovery",
         title: "CDM (6): Ball Recovery",
         summary: "How the defensive midfielder helps win the ball back.",
-        body: "Coming soon. This lesson will cover the defensive midfielder's role in ball recovery situations.",
+        body: "The Screen in Front of the Back Line\n\nYour main defensive job is to protect the space in front of our center backs — the central lane that points straight at our goal. You are the screen: you break up attacks and cut out balls into their strikers before they ever reach our box. A lot of the time, the most important thing you do isn't a tackle at all — it's standing in the right place so their forward pass is never on.\n\nBecome the Third Center Back\n\nWhen we defend deep, you drop in and complete our back three. Now you defend like a center back: get compact with the two CBs so there's no gap, step up to slow an attacker but never dive in, and be brave to win the ball in the air. You're not just a midfielder who tracks back — in our shape, you literally become part of the back line.\n\nCover and Support — the Anchor\n\nYou are a key cover-and-support defender, and usually the anchor of it. When a midfielder ahead of you steps to press the ball, you stay behind them, holding the middle and blocking the central lane, ready to become the next first defender if our pressure is beaten. While others step, you hold.\n\nWin the Second Ball and the Long Ball\n\nSitting in the middle of everything, you're perfectly placed to mop up. Second balls off a header, loose passes, balls that pop out of a tackle — read them early, step in, and win them. A huge amount of your ball recovery is just being in the right spot and reacting first.\n\nDon't Dive, Stay Home\n\nYour discipline matters more than anyone's. You are the last midfield protection before our back line, so if you dive in and miss, the counter goes straight through the middle at our goal. Stay on your feet, hold your position, and screen the danger. The patient 6 who stays home wins us the ball far more often than the one who lunges.",
+        callouts: [
+          { title: "Screen the central lane", body: "Protect the space in front of our center backs and break up attacks before they reach our box." },
+          { title: "Stay home, don't dive", body: "You're the last protection before the back line — a missed dive opens the middle straight to our goal." },
+        ],
+        bullets: [
+          {
+            title: "Protecting the middle",
+            items: [
+              "Screen the central lane in front of our center backs.",
+              "Cut out balls played into their strikers.",
+              "Drop in as the third center back when we defend deep.",
+              "Stay compact with the back line — no gaps.",
+            ],
+          },
+          {
+            title: "Winning the ball",
+            items: [
+              "Be the cover-and-support anchor behind the press.",
+              "Be first to second balls in the middle.",
+              "Be brave and win the header on long balls.",
+              "Don't dive — hold your position and screen the danger.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["They look to play through the middle", "Screen the central lane, block the pass.", "It's the most dangerous space on the field."],
+            ["We're defending deep", "Drop in as the third center back.", "It completes our back three."],
+            ["A teammate presses the ball", "Cover behind and hold the middle.", "You're ready to be the next first defender."],
+            ["Loose or long ball in the center", "Read it early, step in and win it.", "You're already in the best spot to react."],
+            ["Tempted to dive in", "Stay on your feet, hold position.", "A miss opens the middle straight to our goal."],
+          ],
+        },
+        coachSays: "You're the screen in front of our defense — most of your job is being in the right spot so their forward pass is never on. Stay home, never dive, and hold that middle like it's your house.",
+        practice: {
+          type: "true-false" as const,
+          statement: "As the 6, if you see a chance to dive in and win the ball in the middle, you should always go for it to break up the attack quickly.",
+          answer: false,
+          explanation: "You are the last midfield protection before our back line. If you dive in and miss, the counter goes straight through the middle at our goal. Stay on your feet, hold your position, and screen the danger — the patient 6 wins us the ball far more often.",
+        },
       },
       {
         slug: "cdm-restarts",
         title: "CDM (6): Restarts",
         summary: "The defensive midfielder's role on restarts.",
-        body: "Coming soon. This lesson will cover the defensive midfielder's role on restarts.",
+        body: "Safety and the Calm Outlet\n\nOn restarts, your two themes are the same as everywhere else: be the safety, and be the calm option to play out. Watch the team's restart videos for the full picture; here's your position-specific checklist.\n\nOur Goal Kicks: The Central Outlet\n\nMost of the time the goalkeeper plays to a center back — they only come to you if there's no center back option. But you're still a key part of the build: you hang around the edge of the box as the safe central option, and as the press shifts and the 9 steps up to leave you open, drop into that space to receive and help us play out.\n\nOur Free Kicks: The Short Option & the Safety\n\nYou're our short option. The 8 can play it short to you so we can dribble out and start building. And when we don't go short, you hang back as part of the safety in case the free kick breaks down — always ready behind the play.\n\nTheir Free Kicks: In the Wall or Cover\n\nWhen they have a free kick near our goal, you're often one of the center mids in the wall with the 8 and 10. If we only need a two-person wall, you drop back to help defend behind it instead. Either way, you're part of protecting our goal.\n\nOur Corners & Kickoffs: Stay as the Safety\n\nOn our corners, you stay back with the center backs as our insurance against a counter — you do not go up for the corner. On our kickoffs, you nudge up a little as we push for the long ball, but you stay as protection behind the push. On kickoffs against us, be ready to drop and cover the middle.\n\nTheir Restarts: Defend and Be Ready to Spring Us\n\nOn their corners and goal kicks, defend the central area and help the press, but keep half a thought on the counter — if we win it and clear, you're the outlet who can settle it and start us forward again. On their throw-ins, cover, stay compact, and screen the middle.",
+        callouts: [
+          { title: "The safe central outlet", body: "On our goal kicks and free kicks, you're the calm option to receive and build — the short ball to you starts us playing out." },
+          { title: "Always the safety", body: "On our set pieces you stay back as counter-insurance with the CBs; on theirs you're in the wall or covering behind it." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Goal kicks: hang near the box as the central outlet — drop in to receive when the press opens you.",
+              "Free kicks: be the short option for the 8, and stay back as safety.",
+              "Corners: stay back with the center backs — don't go up.",
+              "Kickoffs: nudge up but stay as protection behind the push.",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Free kicks near goal: in the wall with the 8 and 10, or drop back to cover.",
+              "Goal kicks: help the press and stay as cover for a long ball.",
+              "Corners: defend the central area; be the outlet if we win it.",
+              "Throw-ins: cover, stay compact, screen the middle.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our goal kick", "The safe central outlet — hang near the box; drop into space to receive when the press opens you."],
+            ["Our free kick", "The short option (the 8 can play to you to build); also part of the safety behind."],
+            ["Our corner", "Stay back with the center backs as counter-insurance — don't go up."],
+            ["Our kickoff", "Nudge up but stay as protection behind the push."],
+            ["Our throw-in", "Be the safe inside option; otherwise stay as cover."],
+            ["Their free kick near goal", "In the wall (with the 8 and 10), or drop back to cover behind a short wall."],
+            ["Their goal kick", "Help the press and stay as cover behind it for a long ball."],
+            ["Their corner", "Defend the central area; be ready to be the outlet if we win it."],
+            ["Their kickoff", "Ready to drop and cover the middle."],
+            ["Their throw-in", "Cover, stay compact, screen the middle."],
+          ],
+        },
+        coachSays: "On restarts you're the calm outlet and the safety — the short ball to you starts us playing out, and on our set pieces you stay home as the insurance. In the wall on theirs, or covering right behind it.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We've won a corner and everyone's getting ready to attack the box. You're the 6. Where do you go?",
+          choices: [
+            { label: "Push up into the box to attack the corner with everyone else", response: "Not your job here. If you push up and we lose it, there's no one protecting the middle and they counter straight through us. The 6 stays back on our corners." },
+            { label: "Stay back with the center backs as our insurance against a counter", response: "Yes. On our corners you stay back with the center backs as the safety. If they win it and try to break, you and the CBs are already set to stop the counter. Six always gets back — even on set pieces." },
+            { label: "Go take the corner yourself", response: "The 8 takes our corners, not you. Your job is to stay back as the counter-insurance so the players in the box can attack it freely." },
+          ],
+        },
       },
       // ST
       {
         slug: "st-main-principles",
         title: "ST (9): Main Principles",
         summary: "Core habits for the striker in open play.",
-        body: "Coming soon. This lesson will cover the striker's main principles during open play.",
+        body: "Watch the video below for the striker's main principles in our style of play.",
+        videos: [{ title: "Striker", youtubeId: "juQ7NB-GDEo" }],
       },
       {
         slug: "st-transitions",
         title: "ST (9): Transitions",
         summary: "What the striker does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the striker's role in transition moments.",
+        body: "You Set the Tone in Both Directions\n\nAs our striker, you're the first attacker and the first defender at the same time. When we win the ball, you're the target who springs the counter. When we lose it high up the field, you're the first one pressing to win it back. Transitions are where you set the tone for the whole team.\n\nMove to Support — You're Not Just an Attacking-Third Player\n\nA striker who only ever stands in the attacking third, waiting, is easy to defend and gives us nothing. Your best weapon is to move to support the ball wherever it is. Drop into midfield to give a short option, drift into the channel where the ball is, come back to link the play — then spin off and attack the space again. Being in the channel with the ball is the key idea: when the ball is in a channel, get yourself into that same channel so the pass to you is short and easy, instead of forcing a long ball across the field. You're a moving, supporting threat, not a statue up top.\n\nWhen We Win It: Come to the Ball, Don't Just Stay High\n\nThe biggest mistake a striker makes on a counter is standing pinned high and waiting for a hopeful long ball. Instead, come into the channel with the ball so the pass to you is short and easy. Get into that ball-side space, show for it, and either hold it up to bring teammates into play or turn and run at their goal. A short pass to a striker who came to the ball is worth ten hopeful long balls over the top.\n\nStay Available for the Reset\n\nThere's a flip side: when we're stuck deep and have to play a tactical reset — a long ball up the field to reset our shape — you're the target. Stay high enough to be that option, and when it comes, battle to win it and bring others into the play. You're both the short outlet on a counter and the long target on a reset; read which one we need.\n\nWhen We Lose It: Press First, Stop the Counter\n\nThe instant we lose the ball in their half, you're usually the closest player to it. Press immediately to slow them down and try to win it back high — the best place on the field to win it. If you can't get it back, recover. The one thing you never do is watch your own giveaway turn into their counter while you stand still.\n\nRun in Behind a High Line\n\nWhen we have the ball in the middle and their defense is pushed up high, your run in behind is the most dangerous thing we can do. Time it, stay onside, and attack the space — a through ball or a long ball for you to run onto and go straight at goal is one of our best ways to score.",
+        callouts: [
+          { title: "Move to support, don't camp high", body: "You're not just an attacking-third player — drop in and move to support the ball wherever it is." },
+          { title: "Be in the channel with the ball", body: "When the ball is in a channel, get into that same channel so the pass to you is short — not a long ball across the field." },
+          { title: "Lose it high? Press first.", body: "When we lose it in their half, you're often closest — immediate pressure to win it back high." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Move to support wherever the ball is — don't camp in the attacking third.",
+              "Come into the ball-side channel as a short, easy outlet.",
+              "Hold it up to bring teammates in, or turn and run at goal.",
+              "Stay available high as the target for a tactical reset.",
+              "Threaten in behind in the golden window.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Press immediately if you're closest — you usually are.",
+              "Try to win it back high — the best place to win it.",
+              "Recover if you can't get it back — never stand and watch.",
+              "Make runs in behind when their defense is high.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We win it on a counter", "Come into the channel as a short outlet.", "A short pass beats a hopeful long ball."],
+            ["We play a tactical reset", "Stay high, battle to win the long ball.", "You're the target up top."],
+            ["We lose it high", "Press immediately to win it back.", "You're closest, and it's the best place to win it."],
+            ["Their defense is high", "Make a run in behind.", "A through ball for you is our most dangerous attack."],
+          ],
+        },
+        coachSays: "You set the tone both ways — first attacker, first defender. Come to the ball on a counter, run in behind a high line, and the second we lose it up there, you're the first one pressing.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "We win the ball deep in our own half. You're the striker, pinned high on their last defender, and a teammate is about to play out of the back.",
+          choices: [
+            { label: "Stay pinned high and call for a long ball over the top", response: "A hopeful long ball from deep is easy for their defenders to win. Pinned high, you're a long way from a short, safe pass — and we likely lose it." },
+            { label: "Come into the ball-side channel to give a short, easy outlet", response: "Yes. Come to the ball so the pass to you is short and safe — then hold it up to bring teammates in, or turn and run. A short pass to a striker who came to the ball beats a hopeful long ball every time." },
+            { label: "Drift wide to the touchline and wait there", response: "Drifting wide takes you away from the central danger and away from a short central outlet. Come into the ball-side channel where you can actually receive and threaten." },
+          ],
+        },
       },
       {
         slug: "st-ball-recovery",
         title: "ST (9): Ball Recovery",
         summary: "How the striker helps win the ball back.",
-        body: "Coming soon. This lesson will cover the striker's role in ball recovery situations.",
+        body: "You Are Our First Defender Up Top\n\nWinning the ball back starts with you. Before our midfield or defense ever gets involved, your pressure on their defenders and goalkeeper is the first line of our defending. When you press well, you start everything; when you switch off, the whole press falls apart.\n\nShape the Press: Block the Switch\n\nThis is the most important idea for you. When you press a defender, do not run straight at them — angle your run so you take away one side. Usually that means blocking the switch to their far center back, so they can't escape across the field. By tightening your run and cutting off one direction, you force them down the side where the rest of our team is waiting to win it. Your run decides where the play goes.\n\nThe Whole Team Shifts With You\n\nHere's what makes it actually work: when you block off one side of the field, the whole team shifts across to the other side with you. We overload the ball side — everyone slides over to make it compact and crowded — and the side you blocked off goes dead, because the ball can't get there anymore. Your angled run is the trigger, and the team's shift is the trap. So shape your press knowing your teammates are sliding across behind you to close down every option on that side.\n\nImmediate Pressure Forces Mistakes\n\nThe moment the ball is played to one of their defenders, press immediately. We want them rushed, so they panic and make a bad decision — kick it straight to our winger, or boot it long where we win the battle. Immediate pressure is how we turn their build-up into our ball. A slow, late press lets them play out comfortably.\n\nWin It High, Score Quick\n\nA ball won high up the field, near their goal, is the best chance we get all game. When your press forces the mistake and we win it, go straight at goal — their defense is scrambled and there's nothing better than scoring off a high turnover.\n\nWhen We Lose It: Recover and Press Again\n\nIf we lose the ball in their half, you're our first line against the counter. Press to win it back right away, and if you can't, recover back into your pressing position. The forward who keeps pressing and never gives up on a lost ball wins us possession in dangerous areas over and over.",
+        callouts: [
+          { title: "Shape the press — block the switch", body: "Don't run straight on. Angle your run so they can only go one way — into our trap." },
+          { title: "Immediate pressure forces mistakes", body: "The second the ball reaches a defender, press — make them panic into a bad decision." },
+        ],
+        bullets: [
+          {
+            title: "Leading the press",
+            items: [
+              "You're our first defender — press immediately when the ball reaches a defender.",
+              "Shape your run to block the switch and force one direction.",
+              "As you block one side, the whole team shifts across to overload the ball side.",
+              "Make them panic into a bad decision.",
+              "Take away the central option as you press.",
+            ],
+          },
+          {
+            title: "Winning it high",
+            items: [
+              "A ball won near their goal is our best chance — go straight at goal.",
+              "When we lose it in their half, press to win it back.",
+              "If you can't win it back, recover into your pressing position.",
+              "Never give up on a lost ball.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["Ball played to their defender", "Press immediately.", "Forces a rushed, bad decision."],
+            ["You're pressing a center back", "Shape your run to block the switch.", "Forces them one way into our trap."],
+            ["They look to play through the middle", "Cut the central option as you press.", "Leaves them only the risky pass."],
+            ["You win it high", "Go straight at goal.", "Best chance to score in the whole game."],
+            ["We lose it in their half", "Press to win it back, then recover.", "You're our first line against the counter."],
+          ],
+        },
+        coachSays: "Defending starts with you. Press the second the ball reaches a defender, and shape your run so they can only go where we want them. Win it high and we're already at their goal.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "Their goalkeeper plays a short goal kick out to a center back. You're the striker, stepping up to press. Their other center back is open across the field for a switch.",
+          choices: [
+            { label: "Sprint straight at the center back as fast as you can", response: "Running straight on lets them simply pass across to their open center back and escape your press. Your run has to take a side away." },
+            { label: "Angle your run to block the switch, forcing them down one side into our trap", response: "Yes. Shape the press — tighten your run so they can't switch to the far center back. That forces them down one side, where the rest of our team is waiting to win it." },
+            { label: "Hang back near the halfway line and wait for them to come to you", response: "Waiting lets them build out in comfort. We press immediately and shape it — your job is to step up now and force a bad decision." },
+          ],
+        },
       },
       {
         slug: "st-restarts",
         title: "ST (9): Restarts",
         summary: "The striker's role on restarts.",
-        body: "Coming soon. This lesson will cover the striker's role on restarts.",
-      },
-      // LB
-      {
-        slug: "lb-main-principles",
-        title: "LB (3): Main Principles",
-        summary: "Core habits for the left back in open play.",
-        body: "Coming soon. This lesson will cover the left back's main principles during open play.",
-      },
-      {
-        slug: "lb-transitions",
-        title: "LB (3): Transitions",
-        summary: "What the left back does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the left back's role in transition moments.",
-      },
-      {
-        slug: "lb-ball-recovery",
-        title: "LB (3): Ball Recovery",
-        summary: "How the left back helps win the ball back.",
-        body: "Coming soon. This lesson will cover the left back's role in ball recovery situations.",
-      },
-      {
-        slug: "lb-restarts",
-        title: "LB (3): Restarts",
-        summary: "The left back's role on restarts.",
-        body: "Coming soon. This lesson will cover the left back's role on restarts.",
-      },
-      // RB
-      {
-        slug: "rb-main-principles",
-        title: "RB (2): Main Principles",
-        summary: "Core habits for the right back in open play.",
-        body: "Coming soon. This lesson will cover the right back's main principles during open play.",
-      },
-      {
-        slug: "rb-transitions",
-        title: "RB (2): Transitions",
-        summary: "What the right back does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the right back's role in transition moments.",
-      },
-      {
-        slug: "rb-ball-recovery",
-        title: "RB (2): Ball Recovery",
-        summary: "How the right back helps win the ball back.",
-        body: "Coming soon. This lesson will cover the right back's role in ball recovery situations.",
-      },
-      {
-        slug: "rb-restarts",
-        title: "RB (2): Restarts",
-        summary: "The right back's role on restarts.",
-        body: "Coming soon. This lesson will cover the right back's role on restarts.",
+        body: "You're Central to Restarts, Both Ways\n\nYou lead our press on their restarts and you're a goal threat on ours. Watch the team's restart videos for the full picture; here's your position-specific checklist.\n\nTheir Goal Kicks: Lead the Press\n\nThis is your biggest restart job. The moment the ball is played out to a defender, press immediately — and shape your run to block the switch, forcing them down one side. We want to rush them into a bad decision: a panicked kick to our winger, or a boot where we win the battle. If your press forces the mistake and we win it high, go straight at goal.\n\nOur Kickoffs: You Start It\n\nThe kickoff is yours to begin. You play the ball back to a teammate to start it, and then we hit it long into their corner — and you run in to go win it in their half. On kickoffs against us, you press immediately, the same idea as their goal kicks: force a mistake right away.\n\nOur Corners: Attack the Box\n\nOn our corners, you're one of the runners attacking the box. Time your run to the signal and attack your spot hard — go for the ricochet or the finish. You're exactly the kind of player the set piece is designed to find.\n\nOur Free Kicks: Battle Up Top\n\nOn our free kicks, you're a target up top — long balls will come to you, so battle to win them and bring teammates into the play. In the attacking third, a free kick can be decisive and you can take it yourself.\n\nOur Goal Kicks & Throw-Ins\n\nOn our goal kicks, stay high as the reset target — if we have to play it long, you're who we're aiming for, so battle to win it. On throw-ins, a winger pulling out can free you for a long throw down the line — take it down and turn it into a 1v1 or 1v2 at goal. In the attacking third, attack the box like a corner.\n\nTheir Corners & Free Kicks: Defend, Then Be the Outlet\n\nOn their corners, help defend the box — but the moment we win it, be the outlet to run onto our clearance and start a counter. On their free kicks near our goal, stay high with the 10 as our out-ball, ready to spring us forward if we win it.",
+        callouts: [
+          { title: "Lead the press on their goal kicks", body: "Immediate pressure, shape your run to block the switch, and force a bad decision. This is your biggest restart job." },
+          { title: "You start our kickoff", body: "Play it back to begin the play, then run in for the long ball into their corner." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Kickoffs: play the ball back to start it, then run in for the long ball.",
+              "Corners: be one of the runners attacking the box.",
+              "Free kicks: battle as the target up top; take it in the attacking third.",
+              "Goal kicks: stay high as the reset target and battle to win it.",
+              "Throw-ins: get free for a long throw down the line (1v1/1v2 to goal).",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Goal kicks: lead the press — shape it and block the switch.",
+              "Kickoffs: press immediately to force a mistake.",
+              "Corners: help defend, then be the outlet to run onto our clearance.",
+              "Free kicks near goal: stay high with the 10 as our out-ball.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Their goal kick", "Lead the press — immediate pressure, shape your run to block the switch, force a bad decision; win it high."],
+            ["Their kickoff", "Press immediately to force a mistake."],
+            ["Our kickoff", "Play the ball back to start it, then run in for the long ball into their corner."],
+            ["Our corner", "One of the runners attacking the box — go for the ricochet or finish."],
+            ["Our free kick", "Battle as a target up top (long balls come to you); take it in the attacking third."],
+            ["Our goal kick", "Stay high as the reset target — battle to win the long ball and bring others in."],
+            ["Our throw-in", "Get free for a long throw down the line (1v1/1v2 to goal); attack the box in the attacking third."],
+            ["Their corner", "Help defend the box, then be the outlet to run onto our clearance."],
+            ["Their free kick near goal", "Stay high with the 10 as our out-ball; spring the counter if we win it."],
+            ["Their throw-in", "Press or mark, and be ready to break."],
+          ],
+        },
+        coachSays: "On their restarts you lead the press — shape it, block the switch, force the mistake. On ours, you're our box threat: start the kickoff, attack our corners, and battle for every ball up top.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "It's our kickoff to start the game. The ball is at your feet on the center spot. What do you do?",
+          choices: [
+            { label: "Dribble forward at their defense to start the attack yourself", response: "Dribbling straight into a set defense at kickoff is low-percentage — they're organized and waiting. We have a better plan." },
+            { label: "Play it back to a teammate so we can hit the long ball into their corner, then run in to win it", response: "Yes. The striker plays it back to start our kickoff, then we hit it long into their corner — and you run in to win it in their half, catching them static and vulnerable at the start." },
+            { label: "Pass it square to a teammate and build out slowly from the middle", response: "Building out slowly from a kickoff invites their press onto us in the middle of the field. Our plan is to play it back, then go long into their corner and chase it down." },
+          ],
+        },
       },
       // LW
       {
         slug: "lw-main-principles",
         title: "LW (11): Main Principles",
         summary: "Core habits for the left winger in open play.",
-        body: "Coming soon. This lesson will cover the left winger's main principles during open play.",
+        body: "Watch the video below for the wingers' main principles in our style of play (left and right).",
+        videos: [{ title: "Wingers (Left and Right)", youtubeId: "zcTxMTwB4qk" }],
       },
       {
         slug: "lw-transitions",
         title: "LW (11): Transitions",
         summary: "What the left winger does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the left winger's role in transition moments.",
+        body: "You Are Our Width — Get Wide, Stay Wide\n\nIn our 3-4-1, the wingers are our only real width — so the whole team's spacing depends on you. The instant we win the ball, your first thought is to get wide and stay wide, stretching the field and giving us an out-ball down the left. And the other half of the job is just as important: you have to drag all the way back to defend, because no one else covers your channel. You're a corner-to-corner player, every single play.\n\nWhen We Win It: The Out-Ball and the Counter\n\nWhen we win it on your side, you're the outlet to escape pressure — get wide, receive, and take it down the line on the counter, or play it back inside to a midfielder to switch the attack. When you can, be in the channel with the ball to give a short, supportable option rather than asking for a long ball across the field. Get it down the line with speed and look for the cross.\n\nFar Side? Tuck In\n\nHere's a key habit: when the ball is on the right side, you don't just stand out on the left touchline. You tuck inside — to attack a cross coming into the box, and to make us compact when we defend. This is you in the team's shift: as the ball moves to one side, the whole team slides across, and the far winger coming inside is a huge part of making that side compact.\n\nProtect the Ball Out Wide\n\nA warning that matters most for you: if you lose the ball in the wide channel of the middle third, you hand the other team a dangerous counter down our side. So when you have it out wide, protect it — don't try a low-percentage move and lose it cheaply. Get wide, stay wide, look forward, but take care of the ball.\n\nWhen We Lose It: Drag Back and Shift\n\nThe moment we lose it, get home. If it's lost on your side, you're the first defender out wide. If it's on the far side, you tuck inside and shift with the team to keep us compact. And know this: if you don't track back, one of our center backs has to step out to cover your channel, and that pulls our whole shape apart. Your recovery run protects everyone.",
+        callouts: [
+          { title: "You're our only width", body: "Get wide and stay wide in attack; drag all the way back in defense. Corner to corner, every play." },
+          { title: "Far side? Tuck in.", body: "When the ball's on the other side, come inside to make us compact — that's you in the team shift." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Get wide and stay wide as our out-ball down the left.",
+              "Take it down the line on the counter, or play back inside to switch.",
+              "Be in the channel with the ball for a short, supportable option.",
+              "Tuck in to attack the cross when the ball's on the far side.",
+              "Protect the ball out wide — losing it there invites a counter.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Drag all the way back — you're our only width.",
+              "Be the first defender if it's lost on your side.",
+              "Tuck inside and shift with the team if it's on the far side.",
+              "Make your recovery run so a center back doesn't have to cover for you.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We win it on your side", "Get wide, take it down the line.", "You're the out-ball and the counter threat."],
+            ["We win it on the far side", "Tuck in to attack the cross.", "Brings numbers into the box."],
+            ["You have it in the wide middle third", "Protect it — don't lose it cheaply.", "Losing it wide invites a counter down our side."],
+            ["We lose it on your side", "Drag back, be the first defender wide.", "You're our only width — no one else covers it."],
+            ["We lose it on the far side", "Tuck inside, shift with the team.", "Makes us compact and blocks the ball side."],
+          ],
+        },
+        coachSays: "You're our width both ways — wide and stretching them when we attack, all the way back when we defend. Take care of that ball out wide, and when the ball's on the far side, tuck in and shift with us.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The ball is on the right side of the field, far from you, and we suddenly lose it there. You're our left winger, out wide on the left touchline.",
+          choices: [
+            { label: "Stay wide on your left touchline in case we win it back and you can attack", response: "Staying wide on the far side leaves us stretched and easy to play through. When the ball's on the other side and we lose it, your job is to come inside and make us compact." },
+            { label: "Tuck inside to make us compact and shift across with the team", response: "Yes. As the far-side winger, you tuck in and shift with the team to overload and compact the ball side. That team shift is how one player's pressure becomes a trap." },
+            { label: "Push high up the left wing to stay ready for a long counter", response: "Pushing high abandons your defensive job and leaves a gap. We're a 2-5-1 and need everyone compact when we lose it — tuck in and shift first." },
+          ],
+        },
       },
       {
         slug: "lw-ball-recovery",
         title: "LW (11): Ball Recovery",
         summary: "How the left winger helps win the ball back.",
-        body: "Coming soon. This lesson will cover the left winger's role in ball recovery situations.",
+        body: "First Defender in the Wide Channel\n\nWhen the other team has the ball in your wide channel, you are the first defender. Step up and press the wide attacker, slow them down, and make sure there is no breakaway down the side — because a wide breakaway almost always ends in a dangerous cross or a shot. Like every first defender: don't dive in. Stay on your feet and slow them down.\n\nShape Them Inside or Down the Line\n\nThis is your version of shaping the press. Don't just stand there — angle your body to force the attacker one of two ways: inside toward our center mids, where we're compact and waiting, or down the line and out of bounds. Either way, you're sending them where we have help. And as you block off the outside, the whole team shifts across with you — the far-side winger tucks in, and we make the ball side crowded. Your pressure is the trigger; the team's shift is the trap.\n\nYou Must Drag Back\n\nYou're our only width, so when the ball is in your area you have to recover all the way back to defend it. If you don't, one of our center backs is forced to step out and cover your channel, and that opens a gap in our shape. Corner-to-corner stamina isn't optional for a winger — it's the job.\n\nDon't Get Beaten — Protect the Cross\n\nStep up enough to pressure and slow the attacker, but don't dive in and don't back all the way off into a free cross. The balance is the whole skill: close enough to stop a clean cross or a breakaway, patient enough not to get beaten by a touch around you.\n\nWin It, Start the Counter\n\nWhen you win the ball out wide, that's often a great place to start a counter — and if you win it high in their corner, even better, because they have very few options to play out of there. Win it, and look to spring us forward fast.",
+        callouts: [
+          { title: "No breakaway wide", body: "Slow the wide attacker so there's no breakaway — a wide breakaway ends in a cross or a shot." },
+          { title: "Shape them where we have help", body: "Force them inside to our center mids or down the line out of bounds, as the team shifts across behind you." },
+        ],
+        bullets: [
+          {
+            title: "Pressing in your channel",
+            items: [
+              "You're the first defender when the ball's in your wide channel.",
+              "Slow them down — no breakaway, no clean cross.",
+              "Don't dive in — stay on your feet.",
+              "Shape them inside to our mids, or down the line and out.",
+            ],
+          },
+          {
+            title: "The shift and the recovery",
+            items: [
+              "As you block the outside, the team shifts and the far winger tucks in.",
+              "Drag all the way back so a center back doesn't have to cover for you.",
+              "Balance it — close enough to stop the cross, not so close you get beaten.",
+              "Win it wide and start the counter — even better high in their corner.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["Ball in your wide channel", "Press, slow them, no breakaway.", "A wide breakaway ends in a cross or shot."],
+            ["Attacker dribbling at you", "Shape them inside to our mids, or down the line out.", "Sends them where we have help."],
+            ["You're pressing wide", "Trust the team to shift across behind you.", "We overload the ball side and block it off."],
+            ["You get caught upfield", "Drag all the way back.", "A center back stepping out pulls our shape apart."],
+            ["You win it wide", "Start the counter — or win it high in their corner.", "A great place to spring forward."],
+          ],
+        },
+        coachSays: "In your channel you're the first defender — slow them down, no breakaway, and never dive. Force them inside to our help or down the line out, and trust the team to shift across with you.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The other team has the ball in your wide channel and an attacker is dribbling straight at you down the left side. You've dropped back to defend.",
+          choices: [
+            { label: "Dive in to win the ball before they can cross it", response: "Diving in is exactly what we don't do — if you miss, they're past you with a breakaway, and that ends in a cross or a shot. Stay on your feet and slow them down." },
+            { label: "Slow them down and shape them inside toward our center mids, or down the line and out", response: "Yes. Your job out wide is to slow the attacker so there's no breakaway, and to force them where we have help — inside to our mids, or down the line and out of bounds." },
+            { label: "Drop all the way back and let them cross it in", response: "Backing off into a free cross is the danger we're trying to prevent. Step up enough to pressure and slow them, just without diving in." },
+          ],
+        },
       },
       {
         slug: "lw-restarts",
         title: "LW (11): Restarts",
         summary: "The left winger's role on restarts.",
-        body: "Coming soon. This lesson will cover the left winger's role on restarts.",
+        body: "Your Width Gives You a Big Restart Job\n\nBecause you're our width, you're heavily involved in restarts — taking throw-ins, being the out-ball, and helping our press. Watch the team's restart videos for the full picture; here's your position-specific checklist.\n\nOur Throw-Ins: You Usually Take It\n\nOn the left side, you usually take the throw-in. The two rules: throw it up the line, and throw it fast. Don't wait for everyone to get organized — a quick throw up the line catches the other team out. Never throw it backward. In the attacking third, you can throw it into the box and treat it like a corner.\n\nOur Goal Kicks: The First Out-Ball\n\nYou're often the first pass out of a goal kick — the center back plays out to you. Get wide, show for it, and once you have it, play forward down the line or back inside to a midfielder. You're a key way for us to escape their press and start playing.\n\nOur Corners: Sit for the Rebound\n\nOn our corners, you sit just outside the box, ready to attack a ball that runs through everyone — a shot or a loose rebound. Sometimes we play a short corner through a winger instead; be ready for that call too.\n\nTheir Goal Kicks: Block the Wide Angle\n\nWhen they have a goal kick and our striker presses, your job is to come out and block the angle to their winger on your side, so they can't play that wide pass. That makes us compact and forces them where we want — part of the trap that wins the ball high.\n\nTheir Corners: Block the Short Corner\n\nWhen they have a corner in your channel, you come in first to stop any short corner, then mark up and defend the box. Don't let them play a quick short one while we're getting set.\n\nFree Kicks & Kickoffs\n\nOn free kicks, both ours and theirs, you tuck in — wide but not isolated — to help and be ready to recover. On our kickoffs, you start wide on the side we've chosen for the long ball into their corner (or hold wide on the far side as insurance). On kickoffs against us, match their wide player and press immediately.",
+        callouts: [
+          { title: "Throw it up the line, fast", body: "On your side you take the throw — up the line, never back, and quick to catch them out." },
+          { title: "Block the wide angle on their goal kicks", body: "Come out to cut the pass to their winger as the 9 presses, making us compact." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Throw-ins: you take them on the left — up the line, fast, never back.",
+              "Goal kicks: be the first out-ball — get wide, then play down the line or back inside.",
+              "Corners: sit outside for the rebound; be ready for a short-corner call.",
+              "Kickoffs: start wide on the chosen side for the long ball, or hold wide as insurance.",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Goal kicks: block the wide angle to their winger as the 9 presses.",
+              "Corners: block the short corner in your channel, then mark up.",
+              "Free kicks: tuck in to help defend.",
+              "Kickoffs: match their wide player and press immediately.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our throw-in (left side)", "You usually take it — throw it up the line, fast, never back; into the box in the attacking third."],
+            ["Our goal kick", "The first out-ball — get wide, receive, play down the line or back inside."],
+            ["Our corner", "Sit outside the box for the rebound or a shot; be ready for a short-corner call."],
+            ["Our free kick", "Tuck in, wide but not isolated; be ready to recover for the cross."],
+            ["Our kickoff", "Start wide on the chosen side for the long ball, or hold wide on the far side as insurance."],
+            ["Their goal kick", "Block the wide angle to their winger as the 9 presses — make us compact."],
+            ["Their corner", "In your channel, block the short corner; then mark up and defend."],
+            ["Their free kick near goal", "Tuck in to help defend."],
+            ["Their kickoff", "Match their wide player and press immediately."],
+            ["Their throw-in", "Mark up, stay compact."],
+          ],
+        },
+        coachSays: "On your side, the throw is yours — up the line and fast, never back. Be our out-ball on goal kicks, sit for the rebound on corners, and on their goal kicks, block that wide angle to make us compact.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You have a throw-in on the left side in the middle third. Your team is still getting organized, and a teammate near you is open but facing our own goal.",
+          choices: [
+            { label: "Throw it backward to the open teammate to keep possession", response: "We never throw it backward — that just invites pressure and forces a risky pass near our own goal. The ball should always go up the line." },
+            { label: "Throw it up the line, fast, before the other team gets set", response: "Yes. On throw-ins we throw it up the line and we throw it fast — a quick throw up the line catches the other team out before they're organized." },
+            { label: "Hold the ball and wait for the whole team to get into position", response: "Waiting lets the other team get set and kills the advantage. Throw it quickly up the line — speed is the whole point of a good throw-in." },
+          ],
+        },
       },
       // RW
       {
         slug: "rw-main-principles",
         title: "RW (7): Main Principles",
         summary: "Core habits for the right winger in open play.",
-        body: "Coming soon. This lesson will cover the right winger's main principles during open play.",
+        body: "Watch the video below for the wingers' main principles in our style of play (left and right).",
+        videos: [{ title: "Wingers (Left and Right)", youtubeId: "zcTxMTwB4qk" }],
       },
       {
         slug: "rw-transitions",
         title: "RW (7): Transitions",
         summary: "What the right winger does the moment possession changes.",
-        body: "Coming soon. This lesson will cover the right winger's role in transition moments.",
+        body: "You Are Our Width — Get Wide, Stay Wide\n\nThis is the mirror of the left winger's job, just on the right. In our 3-4-1, the wingers are our only real width — so the whole team's spacing depends on you. The instant we win the ball, your first thought is to get wide and stay wide, stretching the field and giving us an out-ball down the right. And the other half is just as important: you drag all the way back to defend, because no one else covers your channel. You're a corner-to-corner player, every single play.\n\nWhen We Win It: The Out-Ball and the Counter\n\nWhen we win it on your side, you're the outlet to escape pressure — get wide, receive, and take it down the line on the counter, or play it back inside to a midfielder to switch the attack. When you can, be in the channel with the ball to give a short, supportable option rather than asking for a long ball across the field. Get it down the line with speed and look for the cross.\n\nFar Side? Tuck In\n\nHere's a key habit: when the ball is on the left side, you don't just stand out on the right touchline. You tuck inside — to attack a cross coming into the box, and to make us compact when we defend. This is you in the team's shift: as the ball moves to one side, the whole team slides across, and the far winger coming inside is a huge part of making that side compact.\n\nProtect the Ball Out Wide\n\nA warning that matters most for you: if you lose the ball in the wide channel of the middle third, you hand the other team a dangerous counter down our side. So when you have it out wide, protect it — don't try a low-percentage move and lose it cheaply. Get wide, stay wide, look forward, but take care of the ball.\n\nWhen We Lose It: Drag Back and Shift\n\nThe moment we lose it, get home. If it's lost on your side, you're the first defender out wide. If it's on the far side, you tuck inside and shift with the team to keep us compact. And know this: if you don't track back, one of our center backs has to step out to cover your channel, and that pulls our whole shape apart. Your recovery run protects everyone.",
+        callouts: [
+          { title: "You're our only width", body: "Get wide and stay wide in attack; drag all the way back in defense. Corner to corner, every play." },
+          { title: "Far side? Tuck in.", body: "When the ball's on the other side, come inside to make us compact — that's you in the team shift." },
+        ],
+        bullets: [
+          {
+            title: "When we win the ball",
+            items: [
+              "Get wide and stay wide as our out-ball down the right.",
+              "Take it down the line on the counter, or play back inside to switch.",
+              "Be in the channel with the ball for a short, supportable option.",
+              "Tuck in to attack the cross when the ball's on the far side.",
+              "Protect the ball out wide — losing it there invites a counter.",
+            ],
+          },
+          {
+            title: "When we lose the ball",
+            items: [
+              "Drag all the way back — you're our only width.",
+              "Be the first defender if it's lost on your side.",
+              "Tuck inside and shift with the team if it's on the far side.",
+              "Make your recovery run so a center back doesn't have to cover for you.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Your job", "Why it matters"],
+          rows: [
+            ["We win it on your side", "Get wide, take it down the line.", "You're the out-ball and the counter threat."],
+            ["We win it on the far side", "Tuck in to attack the cross.", "Brings numbers into the box."],
+            ["You have it in the wide middle third", "Protect it — don't lose it cheaply.", "Losing it wide invites a counter down our side."],
+            ["We lose it on your side", "Drag back, be the first defender wide.", "You're our only width — no one else covers it."],
+            ["We lose it on the far side", "Tuck inside, shift with the team.", "Makes us compact and blocks the ball side."],
+          ],
+        },
+        coachSays: "You're our width both ways — wide and stretching them when we attack, all the way back when we defend. Take care of that ball out wide, and when the ball's on the far side, tuck in and shift with us.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The ball is on the left side of the field, far from you, and we suddenly lose it there. You're our right winger, out wide on the right touchline.",
+          choices: [
+            { label: "Stay wide on your right touchline in case we win it back and you can attack", response: "Staying wide on the far side leaves us stretched and easy to play through. When the ball's on the other side and we lose it, your job is to come inside and make us compact." },
+            { label: "Tuck inside to make us compact and shift across with the team", response: "Yes. As the far-side winger, you tuck in and shift with the team to overload and compact the ball side. That team shift is how one player's pressure becomes a trap." },
+            { label: "Push high up the right wing to stay ready for a long counter", response: "Pushing high abandons your defensive job and leaves a gap. We're a 2-5-1 and need everyone compact when we lose it — tuck in and shift first." },
+          ],
+        },
       },
       {
         slug: "rw-ball-recovery",
         title: "RW (7): Ball Recovery",
         summary: "How the right winger helps win the ball back.",
-        body: "Coming soon. This lesson will cover the right winger's role in ball recovery situations.",
+        body: "First Defender in the Wide Channel\n\nThis mirrors the left winger's job on the right side. When the other team has the ball in your wide channel, you are the first defender. Step up and press the wide attacker, slow them down, and make sure there is no breakaway down the side — because a wide breakaway almost always ends in a dangerous cross or a shot. Like every first defender: don't dive in. Stay on your feet and slow them down.\n\nShape Them Inside or Down the Line\n\nThis is your version of shaping the press. Don't just stand there — angle your body to force the attacker one of two ways: inside toward our center mids, where we're compact and waiting, or down the line and out of bounds. Either way, you're sending them where we have help. And as you block off the outside, the whole team shifts across with you — the far-side winger tucks in, and we make the ball side crowded. Your pressure is the trigger; the team's shift is the trap.\n\nYou Must Drag Back\n\nYou're our only width, so when the ball is in your area you have to recover all the way back to defend it. If you don't, one of our center backs is forced to step out and cover your channel, and that opens a gap in our shape. Corner-to-corner stamina isn't optional for a winger — it's the job.\n\nDon't Get Beaten — Protect the Cross\n\nStep up enough to pressure and slow the attacker, but don't dive in and don't back all the way off into a free cross. The balance is the whole skill: close enough to stop a clean cross or a breakaway, patient enough not to get beaten by a touch around you.\n\nWin It, Start the Counter\n\nWhen you win the ball out wide, that's often a great place to start a counter — and if you win it high in their corner, even better, because they have very few options to play out of there. Win it, and look to spring us forward fast.",
+        callouts: [
+          { title: "No breakaway wide", body: "Slow the wide attacker so there's no breakaway — a wide breakaway ends in a cross or a shot." },
+          { title: "Shape them where we have help", body: "Force them inside to our center mids or down the line out of bounds, as the team shifts across behind you." },
+        ],
+        bullets: [
+          {
+            title: "Pressing in your channel",
+            items: [
+              "You're the first defender when the ball's in your wide channel.",
+              "Slow them down — no breakaway, no clean cross.",
+              "Don't dive in — stay on your feet.",
+              "Shape them inside to our mids, or down the line and out.",
+            ],
+          },
+          {
+            title: "The shift and the recovery",
+            items: [
+              "As you block the outside, the team shifts and the far winger tucks in.",
+              "Drag all the way back so a center back doesn't have to cover for you.",
+              "Balance it — close enough to stop the cross, not so close you get beaten.",
+              "Win it wide and start the counter — even better high in their corner.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Situation", "Do this", "Why"],
+          rows: [
+            ["Ball in your wide channel", "Press, slow them, no breakaway.", "A wide breakaway ends in a cross or shot."],
+            ["Attacker dribbling at you", "Shape them inside to our mids, or down the line out.", "Sends them where we have help."],
+            ["You're pressing wide", "Trust the team to shift across behind you.", "We overload the ball side and block it off."],
+            ["You get caught upfield", "Drag all the way back.", "A center back stepping out pulls our shape apart."],
+            ["You win it wide", "Start the counter — or win it high in their corner.", "A great place to spring forward."],
+          ],
+        },
+        coachSays: "In your channel you're the first defender — slow them down, no breakaway, and never dive. Force them inside to our help or down the line out, and trust the team to shift across with you.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "The other team has the ball in your wide channel and an attacker is dribbling straight at you down the right side. You've dropped back to defend.",
+          choices: [
+            { label: "Dive in to win the ball before they can cross it", response: "Diving in is exactly what we don't do — if you miss, they're past you with a breakaway, and that ends in a cross or a shot. Stay on your feet and slow them down." },
+            { label: "Slow them down and shape them inside toward our center mids, or down the line and out", response: "Yes. Your job out wide is to slow the attacker so there's no breakaway, and to force them where we have help — inside to our mids, or down the line and out of bounds." },
+            { label: "Drop all the way back and let them cross it in", response: "Backing off into a free cross is the danger we're trying to prevent. Step up enough to pressure and slow them, just without diving in." },
+          ],
+        },
       },
       {
         slug: "rw-restarts",
         title: "RW (7): Restarts",
         summary: "The right winger's role on restarts.",
-        body: "Coming soon. This lesson will cover the right winger's role on restarts.",
+        body: "Your Width Gives You a Big Restart Job\n\nThis mirrors the left winger's restart job on the right. Because you're our width, you're heavily involved in restarts — taking throw-ins, being the out-ball, and helping our press. Watch the team's restart videos for the full picture; here's your position-specific checklist.\n\nOur Throw-Ins: You Usually Take It\n\nOn the right side, you usually take the throw-in. The two rules: throw it up the line, and throw it fast. Don't wait for everyone to get organized — a quick throw up the line catches the other team out. Never throw it backward. In the attacking third, you can throw it into the box and treat it like a corner.\n\nOur Goal Kicks: The First Out-Ball\n\nYou're often the first pass out of a goal kick — the center back plays out to you. Get wide, show for it, and once you have it, play forward down the line or back inside to a midfielder. You're a key way for us to escape their press and start playing.\n\nOur Corners: Attack or Play Short\n\nOn our corners, you're one of the attacking pieces — a runner attacking the box, and sometimes the one who plays a short corner before we deliver in. Be ready for whichever the call is, and attack the ball hard when it comes in.\n\nTheir Goal Kicks: Block the Wide Angle\n\nWhen they have a goal kick and our striker presses, your job is to come out and block the angle to their winger on your side, so they can't play that wide pass. That makes us compact and forces them where we want — part of the trap that wins the ball high.\n\nTheir Corners: Block the Short Corner\n\nWhen they have a corner in your channel, you come in first to stop any short corner, then mark up and defend the box. Don't let them play a quick short one while we're getting set.\n\nFree Kicks & Kickoffs\n\nOn free kicks, both ours and theirs, you tuck in — wide but not isolated — to help and be ready to recover. On our kickoffs, you start wide on the side we've chosen for the long ball into their corner (or hold wide on the far side as insurance). On kickoffs against us, match their wide player and press immediately.",
+        callouts: [
+          { title: "Throw it up the line, fast", body: "On your side you take the throw — up the line, never back, and quick to catch them out." },
+          { title: "Block the wide angle on their goal kicks", body: "Come out to cut the pass to their winger as the 9 presses, making us compact." },
+        ],
+        bullets: [
+          {
+            title: "On our restarts",
+            items: [
+              "Throw-ins: you take them on the right — up the line, fast, never back.",
+              "Goal kicks: be the first out-ball — get wide, then play down the line or back inside.",
+              "Corners: attack the box as a runner, or play the short corner when it's the call.",
+              "Kickoffs: start wide on the chosen side for the long ball, or hold wide as insurance.",
+            ],
+          },
+          {
+            title: "On their restarts",
+            items: [
+              "Goal kicks: block the wide angle to their winger as the 9 presses.",
+              "Corners: block the short corner in your channel, then mark up.",
+              "Free kicks: tuck in to help defend.",
+              "Kickoffs: match their wide player and press immediately.",
+            ],
+          },
+        ],
+        table: {
+          columns: ["Restart", "Your job"],
+          rows: [
+            ["Our throw-in (right side)", "You usually take it — throw it up the line, fast, never back; into the box in the attacking third."],
+            ["Our goal kick", "The first out-ball — get wide, receive, play down the line or back inside."],
+            ["Our corner", "Attack the box as a runner, or play the short corner when it's the call."],
+            ["Our free kick", "Tuck in, wide but not isolated; be ready to recover for the cross."],
+            ["Our kickoff", "Start wide on the chosen side for the long ball, or hold wide on the far side as insurance."],
+            ["Their goal kick", "Block the wide angle to their winger as the 9 presses — make us compact."],
+            ["Their corner", "In your channel, block the short corner; then mark up and defend."],
+            ["Their free kick near goal", "Tuck in to help defend."],
+            ["Their kickoff", "Match their wide player and press immediately."],
+            ["Their throw-in", "Mark up, stay compact."],
+          ],
+        },
+        coachSays: "On your side, the throw is yours — up the line and fast, never back. Be our out-ball on goal kicks, attack the box on corners, and on their goal kicks, block that wide angle to make us compact.",
+        practice: {
+          type: "what-would-you-do" as const,
+          scenario: "You have a throw-in on the right side in the middle third. Your team is still getting organized, and a teammate near you is open but facing our own goal.",
+          choices: [
+            { label: "Throw it backward to the open teammate to keep possession", response: "We never throw it backward — that just invites pressure and forces a risky pass near our own goal. The ball should always go up the line." },
+            { label: "Throw it up the line, fast, before the other team gets set", response: "Yes. On throw-ins we throw it up the line and we throw it fast — a quick throw up the line catches the other team out before they're organized." },
+            { label: "Hold the ball and wait for the whole team to get into position", response: "Waiting lets the other team get set and kills the advantage. Throw it quickly up the line — speed is the whole point of a good throw-in." },
+          ],
+        },
       },
     ],
     sections: [
@@ -4823,26 +5883,14 @@ export const learningModules: LearningModule[] = [
         lessonSlugs: ["st-main-principles", "st-transitions", "st-ball-recovery", "st-restarts"],
       },
       {
-        slug: "lb-position",
-        title: "Module 7: LB (3) — Left Back",
-        summary: "Left back principles for open play, transitions, ball recovery, and restarts.",
-        lessonSlugs: ["lb-main-principles", "lb-transitions", "lb-ball-recovery", "lb-restarts"],
-      },
-      {
-        slug: "rb-position",
-        title: "Module 8: RB (2) — Right Back",
-        summary: "Right back principles for open play, transitions, ball recovery, and restarts.",
-        lessonSlugs: ["rb-main-principles", "rb-transitions", "rb-ball-recovery", "rb-restarts"],
-      },
-      {
         slug: "lw-position",
-        title: "Module 9: LW (11) — Left Winger",
+        title: "Module 7: LW (11) — Left Winger",
         summary: "Left winger principles for open play, transitions, ball recovery, and restarts.",
         lessonSlugs: ["lw-main-principles", "lw-transitions", "lw-ball-recovery", "lw-restarts"],
       },
       {
         slug: "rw-position",
-        title: "Module 10: RW (7) — Right Winger",
+        title: "Module 8: RW (7) — Right Winger",
         summary: "Right winger principles for open play, transitions, ball recovery, and restarts.",
         lessonSlugs: ["rw-main-principles", "rw-transitions", "rw-ball-recovery", "rw-restarts"],
       },
